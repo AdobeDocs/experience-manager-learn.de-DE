@@ -4,7 +4,7 @@ description: Emily Kellman erzählt, wie Adobe.com die Funktion „Varianten gen
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: df0a03c1-d278-4c45-afff-bfbdaffe83bd
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Emily Kellman erzählt, wie Adobe.com die Funktion „Varianten generieren“ verwendet hat, um die Inhaltsgeschwindigkeit zu erhöhen, Timelines zu reduzieren und Konversionen zu steigern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462731/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)

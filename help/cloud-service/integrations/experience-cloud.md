@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die von AEM as a Cloud Service unterstützt
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations
-role: Leader, Architect, Admin, Developer
+role: Leader, Admin, Developer
 level: Beginner
 jira: KT-10718
 thumbnail: KT-10718.png
@@ -14,7 +14,7 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 99%
@@ -87,7 +87,7 @@ Durch die Integration von Adobe Analytics in AEM as a Cloud Service können Sie 
 
 ## Adobe Commerce
 
-Dank der Integration von Adobe Commerce in AEM as a Cloud Service können Marken schneller skalieren und innovativ sein, um Commerce-Erlebnisse zu differenzieren und die Online-Geschwindigkeit zu erhöhen. AEM mit Commerce kombiniert die immersiven, Omni-Channel-basierten und personalisierten Erlebnisse in Experience Manager mit einer beliebigen Anzahl von Commerce-Lösungen, um in allen Bereichen der Customer Journey für differenzierte Erlebnisse zu sorgen, die Time-to-Value zu verkürzen und höhere Konversionsraten zu erzielen.
+Dank der Integration von Adobe Commerce in AEM as a Cloud Service können Marken schneller skalieren und innovativ sein, um Commerce-Erlebnisse zu differenzieren und die Online-Geschwindigkeit zu erhöhen. AEM mit Commerce kombiniert die immersiven, Omni-Channel-basierten und personalisierten Erlebnisse in Experience Manager mit einer beliebigen Anzahl von Lösungen für den Handel, um in allen Bereichen der Customer Journey für differenzierte Erlebnisse zu sorgen, die Time-to-Value zu verkürzen und höhere Konversionsraten zu erzielen.
 
 ### AEM Sites
 
@@ -147,9 +147,9 @@ Adobe Target ist in AEM as a Cloud Service integriert, um jeder Endbenutzerin un
 
 ### AEM Sites
 
-+ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
++ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
 
-+[Personalization-Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
++[Personalization-Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 
 + Experience Fragments in Target
 

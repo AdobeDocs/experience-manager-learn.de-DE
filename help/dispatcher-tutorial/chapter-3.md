@@ -3,15 +3,15 @@ title: Kapitel 3 – Fortgeschrittene Dispatcher-Caching-Themen
 description: Dies ist Teil 3 einer dreiteiligen Reihe zum Thema Caching in AEM. Die ersten beiden Teile konzentrierten sich dabei auf das einfache HTTP-Caching im Dispatcher und auf bestehende Einschränkungen. In diesem Teil werden einige Ideen zur Überwindung dieser Einschränkungen erläutert.
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 exl-id: 7c7df08d-02a7-4548-96c0-98e27bcbc49b
 duration: 1353
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '6172'
-ht-degree: 100%
+source-wordcount: '6173'
+ht-degree: 99%
 
 ---
 
@@ -125,7 +125,7 @@ Jede im letzten Kapitel eingeführte Ebene liefert einen gewissen Wert in der Ca
 Es gibt drei grundlegende Invalidierungsstrategien:
 
 * **TTL:** Ein Objekt läuft nach einer festen Zeitdauer ab (z. B. „2 Stunden ab jetzt“).
-* **Ablaufdatum:** Ein Objekt läuft zu einem bestimmten Zeitpunkt in der Zukunft ab (z. B. „10:00 Uhr am 10. Juni 2019“).
+* **Ablaufdatum:** Das Objekt läuft zu einem definierten Zeitpunkt in der Zukunft ab (z. B. „17 :00 am 10. Juni 2019„)
 * **Ereignisbasiert:** Ein Objekt wird explizit durch ein Ereignis invalidiert, das auf der Plattform aufgetreten ist (z. B. bei Änderung oder Aktivierung einer Seite).
 
 Nun können Sie verschiedene Strategien auf verschiedenen Cache-Ebenen verwenden. Einige davon sind allerdings „toxisch“.

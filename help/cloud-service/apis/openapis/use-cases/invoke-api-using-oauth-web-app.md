@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud S
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
@@ -12,8 +12,8 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 100%
 
@@ -49,7 +49,7 @@ Die WKND-PIM-Anwendung ist eine Beispiel-Web-Anwendung, die zur Verwaltung von P
 
 Das Adobe Developer Console(ADC)-Projekt ist so konfiguriert, dass es über die OAuth-Web-Anwendungs-Authentifizierung auf die Assets Author-API zugreift. Es stellt der Web-Anwendung WKND-PIM die erforderliche _client_id_ und das erforderliche _client_secret_ bereit, um den _authorization_code_-Grant-Fluss zu initiieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3442766?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 Die folgende Abbildung zeigt den Funktionsfluss der Web-Anwendung WKND-PIM zum _Abrufen benutzerspezifischer Zugriffs-Token für die Interaktion mit dem Assets Author-API_.
@@ -459,7 +459,7 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
 1. Filtern Sie im Dialogfeld _Add API_ (API hinzufügen) auf _Experience Cloud_, wählen Sie die Karte **AEM Assets Author API** (AEM Assets Author-API) und klicken Sie auf **Next** (Weiter).
 
-   ![Hinzufügen eines AEM-APIs](../assets/s2s/add-aem-api.png)
+   ![Hinzufügen einer AEM-API](../assets/s2s/add-aem-api.png)
 
    >[!TIP]
    >

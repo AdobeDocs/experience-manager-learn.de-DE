@@ -4,7 +4,7 @@ description: 'Allgemeine Übersicht über die Zwischenspeicherung beim Publish-S
 version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-08-28T00:00:00Z
@@ -12,8 +12,8 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 240
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ Wenn eine HTTP-Antwort für eine AEM Dispatcher-Zwischenspeicherung [nach den ob
 |:------------ |:---------- |
 | [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#html-text) | 5 Minuten |
 | [Assets (Bilder, Videos, Dokumente usw.)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#images) | 10 Minuten |
-| [Persistierte Anfragen (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=de&amp;publish-instances) | 2 Stunden |
+| [Persistierte Anfragen (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=de&publish-instances) | 2 Stunden |
 | [Client-Bibliotheken (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#client-side-libraries) | 30 Tage |
 | [Andere](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#other-content) | Nicht zwischengespeichert |
 
@@ -96,7 +96,7 @@ HTTP-Antworten für entsprechende HTTP-Anforderungen werden zwischengespeichert,
 + Der URL-Pfad der HTTP-Anfrage endet mit einer Erweiterung, z. B. `.html`, `.json`, `.css`, `.js`, usw.
 + HTTP-Anfragen enthalten keine Autorisierung und werden nicht von AEM authentifiziert.
    + Die Zwischenspeicherung authentifizierter Anfragen [kann global](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-when-authentication-is-used) oder selektiv über die [Zwischenspeicherung unter Berücksichtigung von Berechtigungen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=de) aktiviert werden.
-+ Die HTTP-Anfrage enthält keine Anfrageparameter.
++ Die HTTP-Abfrage enthält keine Abfrageparameter.
    + Wenn Sie jedoch [Ignorierte Abfrageparameter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#ignoring-url-parameters) konfigurieren, können HTTP-Anfragen, die die ignorierten Anfrageparameter enthalten, im Cache zwischengespeichert/bereitgestellt werden.
 + Der Pfad der HTTP-Anfrage [entspricht einer Dispatcher-Zulassungsregel und stimmt nicht mit einer Ablehnungsregel überein](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-documents-to-cache).
 + Die HTTP-Antwort verfügt über keine der folgenden durch AEM Publish festgelegten HTTP-Antwort-Header:
@@ -133,7 +133,7 @@ Wenn eine HTTP-Antwort für eine AEM Dispatcher-Zwischenspeicherung [nach den ob
 |:------------ |:---------- |
 | [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#html-text) | Bis zur Invalidierung |
 | [Assets (Bilder, Videos, Dokumente usw.)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#images) | Nie |
-| [Persistierte Anfragen (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=de&amp;publish-instances) | 1 Minute |
+| [Persistierte Anfragen (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=de&publish-instances) | 1 Minute |
 | [Client-Bibliotheken (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#client-side-libraries) | 30 Tage |
 | [Andere](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#other-content) | Bis zur Invalidierung |
 
@@ -143,7 +143,7 @@ Der Cache des AEM Dispatchers kann über die [Dispatcher-Konfiguration](https://
 
 + Was zwischengespeichert wird
 + Welche Teile des Zwischenspeichers bei der Veröffentlichung/Aufhebung der Veröffentlichung invalidiert werden
-+ Welche HTTP-Anfrageparameter bei der Auswertung des Zwischenspeichers ignoriert werden
++ Welche HTTP-Abfrageparameter bei der Auswertung des Zwischenspeichers ignoriert werden
 + Welche HTTP-Antwort-Header zwischengespeichert werden
 + Aktivieren oder Deaktivieren der TTL-Zwischenspeicherung
 + … und vieles mehr

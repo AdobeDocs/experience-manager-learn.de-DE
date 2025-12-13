@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ Kopfzeilen-Schaltflächen können als einzelne Schaltfläche oder als Schaltflä
 Dieses Beispiel erstreckt sich bis zum Erweiterungspunkt `headerBar`, um dem Inhaltsfragmenteditor eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Kopfzeilenmenü](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## Beispielerweiterung

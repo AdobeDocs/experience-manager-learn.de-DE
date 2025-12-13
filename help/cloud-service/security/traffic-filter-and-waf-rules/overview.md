@@ -4,16 +4,16 @@ description: Erfahren Sie, wie Sie Ihre AEM-Websites mit Traffic-Filterregeln, e
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
-workflow-type: ht
-source-wordcount: '0'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '1185'
 ht-degree: 100%
 
 ---

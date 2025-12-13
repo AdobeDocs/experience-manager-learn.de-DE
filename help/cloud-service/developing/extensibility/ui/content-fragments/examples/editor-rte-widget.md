@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor Widgets zum Rich-Text-Editor (RTE) hinzufügen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447441?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 Um dynamische Inhalte im Rich-Text-Editor (RTE) hinzuzufügen, muss die Funktionalität **Widgets** verwendet werden. Die Widgets helfen bei der Integration der einfachen oder komplexen Benutzeroberfläche in den RTE, wobei die Benutzeroberfläche mit dem JS-Framework Ihrer Wahl erstellt werden kann. Widgets können als Dialogfelder angesehen werden, die durch Drücken der Sondertaste `{` im RTE geöffnet werden.
 
@@ -40,7 +40,7 @@ Der Einfachheit halber verwendet dieses Beispiel das [Adobe React Spectrum](http
 Dieses Beispiel erstreckt sich bis zum Erweiterungspunkt `rte`, um dem RTE im Inhaltsfragmenteditor ein Widget hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rich-Text-Editor-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## Beispielerweiterung

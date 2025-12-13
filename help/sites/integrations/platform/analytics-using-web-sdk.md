@@ -4,7 +4,7 @@ description: Integrieren Sie AEM Sites und Adobe Analytics mithilfe des modernen
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
-role: Admin, Architect, Data Architect, Developer
+role: Admin, Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
@@ -14,8 +14,8 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 100%
 
@@ -241,7 +241,7 @@ Um zu Testzwecken genügend Traffic zu generieren, wird ein Selenium-Automatisie
 
 ## Datensatzüberprüfung – Seitenansichts- und CTA-Daten der WKND-Site
 
-Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der im [vorherigen Tutorial](./web-sdk.md) erstellte Datensatz wird wiederverwendet, um zu überprüfen, ob die Seitenansichts- und CTA-Klickdaten in den Experience Platform-Datensatz aufgenommen werden. In der Datensatzbenutzeroberfläche werden verschiedene Details wie die Gesamtdatensätze, die Größe und die erfassten Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
+Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der im [vorherigen Tutorial](./web-sdk.md) erstellte Datensatz wird wiederverwendet, um zu überprüfen, ob die Seitenansichts- und CTA-Klickdaten in den Experience Platform-Datensatz aufgenommen werden. In der Datensatzbenutzeroberfläche werden verschiedene Details wie die Gesamteinträge, die Größe und die erfassten Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 

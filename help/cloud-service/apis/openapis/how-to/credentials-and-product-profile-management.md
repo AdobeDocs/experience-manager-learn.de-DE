@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Anmeldedaten und Produktprofile für AEM-APIs
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Article
 jira: KT-17428
@@ -12,8 +12,8 @@ thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
-source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 
@@ -42,7 +42,7 @@ Ein Produktprofil ist mit einem oder mehreren _Services_ verknüpft. In AEM as a
 
 Nach erfolgreichem API-Aufruf werden im AEM-Autoren-Service ein Benutzerprofil, das die Anmeldedaten des ADC-Projekts darstellt, sowie Benutzergruppen erstellt, die der Produktprofil- und Service-Konfiguration entsprechen. 
 
-![Mitgliedschaft des Produktprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
+![Zugehörigkeit des Produktprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
 
 Im obigen Szenario wird das Benutzerprofil `1323d2...` im AEM-Autoren-Service erstellt und ist Mitglied der Benutzergruppen `AEM Assets Collaborator Users - Service` und `AEM Assets Collaborator Users - author - Program XXX - Environment XXX`.
 

@@ -4,13 +4,13 @@ description: Erfahren Sie, wie Sie Inhalte mithilfe von Adobe Experience Platfor
 version: Experience Manager as a Cloud Service
 feature: Personalization
 topic: Personalization, Content Management, Integrations
-role: Developer, Architect, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-10-17T00:00:00Z
 jira: KT-16331
 thumbnail: KT-16331.jpeg
-source-git-commit: a713c282af1dd6c3e947a1b22de53488d7761019
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '6446'
 ht-degree: 25%
@@ -33,7 +33,7 @@ In Ihrer Organisation gibt es möglicherweise verschiedene Anwendungsfälle für
 
 ## Anwendungsbeispiel
 
->[!VIDEO](https://video.tv.adobe.com/v/3476118/?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
 
 In diesem Tutorial unter Verwendung der [Beispiel-WKND-Site](https://github.com/adobe/aem-guides-wknd) zeigt der Prozess, wie **angemeldete**, die ein **Ski**-Abenteuer erworben haben, einen personalisierten Helden auf der **WKND-Startseite**.
 
@@ -139,7 +139,7 @@ In diesem Beispiel ist die WKND-Benutzer-ID (`wkndUserId`) die allgemeine Kennun
 
 Erstellen wir einen Identity-Namespace für die WKND-Benutzer-ID (`wkndUserId`).
 
-- Klicken Sie in **&#x200B;**&#x200B;Adobe Experience Platform **im** Navigationsbereich auf „Identitäten“. Klicken Sie dann oben **auf die Schaltfläche** Identity-Namespace erstellen“.
+- Klicken Sie in **** Adobe Experience Platform **im** Navigationsbereich auf „Identitäten“. Klicken Sie dann oben **auf die Schaltfläche** Identity-Namespace erstellen“.
 
   ![Identity-Namespace erstellen](../assets/use-cases/known-user-personalization/create-identity-namespace.png)
 
@@ -160,7 +160,7 @@ Ein Schema definiert die Struktur und das Format von Daten, die Sie in Adobe Exp
 
 Erstellen Sie zunächst ein Schema zur Erfassung von Verhaltensdaten wie Seitenansichtsereignissen und Benutzerinteraktionen.
 
-- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Schemata** und dann oben rechts auf die Schaltfläche **Schema erstellen** . Wählen Sie dann die Option **Manuell** und klicken Sie auf die Schaltfläche **Auswählen**.
+- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Schemata** und dann oben rechts auf die Schaltfläche **Schema erstellen** . Wählen Sie dann die Option **Manuell** und klicken Sie auf die Schaltfläche **Auswählen**.
 
   ![Schema erstellen](../assets/use-cases/known-user-personalization/create-schema.png)
 
@@ -268,7 +268,7 @@ Ein Datensatz ist ein Container für Daten, die einem bestimmten Schema folgen. 
 
 #### Verhaltensdaten-Datensatz
 
-- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Datensätze** und dann oben rechts auf die Schaltfläche **Datensatz** erstellen). Wählen Sie dann die Option **Schemabasiert** und klicken Sie auf **Weiter**.
+- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Datensätze** und dann oben rechts auf die Schaltfläche **Datensatz** erstellen). Wählen Sie dann die Option **Schemabasiert** und klicken Sie auf **Weiter**.
 
   ![Datensatz erstellen](../assets/use-cases/known-user-personalization/create-behavioral-dataset.png)
 
@@ -707,7 +707,7 @@ Diese Einstellungen stellen sicher, dass Ihre Verhaltens- und Transaktionsdaten 
 
 Mit dem Adobe Target-Ziel (V2) können Sie in Experience Platform erstellte Zielgruppen direkt in Adobe Target aktivieren. Mithilfe dieser Verbindung können Ihre Zielgruppen für Personalisierungsaktivitäten in Adobe Target verwendet werden.
 
-- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Ziele** und dann auf die Registerkarte **Katalog**. Suchen Sie nach **Personalization** und wählen Sie **(v2) Adobe Target**-Ziel aus.
+- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Ziele** und dann auf die Registerkarte **Katalog**. Suchen Sie nach **Personalization** und wählen Sie **(v2) Adobe Target**-Ziel aus.
 
   ![Adobe Target-Ziel](../assets/use-cases/known-user-personalization/adobe-target-destination.png)
 
@@ -913,7 +913,7 @@ $ git checkout -b feature/known-user-personalization
   $ mvn clean install -PautoInstallSinglePackage
   ```
 
-  Melden Sie sich mit `asmith/asmith` (oder anderen von Ihnen erstellten Benutzeranmeldeinformationen) an, [&#x200B; sie &#x200B;](https://github.com/adobe/aem-guides-wknd/blob/main/ui.content.sample/src/main/content/jcr_root/home/users/wknd/l28HasMYWAMHAaGkv-Lj/.content.xml) das `aem-guides-wknd`-Projekt aufgenommen werden.
+  Melden Sie sich mit `asmith/asmith` (oder anderen von Ihnen erstellten Benutzeranmeldeinformationen) an, [ sie ](https://github.com/adobe/aem-guides-wknd/blob/main/ui.content.sample/src/main/content/jcr_root/home/users/wknd/l28HasMYWAMHAaGkv-Lj/.content.xml) das `aem-guides-wknd`-Projekt aufgenommen werden.
 
   ![Anmelden](../assets/use-cases/known-user-personalization/userid-in-session-storage.png)
 
@@ -1004,7 +1004,7 @@ Besuchen Sie die Adobe Experience Platform erneut, um zu überprüfen, ob die Ve
 
   ![ECID](../assets/use-cases/known-user-personalization/ecid.png)
 
-- Klicken Sie auf **Schaltfläche**&#x200B;Anzeigen“.
+- Klicken Sie auf **Schaltfläche**Anzeigen“.
   ![Profilliste](../assets/use-cases/known-user-personalization/profile-list.png)
 
 - Klicken Sie auf das Profil. Sie sollten die Details des Profils sehen.

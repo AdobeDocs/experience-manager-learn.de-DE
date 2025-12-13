@@ -3,7 +3,7 @@ title: Bootstrapping der Remote-SPA für SPA-Editor
 description: Erfahren Sie, wie Sie ein Bootstrapping einer Remote-SPA für Kompatibilität mit dem AEM-SPA-Editor durchführen.
 topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7633
 thumbnail: kt-7633.jpeg
@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
 duration: 327
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1167'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -129,7 +129,7 @@ Beim Erstellen einer bearbeitbaren SPA ist es am besten, einen [internen Proxy i
        * @returns true if the SPA request should be re-routed to AEM
        */
        const toAEM = function(path, req) {
-           return path.startsWith('/content') || 
+           return path.startsWith('/content') ||
                path.startsWith('/graphql') ||
                path.endsWith('.model.json')
        }

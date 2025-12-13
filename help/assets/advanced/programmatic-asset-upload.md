@@ -4,13 +4,13 @@ description: Erfahren Sie, wie Sie Assets mithilfe der @adobe/aem-upload Node.js
 version: Experience Manager as a Cloud Service
 topic: Development, Content Management
 feature: Asset Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 last-substantial-update: 2025-11-14T00:00:00Z
 doc-type: Tutorial
 jira: KT-19571
 thumbnail: KT-19571.png
-source-git-commit: 151a5220ee842ee77ae27e99ded62f8d3dae4612
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1585'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 Erfahren Sie, wie Sie Assets mithilfe des Client-Programms, das die Bibliothek [aem-upload](https://github.com/adobe/aem-upload) Node.js verwendet, in die AEM as a Cloud Service-Umgebung hochladen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476961?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
 
 
 ## Lerninhalt
@@ -54,7 +54,7 @@ Die Bibliothek [aem-upload](https://github.com/adobe/aem-upload) Node.js abstrah
 
 >[!CAUTION]
 >
->Es gibt KEINE Entsprechung zur Bibliothek [aem-upload](https://github.com/adobe/aem-upload) in Java. Die Client-Anwendung muss in Node.js geschrieben sein, damit der Ansatz des _direkten binären Uploads_ verwendet werden kann. Weitere Informationen finden Sie auf der Seite [Experience Manager Assets-APIs und -Vorgänge](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) .
+>Es gibt KEINE Entsprechung zur Bibliothek [aem-upload](https://github.com/adobe/aem-upload) in Java. Die Client-Anwendung muss in Node.js geschrieben sein, damit der Ansatz des _direkten binären Uploads_ verwendet werden kann. Weitere Informationen finden Sie auf der Seite [Experience Manager Assets-APIs und -Vorgänge](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis) .
 
 ## Beispielanwendung
 
@@ -101,9 +101,9 @@ Bevor Sie die Beispielanwendung ausführen, müssen Sie sie mit den erforderlich
 
 Es _(mehrere Authentifizierungsmethoden),_ von der Bibliothek [aem-upload](https://github.com/adobe/aem-upload) Node.js unterstützt werden. In der folgenden Tabelle sind die unterstützten _Authentifizierungsmethoden_ und ihr Zweck aufgeführt.
 
-| | Standardauthentifizierung | [Lokales Entwicklungstoken](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Service-Anmeldeinformationen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-Web-App](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | Standardauthentifizierung | [Lokales Entwicklungstoken](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Service-Anmeldeinformationen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-Web-App](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
-| Wird unterstützt? | &check; | &check; | &check; | &cross; | &cross; | &cross; |
+| Wird unterstützt? | &amp;check; | &amp;check; | &amp;check; | &amp;cross; | &amp;cross; | &amp;cross; |
 | Zweck | Lokale Entwicklung | Lokale Entwicklung | Produktion | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
 
 Gehen Sie wie folgt vor, um die Beispielanwendung zu konfigurieren:
@@ -180,7 +180,7 @@ Um die Dienstanmeldeinformationen abzurufen, müssen Sie die **AEM**-Developer C
 
 1. Aktualisieren Sie die Umgebungsvariable `AEM_SERVICE_CREDENTIALS_FILE` mit dem Pfad zur Datei service-credentials.json.
 
-1. Stellen Sie sicher, dass der Benutzer mit den Service-Anmeldeinformationen über die erforderlichen Berechtigungen zum Hochladen von Assets in die AEM as a Cloud Service-Umgebung verfügt. Weitere Informationen finden Sie auf [&#x200B; Seite „Zugriff in AEM &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
+1. Stellen Sie sicher, dass der Benutzer mit den Service-Anmeldeinformationen über die erforderlichen Berechtigungen zum Hochladen von Assets in die AEM as a Cloud Service-Umgebung verfügt. Weitere Informationen finden Sie auf [ Seite „Zugriff in AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
 
 >[!ENDTABS]
 

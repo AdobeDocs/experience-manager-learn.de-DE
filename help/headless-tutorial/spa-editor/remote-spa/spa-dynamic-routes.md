@@ -3,7 +3,7 @@ title: 'Hinzufügen bearbeitbarer Komponenten zu dynamischen Routen von Remote-S
 description: Erfahren Sie, wie Sie in einem Remote-SPA bearbeitbare Komponenten zu dynamischen Routen hinzufügen.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7636
 thumbnail: kt-7636.jpeg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '903'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '902'
+ht-degree: 94%
 
 ---
 
@@ -34,7 +34,7 @@ Die SPA-Route Adventure-Detail ist definiert als `/adventure/:slug`, wobei `slug
 
 In den vorherigen beiden Kapiteln haben wir bearbeitbare Komponenteninhalte aus der SPA-Startansicht der entsprechenden Remote-SPA-Stammseite in AEM unter `/content/wknd-app/us/en/` zugeordnet.
 
-Die Definition der Zuordnung für bearbeitbare Komponenten für die dynamischen SPA-Routen ist ähnlich, jedoch müssen wir ein 1:1-Zuordnungsschema zwischen Instanzen der Route und AEM-Seiten erstellen.
+Die Definition der Zuordnung für bearbeitbare Komponenten für die dynamischen SPA-Routen ist ähnlich, jedoch müssen wir ein 1::1-Zuordnungsschema zwischen Instanzen der Route und AEM-Seiten erstellen.
 
 In diesem Tutorial nehmen wir den Namen des WKND Adventure-Inhaltsfragments, der das letzte Segment des Pfads ist, und ordnen ihn einem einfachen Pfad unter `/content/wknd-app/us/en/adventure` zu.
 

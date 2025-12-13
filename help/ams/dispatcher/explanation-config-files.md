@@ -10,8 +10,8 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Für den Apache-Webserver ist die Dateierweiterung einer Datei nicht von Belang,
 | Datei | Dateiziel | Beschreibung |
 | --- | --- | --- |
 | DATEINAME`.any` | `/etc/httpd/conf.dispatcher.d/` | Das AEM Dispatcher-Apache-Modul bezieht seine Einstellungen aus `*.any`-Dateien. Die standardmäßige übergeordnete include-Datei ist `conf.dispatcher.d/dispatcher.any`. |
-| DATEINAME`_farm.any` | Staging: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Hinweis:</b> Diese Farm-Dateien dürfen nicht in den Ordner `enabled_farms` kopiert werden. Verwenden Sie stattdessen `symlinks` zu einem relativen Pfad zur Datei `available_farms/*_farm.any`. <br/>`*_farm.any`-Dateien sind in der Datei `conf.dispatcher.d/dispatcher.any` enthalten. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Render- oder Website-Typ. Dateien werden im Verzeichnis `available_farms` erstellt und mit einem `symlink` im Verzeichnis `enabled_farms` aktiviert. <br/>Sie werden automatisch anhand des Namens aus der Datei `dispatcher.any` einbezogen.<br/><b>Grundlegende</b> Farm-Dateien beginnen mit `000_`, um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefinierte</b> Farm-Dateien sollten danach geladen werden, indem ihr Zahlenschema bei `100_` anfängt, um das richtige Einschlussverhalten sicherzustellen. |
+| DATEINAME`_farm.any` | Staging: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Hinweis:</b> Diese Farm-Dateien dürfen nicht in den Ordner `enabled_farms` kopiert werden. Verwenden Sie stattdessen `symlinks` zu einem relativen Pfad zur Datei `available_farms/*_farm.any`. <br/>`*_farm.any`-Dateien sind in der Datei `conf.dispatcher.d/dispatcher.any` enthalten. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Render- oder Website-Typ. Dateien werden im Verzeichnis `available_farms` erstellt und mit einem `symlink` im Verzeichnis `enabled_farms` aktiviert. <br/>Sie werden automatisch anhand des Namens aus der Datei `dispatcher.any` einbezogen.<br/><b>Grundlegende</b> Farm-Dateien beginnen mit `000_`, um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefinierte</b> Farm-Dateien sollten danach geladen werden, indem ihr Zahlenschema bei `100_` anfängt, um das richtige Einschlussverhalten sicherzustellen. | |
 | DATEINAME`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Jede Farm enthält eine Reihe von Regeln, die ändern, welcher Traffic herausgefiltert werden und nicht zu den Renderern gelangen soll. |
 | DATEINAME`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Bei diesen Dateien handelt es sich um eine Liste von Host-Namen oder URI-Pfaden, für die ein Blob-Abgleich durchgeführt wird, um zu bestimmen, welcher Renderer für diese Anfrage verwendet werden soll. |
 | DATEINAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Diese Dateien geben an, welche Elemente zwischengespeichert werden und welche nicht. |

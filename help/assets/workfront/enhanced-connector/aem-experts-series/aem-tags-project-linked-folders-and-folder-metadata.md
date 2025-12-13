@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie AEM-Tags über Workfront-Daten für Assets ve
 version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 jira: KT-9720
 thumbnail: 340333.jpeg
@@ -14,10 +14,10 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 duration: 2633
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '121'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 92%
 
 ---
 
@@ -33,4 +33,4 @@ _Teil 3 einer [vierteiligen Expertenreihe zum erweiterten Workfront-Connector f�
 
 ## Korrekturen
 
-+ __Bei 4:34 und 6:20__: Die Syntax der AEM-Tags ist falsch. Im Video wird `we-retail:apparel/footwear` angezeigt. Die richtige Syntax lautet `["we-retail:apparel/footwear"]` oder allgemeiner `["namespace:tag/childtag"]`.
++ __@ 4:34 und 6 :20__Die Syntax der AEM-Tags ist falsch. Im Video wird `we-retail:apparel/footwear` angezeigt. Die richtige Syntax lautet `["we-retail:apparel/footwear"]` oder allgemeiner `["namespace:tag/childtag"]`.

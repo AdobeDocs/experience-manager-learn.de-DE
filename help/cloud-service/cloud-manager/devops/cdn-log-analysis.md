@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die AEM Cloud Service-Tools zur Analyse von
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Development
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Beginner
 doc-type: Tutorial
 duration: 219
@@ -12,8 +12,8 @@ last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
 exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Informationen zu den _AEM Cloud Service-Tools zur Analyse von CDN-Protokollen_, die Adobe bietet, und dazu, wie sie Einblicke in Ihre CDN-Leistung und AEM-Implementierung ermöglichen.
  
->[!VIDEO](https://video.tv.adobe.com/v/3446114?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
 
 ## Überblick
 

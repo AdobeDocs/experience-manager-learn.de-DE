@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # Stapelweise Aktualisierung einer Eigenschaft – Beispiel für eine Erweiterung
 
->[!VIDEO](https://video.tv.adobe.com/v/3454466?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 Diese beispielhafte AEM-Inhaltsfragmentkonsolenerweiterung ist eine [Aktionsleistenerweiterung](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/), bei der eine Inhaltsfragment-Eigenschaft stapelweise zu einem gemeinsamen Wert aktualisiert wird.
 
@@ -42,7 +42,7 @@ Der Funktionsfluss der Beispielerweiterung lautet wie folgt:
 Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar`, um der Inhaltsfragment-Konsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 

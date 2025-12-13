@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ Benutzerdefinierte Rasterspalten können der Inhaltsfragmentkonsole mithilfe des
 Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `contentFragmentGrid`, um der Inhaltsfragmentkonsole eine benutzerdefinierte Spalte hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/?lang=de) | [Rasterspalten](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## Beispielerweiterung

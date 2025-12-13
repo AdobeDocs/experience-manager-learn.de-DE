@@ -3,7 +3,7 @@ title: Schnelle Einrichtung von SPA-Editor und Remote-SPA
 description: Erfahren Sie, wie Sie mit Remote-SPA und AEM SPA-Editor in 15 Minuten loslegen können!
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7629
 thumbnail: 333181.jpg
@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '726'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 93%
 
 ---
 
@@ -69,7 +69,7 @@ Herunterladen und Installieren des AEM SDK-Schnellstarts auf Port 4502 mit den s
    # Provide `admin` as the admin user's password
    ```
 
-Das AEM SDK wird gestartet und automatisch auf [http://localhost:4502](http://localhost:4502) ausgeführt. Melden Sie sich mit den folgenden Anmeldeinformationen an:
+AEM SDK wird gestartet und automatisch auf [http://localhost:4502](http://localhost:4502) gestartet. Melden Sie sich mit den folgenden Anmeldeinformationen an:
 
 + Benutzername: `admin`
 + Passwort: `admin`
@@ -79,7 +79,7 @@ Das AEM SDK wird gestartet und automatisch auf [http://localhost:4502](http://lo
 Dieses Tutorial weist eine Abhängigkeit vom Projekt __WKND 2.1.0+__ auf (für den Inhalt).
 
 1. [Laden Sie die neueste Version von `aem-guides-wknd.all.x.x.x.zip` herunter.](https://github.com/adobe/aem-guides-wknd/releases)
-1. Melden Sie sich beim AEM SDK Package Manager unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin`-Anmeldeinformationen an.
+1. Melden Sie sich beim Package Manager von AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin` Anmeldeinformationen an.
 1. __Laden__ Sie die in Schritt 1 heruntergeladene Datei `aem-guides-wknd.all.x.x.x.zip` hoch.
 1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `aem-guides-wknd.all-x.x.x.zip`.
 
@@ -89,7 +89,7 @@ Um eine Schnelleinrichtung zu ermöglichen, werden hier AEM-Pakete mit der endg�
 
 1. [Herunterladen ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
 1. [Herunterladen ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
-1. Melden Sie sich beim Package Manager des AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin`-Anmeldeinformationen an.
+1. Melden Sie sich beim Package Manager von AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin` Anmeldeinformationen an.
 1. __Laden__ Sie die in Schritt 1 heruntergeladene Datei `wknd-app.all.x.x.x.zip` hoch.
 1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `wknd-app.all.x.x.x.zip`
 1. __Laden__ Sie die in Schritt 2 heruntergeladene Datei `wknd-app.ui.content.sample.x.x.x.zip` hoch

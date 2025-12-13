@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit großen Ergebnismengen in AEM Headless ar
 version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
@@ -12,8 +12,8 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 308
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ AEM Headless-GraphQL-Abfragen können umfangreiche Ergebnisse zurückgeben. In d
 
 AEM Headless unterstützt einen [Offset-/Limit-Ansatz](#list-query) und Abfragen mit [Cursor-basierter Paginierung](#paginated-query) für kleinere Teilmengen eines größeren Ergebnissatzes. Es können mehrere Anfragen gestellt werden, um so viele Ergebnisse wie erforderlich zu erfassen.
 
-In den folgenden Beispielen werden kleine Teilmengen von Ergebnissen (vier Datensätze pro Anfrage) verwendet, um die Techniken zu zeigen. In einer echten Anwendung würden Sie eine größere Anzahl von Datensätzen pro Anfrage verwenden, um die Leistung zu verbessern. 50 Datensätze pro Anfrage sind eine gute Grundlage.
+In den folgenden Beispielen werden kleine Teilmengen von Ergebnissen (vier Einträge pro Anfrage) verwendet, um die Techniken zu zeigen. In einer echten Anwendung würden Sie eine größere Anzahl von Einträgen pro Anfrage verwenden, um die Leistung zu verbessern. 50 Einträge pro Anfrage sind eine gute Grundlage.
 
 ## Inhaltsfragmentmodell
 
@@ -37,7 +37,7 @@ Beim Arbeiten mit großen Datensätzen können Offset/Limit und die Cursor-basie
 
 ### Offset/Limit
 
-Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Datensätze (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
+Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Einträge (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Einträge das Durchsuchen aller vorherigen Einträge erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
 
 #### GraphQL-Abfrage
 
@@ -100,7 +100,7 @@ Die resultierende JSON-Antwort enthält das zweit-, dritt-, viert- und fünftteu
 
 ### Paginierte Abfrage
 
-Die Cursor-basierte Paginierung, die in paginierten Abfragen verfügbar ist, beinhaltet die Verwendung eines Cursors (ein Verweis auf einen bestimmten Datensatz), um den nächsten Ergebnissatz abzurufen. Dieser Ansatz ist effizienter, da es nicht notwendig ist, alle vorherigen Datensätze zu durchsuchen, um die erforderliche Teilmenge von Daten abzurufen. Paginierte Abfragen eignen sich hervorragend für die Iteration großer Ergebnismengen von Anfang bis zu einem Punkt in der Mitte oder bis zum Ende. Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Datensätze (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
+Die Cursor-basierte Paginierung, die in paginierten Abfragen verfügbar ist, beinhaltet die Verwendung eines Cursors (ein Verweis auf einen bestimmten Eintrag), um den nächsten Ergebnissatz abzurufen. Dieser Ansatz ist effizienter, da es nicht notwendig ist, alle vorherigen Einträge zu durchsuchen, um die erforderliche Teilmenge von Daten abzurufen. Paginierte Abfragen eignen sich hervorragend für die Iteration großer Ergebnismengen von Anfang bis zu einem Punkt in der Mitte oder bis zum Ende. Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Einträge (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Einträge das Durchsuchen aller vorherigen Einträge erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
 
 #### GraphQL-Abfrage
 

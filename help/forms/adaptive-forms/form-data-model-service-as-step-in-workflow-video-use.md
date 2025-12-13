@@ -10,10 +10,10 @@ level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 205
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -22,20 +22,25 @@ ht-degree: 100%
 Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil des AEM-Workflows zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodell-Schritts im AEM-Workflow erforderlich sind
 
 
->[!VIDEO](https://video.tv.adobe.com/v/330117?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
 
 Um dies auf Ihrem Server zu testen, folgen Sie den folgenden Anweisungen
+
 * [Laden Sie das setvalue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Paket, das Metadaten-Eigenschaften festlegt.
->In AEM Forms 6.5 und höher ist diese Funktion [wie hier beschrieben](form-data-model-service-as-step-in-aem65-workflow-video-use.md) vorkonfiguriert
+
+  >[!NOTE]
+  >
+  >In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar ([ hier beschrieben](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
 * Einrichten von Tomcat mit der Datei „SampleRest.war“, wie [hier](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=de) beschrieben. Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Kreditwürdigkeit ist eine Zufallszahl zwischen 200 und 800
 
-* [Importieren Sie die Assets mithilfe von Package Manager in AEM](assets/invoke-fdm-as-service-step.zip). Das Paket enthält Folgendes:
+* [Importieren Sie die Assets mithilfe des Paket-Managers in AEM](assets/invoke-fdm-as-service-step.zip). Das Paket enthält Folgendes:
 
    * Workflow-Modell, das den FDM-Schritt nutzt.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
    * Adaptives Formular, um den Workflow bei der Übermittlung auszulösen.
 * Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie es. Bei der Übermittlung des Formulars wird [loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
 
-![ Workflow ](assets/fdm-as-service-step-workflow.PNG).
+![Workflow](assets/fdm-as-service-step-workflow.PNG).
+
 Der Workflow nutzt die Komponente „ODER-Teilung“, um die Anwendung an Admins weiterzuleiten, wenn die Kreditwürdigkeit über 500 liegt. Wenn der Bonitätswert unter 500 liegt, wird der Antrag an Cavery weitergeleitet

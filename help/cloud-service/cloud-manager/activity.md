@@ -7,12 +7,12 @@ jira: KT-6874
 thumbnail: 26319.jpg
 topic: Architecture
 feature: Cloud Manager, Code Deployment
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: 82a9d00f-abe6-4600-92b1-41b5f0b5e352
 duration: 50
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 100%
 
@@ -24,4 +24,4 @@ Cloud Manager bietet eine konsolidierte Ansicht der Programmaktivität, in der a
 
 Cloud Manager ist außerdem auf Benutzerebene mit [Adobe Experience Cloud-Benachrichtigungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html?lang=de) integriert und bietet einen allgegenwärtigen Überblick über Ereignisse und Aktionen von Interesse.
 
->[!VIDEO](https://video.tv.adobe.com/v/34570?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

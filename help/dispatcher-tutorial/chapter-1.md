@@ -3,15 +3,15 @@ title: Kapitel 1 – Konzepte, Muster und Antimuster des Dispatchers
 description: Dieses Kapitel bietet eine kurze Einführung in die Geschichte und Mechanik des Dispatchers und erläutert, wie sich dies auf die Gestaltung seiner Komponenten durch AEM-Entwicklerinnen und -Entwickler auswirkt.
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
 duration: 3855
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '17384'
-ht-degree: 99%
+source-wordcount: '17382'
+ht-degree: 98%
 
 ---
 
@@ -106,7 +106,7 @@ Grundsätzlich können Sie, wenn alle Dateien zwischengespeichert und daher stat
 
 Um den Dispatcher detaillierter zu verstehen, schauen wir uns die Struktur einer einfachen Beispiel-URL erneut an. Sehen wir uns das folgende Beispiel an:
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
 
 * `http` bezeichnet das Protokoll
 
@@ -624,7 +624,7 @@ Ein Unix-Zeitstempel ist ausreichend für eine reale Implementierung. Für die b
 
 Der Fingerabdruck darf nicht als Abfrageparameter verwendet werden, da URLs mit Abfrageparametern nicht zwischengespeichert werden können. Sie können einen Selektor oder das Suffix für den Fingerabdruck verwenden.
 
-Nehmen wir an, die Datei `/content/dam/flower.jpg` hat als `jcr:lastModified`-Datum den 31. Dezember 2018, 23:59 Uhr. Die URL mit dem Fingerabdruck lautet `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`.
+Nehmen wir an, die Datei `/content/dam/flower.jpg` hat ein `jcr:lastModified` Datum: 31. Dezember 2018, 23 :59. Die URL mit dem Fingerabdruck lautet `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`.
 
 Diese URL bleibt stabil, solange die referenzierte Ressourcendatei (`flower.jpg`) nicht geändert wird. Sie kann also unbegrenzt lange zwischengespeichert werden und ist kein Cache-Mörder.
 
@@ -632,7 +632,7 @@ Beachten Sie, dass diese URL von der responsiven Bildkomponente erstellt und ber
 
 Das ist das Grundkonzept. Es gibt jedoch einige Details, die leicht übersehen werden können.
 
-In unserem Beispiel wurde die Komponente um 23:59 Uhr gerendert und zwischengespeichert. Jetzt wurde das Bild, sagen wir, um 00:00 Uhr geändert. Die Komponente _würde_ eine neue Fingerabdruck-URL im Markup generieren.
+In unserem Beispiel wurde die Komponente mit 23 % gerendert und :59. Jetzt wurde das Bild geändert, sagen wir bei 00:00.  Die Komponente _würde_ eine neue Fingerabdruck-URL im Markup generieren.
 
 Vielleicht denken Sie, sie _sollte_ es … aber sie tut es nicht. Da nur die Binärdatei des Bildes geändert und die einschließende Seite nicht angerührt wurde, ist kein erneutes Rendern des HTML-Markups erforderlich. Der Dispatcher stellt also die Seite mit dem alten Fingerabdruck und damit die alte Version des Bildes bereit.
 
@@ -744,7 +744,7 @@ Wir missbrauchen praktisch einen Selektor als Parameter: „fp-2018-31-12-23-59�
 
 Jede Anfrage umgeht den Dispatcher, was zu Last in einer Veröffentlichungsinstanz führt. Und es wird – noch schlimmer – eine entsprechende Datei im Dispatcher erstellt.
 
-Anstatt also den Fingerabdruck einfach nur als Cache-Killer zu verwenden, müssten Sie das jcr:lastModified-Datum des Bildes überprüfen und einen 404-Fehler zurückgeben, wenn es sich nicht um das erwartete Datum handelt. Dies braucht eine gewisse Zeit und erfordert CPU-Zyklen auf dem Veröffentlichungssystem, was genau das ist, was Sie eigentlich verhindern wollten.
+Anstatt den Fingerabdruck als einfachen Cache-Killer zu verwenden, müssten Sie das jcr:lastModified-Bilddatum überprüfen und einen 404-Wert zurückgeben, wenn es nicht das erwartete Datum ist. Dies braucht eine gewisse Zeit und erfordert CPU-Zyklen auf dem Veröffentlichungssystem, was genau das ist, was Sie eigentlich verhindern wollten.
 
 #### Nachteile von URL-Fingerabdrücken bei häufig erscheinenden neuen Versionen
 
@@ -850,7 +850,7 @@ Wie bei allen IT-Dingen lautet die Antwort: „Es kommt darauf an.“
 
 Hier kommt es auf das Motiv an. Motive mit kontrastreichen Rändern wie Motive mit geschriebenem Text, Fotos von Gebäuden, Illustrationen, Skizzen oder Fotos von Produktverpackungen (mit scharfen Konturen und Text darauf) fallen normalerweise in diese Kategorie. Motive mit weicheren Farb- und Kontrastübergängen wie Landschaften oder Porträts können etwas mehr komprimiert werden, ohne dass die Qualität verloren geht. Naturfotos fallen normalerweise in diese Kategorie.
 
-Je nachdem, wo das Bild verwendet wird, können Sie auch einen anderen Parameter verwenden. Eine kleine Miniaturansicht in einem Teaser kann eine bessere Komprimierung vertragen als das gleiche Bild in einem bildschirmbreiten Hero-Banner. Das bedeutet, dass der Qualitätsparameter nicht auf das Bild, sondern auf das Bild und den Kontext zurückzuführen ist. Und nach dem Geschmack der Autorin bzw. des Autors.
+Je nachdem, wo das Bild verwendet wird, können Sie auch einen anderen Parameter verwenden. Eine kleine Miniaturansicht in einem Teaser kann eine bessere Komprimierung vertragen als das gleiche Bild in einem bildschirmbreiten Hero Banner. Das bedeutet, dass der Qualitätsparameter nicht auf das Bild, sondern auf das Bild und den Kontext zurückzuführen ist. Und nach dem Geschmack der Autorin bzw. des Autors.
 
 Kurz gesagt: Es gibt keine perfekte Einstellung für alle Bilder. Es gibt keine Einheitsgrößen. Am besten entscheidet die Autorin bzw. der Autor. Sie bzw. er wird den Parameter „Qualität“ als Eigenschaft in der Komponente anpassen, bis sie bzw. er mit der Qualität zufrieden ist und nicht weiter gehen wird, um die Bandbreite nicht zu opfern.
 
@@ -906,7 +906,7 @@ Das ist viel besser, aber erinnern Sie sich an das fiese Skript-Kind aus dem let
   …
 ```
 
-Dadurch wird der Cache umgangen und das Veröffentlichungssystem wird geladen. Es könnte also eine schlechte Idee sein. Sie können dies umgehen, indem Sie nur eine kleine Untergruppe von Parametern filtern. Sie möchten nur `q-20, q-40, q-60, q-80, q-100` zulassen.
+Dadurch wird der Cache umgangen und das Veröffentlichungssystem wird geladen. Es könnte also eine schlechte Idee sein. Sie können dies umgehen, indem Sie nur eine kleine Teilmenge von Parametern filtern. Sie möchten nur `q-20, q-40, q-60, q-80, q-100` zulassen.
 
 #### Filtern ungültiger Anfragen bei Verwendung von Selektoren
 
@@ -1426,7 +1426,7 @@ Aber verlassen Sie sich nicht nur auf AEM. Ansonsten hätten Sie Pfade wie `/hom
 
 Wir hatten schon einmal ein Projekt mit verschiedenen Docroot-Verzeichnissen für jede Domain. Debugging und Wartung waren ein wahrer Albtraum – und tatsächlich wurde es nie fehlerfrei ausgeführt.
 
-Wir konnten die Probleme durch eine Neustrukturierung des Caches lösen. Wir hatten ein einziges Docroot-Verzeichnis für alle Domains, und die Invalidierungsanfragen konnten 1:1 verarbeitet werden, da alle Dateien auf dem Server mit `/content` begannen.
+Wir konnten die Probleme durch eine Neustrukturierung des Caches lösen. Wir hatten einen einzigen Docroot für alle Domains, und Invalidierungsanfragen konnten 1 verarbeitet werden:1 da alle Dateien auf dem Server mit `/content` begannen.
 
 Auch das Kürzen war sehr einfach.  AEM generierte gekürzte Links aufgrund einer entsprechenden Konfiguration unter `/etc/map`.
 
@@ -1528,7 +1528,7 @@ Um das Problem dieses „Cache-Invalidierungs-Sturms“, wie es manchmal bezeich
 
 Sie können den Dispatcher mit einer `grace period` für die automatische Invalidierung einstellen. Dies würde intern etwas mehr Zeit für das `statfiles`-Änderungsdatum einräumen.
 
-Angenommen, Ihre `statfile` hat eine Änderungszeit von heute 12:00 Uhr und Ihre `gracePeriod` ist auf zwei Minuten eingestellt. Dann werden alle automatisch invalidierten Dateien um 12:01 Uhr und um 12:02 Uhr als gültig angesehen. Sie werden nach 12:02 Uhr erneut gerendert.
+Nehmen wir an, Ihr `statfile` verfügt über eine Änderungszeit von heute 12 :00 und Ihr `gracePeriod` ist auf 2 Minuten festgelegt. Dann werden alle automatisch für ungültig erklärten Dateien als gültig erachtet bei 12:01 und bei 12:02. Sie werden nach 12 % :02.
 
 Die Referenzkonfiguration schlägt aus gutem Grund eine `gracePeriod` von zwei Minuten vor. Sie denken jetzt vielleicht: „Zwei Minuten? Das ist so gut wie nichts. Ich warte einfach zehn Minuten, bis der Inhalt angezeigt wird …“ Sie könnten also versucht sein, einen längeren Zeitraum festzulegen, z. B. 10 Minuten, vorausgesetzt, dass Ihr Inhalt mindestens nach diesen 10 Minuten angezeigt wird.
 
@@ -1540,13 +1540,13 @@ Veranschaulichen wir an einem Beispiel, wie `gracePeriod` tatsächlich arbeitet:
 
 Angenommen, Sie betreiben eine Medien-Site und Ihr Bearbeitungs-Team stellt alle fünf Minuten reguläre Inhaltsaktualisierungen bereit. Beachten Sie, dass Sie die Nachfrist auf 5 Minuten festgelegt haben.
 
-Wir beginnen mit einem kurzen Beispiel um 12:00 Uhr.
+Wir werden mit einem kurzen Beispiel um 12 Uhr :00.
 
-12:00 Uhr: Die Statfile ist auf 12:00 Uhr eingestellt. Alle zwischengespeicherten Dateien gelten bis 12:05 Uhr als gültig.
+12:00 - Statfile ist auf 12:00 gesetzt. Alle zwischengespeicherten Dateien gelten bis 12 :05.
 
-12:01 Uhr: Es kommt zu einer Invalidierung. Dadurch verlängert sich die Nachfrist auf 12:06 Uhr
+12:01 - Eine Invalidierung erfolgt. Dadurch verlängert sich die Rostzeit auf 12:06
 
-12:05 Uhr: Eine andere Bearbeiterin oder ein anderer Editor veröffentlicht einen Artikel. Dadurch verlängert sich die die Nachfrist auf 12:10 Uhr.
+12:05 - Ein anderer Herausgeber veröffentlicht seinen Artikel - Verlängerung der Gnadenfrist um eine weitere Gnadenfrist auf 12:10.
 
 Und so weiter... der Inhalt wird nie invalidiert. Jede Invalidierung *innerhalb* der Nachfrist verlängert die Fristzeit effektiv. Die `gracePeriod` ist so konzipiert, dass sie den Sturm der Invalidierung übersteht … aber irgendwann muss man in den Regen … also halten Sie die `gracePeriod` weitgehend kurz, um zu verhindern, dass sie für immer im Unterschlupf Schutz sucht.
 
@@ -1920,4 +1920,4 @@ Invalidierung zwischengespeicherter Seiten aus AEM: [https://helpx.adobe.com/de/
 
 ## Nächster Schritt
 
-* [2. Infrastrukturmuster](chapter-2.md)
+* [&#x200B;2. Infrastrukturmuster](chapter-2.md)

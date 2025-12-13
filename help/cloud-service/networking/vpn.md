@@ -4,15 +4,15 @@ description: Erfahren Sie, wie Sie mit Ihrem VPN eine Verbindung zu AEM as a Clo
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 100%
 
@@ -227,7 +227,7 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
 
    Definieren Sie die JSON-Parameter in `vpn-configure.json` und stellen Sie sie über `... -d @./vpn-configure.json` für curl zur Verfügung.
 
-   [Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
+[Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
 
    ```json
    {

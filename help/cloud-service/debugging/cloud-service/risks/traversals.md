@@ -2,7 +2,7 @@
 title: Durchlauf-Warnungen in AEM as a Cloud Service
 description: Erfahren Sie, wie Sie in AEM as a Cloud Service Durchlauf-Warnungen minimieren können.
 feature: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 jira: KT-10427
 hidefromtoc: true
@@ -11,10 +11,10 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 100%
+ht-degree: 88%
 
 ---
 
@@ -106,9 +106,9 @@ Die Reduzierung von Durchlauf-Warnungen kann mithilfe von drei einfachen Schritt
 
 </div>
 
-## 1. Analysieren{#analyze}
+## &#x200B;1. Analysieren{#analyze}
 
-Ermitteln Sie zunächst, welche AEM-Publish-Services Durchlauf-Warnungen aufweisen. Gehen Sie dazu in Cloud Manager wie folgt vor: [Laden Sie die `aemerror`-Protokolle der Publish-Services herunter](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=de){target="_blank"} – aus allen Umgebungen (Entwicklung, Staging und Produktion) und für die vergangenen __drei Tage__.
+Ermitteln Sie zunächst, welche AEM-Publish-Services Durchlauf-Warnungen aufweisen. Laden Sie dazu von Cloud Manager aus die [-Protokolle `aemerror`Veröffentlichungs-Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager?lang=de){target="_blank"} aus allen Umgebungen (Entwicklung, Staging und Produktion) für die letzten (__Tage__.
 
 ![Herunterladen der AEM as a Cloud Service-Protokolle](./assets/traversals/download-logs.jpg)
 
@@ -151,7 +151,7 @@ org.apache.jackrabbit.oak.query.RuntimeNodeTraversalException:
     ...
 ```
 
-## 2. Anpassen{#adjust}
+## &#x200B;2. Anpassen{#adjust}
 
 Sobald die fehlerhaften Abfragen und ihr aufrufender Code erkannt wurden, müssen Anpassungen vorgenommen werden. Es können zwei Arten von Anpassungen vorgenommen werden, um Durchlauf-Warnungen zu vermeiden:
 
@@ -159,24 +159,24 @@ Sobald die fehlerhaften Abfragen und ihr aufrufender Code erkannt wurden, müsse
 
 __Ändern Sie die Abfrage__, um neue Abfragebeschränkungen hinzuzufügen, die zu bestehenden Indexbeschränkungen aufgelöst werden. Wenn möglich, sollten Sie lieber die Abfrage ändern als die Indizes.
 
-+ [Erfahren Sie, wie Sie die Abfrageleistung optimieren.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=de){target="_blank"}
++ [Erfahren Sie, wie Sie die Abfrageleistung optimieren können](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=de){target="_blank"}
 
 ### Anpassen des Index
 
 __Ändern (oder erstellen) Sie einen AEM-Index__ so, dass bestehende Abfrageeinschränkungen in den Indexaktualisierungen aufgelöst werden können.
 
-+ [Erfahren Sie, wie Sie vorhandene Indizes optimieren.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=de){target="_blank"}
++ [Erfahren Sie, wie Sie vorhandene Indizes optimieren können](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning?lang=de){target="_blank"}
 + [Erfahren Sie, wie Sie Indizes erstellen](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index?lang=de){target="_blank"}
 
-## 3. Überprüfen{#verify}
+## &#x200B;3. Überprüfen{#verify}
 
 Anpassungen, die entweder an den Abfragen, Indizes oder beidem vorgenommen werden, müssen überprüft werden, um sicherzustellen, dass sie die Durchlauf-Warnungen mindern.
 
 ![Abfrage erläutern](./assets/traversals/verify.gif)
 
-Wenn nur [Anpassungen an der Abfrage](#adjust-the-query) vorgenommen werden, kann die Abfrage direkt auf AEM als Cloud Service über Developer Console durch [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"} getestet werden. Erläutern Sie, wie die Abfrage mit dem AEM-Author-Service ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Author-Service zu validieren.
+Wenn nur [Anpassungen an der Abfrage](#adjust-the-query) vorgenommen werden, kann die Abfrage über die Developer Console-Option „Abfrage [&quot; direkt auf AEM as a Cloud Service getestet ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"}. Erläutern Sie, wie die Abfrage mit dem AEM-Author-Service ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Author-Service zu validieren.
 
-Wenn [Anpassungen am Index](#adjust-the-index) vorgenommen werden, muss der Index in AEM as a Cloud Service bereitgestellt werden. Nachdem die Indexanpassungen vorgenommen wurden, kann die Abfrage in Developer Console mit [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"} ausgeführt und weiter optimiert werden.
+Wenn [Anpassungen am Index](#adjust-the-index) vorgenommen werden, muss der Index in AEM as a Cloud Service bereitgestellt werden. Wenn die Indexanpassungen bereitgestellt sind, kann die [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"} von Developer Console verwendet werden, um die Abfrage auszuführen und weiter zu optimieren.
 
 Letztlich werden alle Änderungen (Abfrage und Code) an Git übertragen und mithilfe von Cloud Manager in AEM as a Cloud Service bereitgestellt. Testen Sie nach der Bereitstellung, ob die Code-Pfade, die mit den ursprünglichen Durchlauf-Warnungen verbunden sind, erneut getestet werden, und überprüfen Sie, ob im `aemerror`-Protokoll keine Durchlauf-Warnungen mehr erscheinen.
 

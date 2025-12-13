@@ -5,16 +5,16 @@ version: Experience Manager as a Cloud Service
 doc-type: article
 topic: Migration
 feature: Migration
-role: Architect, Developer
+role: Developer
 level: Beginner
 jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1884'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '1877'
+ht-degree: 97%
 
 ---
 
@@ -33,7 +33,7 @@ Hier erhalten Sie Antworten auf häufig gestellte Fragen zur Migration von Inhal
 
 Verwenden Sie die unten stehende Vorlage, um zusätzliche Informationen beim Erstellen von CTT-bezogenen Adobe-Support-Tickets bereitzustellen.
 
-![Inhaltsmigration – Adobe-Support-Ticket-Vorlage](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
+![Content Migration Adobe Support Ticket-Vorlage](../../assets/faq/adobe-support-ticket-template.png) {align="center"}
 
 ## Allgemeine Fragen zur Inhaltsmigration
 
@@ -42,7 +42,7 @@ Verwenden Sie die unten stehende Vorlage, um zusätzliche Informationen beim Ers
 Es gibt drei verschiedene Methoden:
 
 + Verwenden des Content Transfer Tool (AEM 6.3+ → AEMaaCS)
-+ Verwenden von Package Manager (AEM → AEMaaCS)
++ Verwenden vom Paket-Manager (AEM → AEMaaCS)
 + Verwenden des vorkonfigurierten Bulk Import Service für Assets (S3/Azure → AEMaaCS)
 
 ### F: Gibt es eine Begrenzung für die Menge an Inhalten, die mit CTT übertragen werden kann?
@@ -59,7 +59,7 @@ Exportieren Sie den Bericht als CSV-Datei und laden Sie ihn dann [verknüpft mit
 
 ### F: Ist es empfehlenswert, vom Quellautorensystem zu extrahieren und diese Inhalte in die Autoren- und Veröffentlichungsinstanz von AEMaaCS aufzunehmen?
 
-Es wird immer empfohlen, eine 1:1-Extraktion und -Aufnahme zwischen der Autoren- und Veröffentlichungsebene durchzuführen. Es ist aber akzeptabel, Inhalte aus der Autoreninstanz der Quellproduktion zu extrahieren und diese in das Entwicklungs-, Staging- und Produktions-CS zu integrieren.
+Es wird immer empfohlen, eine 1::1-Extraktion und -Aufnahme zwischen der Autoren- und der Veröffentlichungsebene durchzuführen. Es ist aber akzeptabel, Inhalte aus der Autoreninstanz der Quellproduktion zu extrahieren und diese in das Entwicklungs-, Staging- und Produktions-CS zu integrieren.
 
 ### F: Gibt es eine Möglichkeit, die Zeit abzuschätzen, die es dauert, den Inhalt mit CTT von der AEM-Quelle nach AEMaaCS zu migrieren?
 
@@ -101,7 +101,7 @@ Ja. Der Endbenutzer-Traffic wird nicht durch die Inhaltsmigration unterbrochen. 
 
 ### F: Der BPA-Bericht zeigt Elemente im Zusammenhang mit fehlenden Original-Ausgabedarstellungen an. Sollte ich diese vor der Extraktion quellseitig bereinigen?
 
-Ja. Eine fehlende Original-Ausgabedarstellung bedeutet, dass die Asset-Binärdatei gar nicht ordnungsgemäß hochgeladen wurde. Betrachten Sie dies wie einen Fall von ungültigen Daten. Überprüfen Sie die Daten, sichern Sie sie nach Bedarf mit Package Manager und entfernen Sie sie aus der AEM-Quelle, bevor Sie die Extraktion ausführen. Die ungültigen Daten weisen negative Ergebnisse in den Asset-Verarbeitungsschritten auf.
+Ja. Eine fehlende Original-Ausgabedarstellung bedeutet, dass die Asset-Binärdatei gar nicht ordnungsgemäß hochgeladen wurde. Betrachten Sie dies wie einen Fall von ungültigen Daten. Überprüfen Sie die Daten, sichern Sie sie nach Bedarf mit dem Paket-Manager und entfernen Sie sie aus der AEM-Quelle, bevor Sie die Extraktion ausführen. Die ungültigen Daten weisen negative Ergebnisse in den Asset-Verarbeitungsschritten auf.
 
 ### F: Der BPA-Bericht enthält Elemente zu fehlenden `jcr:content`-Knoten für Ordner. Wie soll ich mit ihnen verfahren?
 
@@ -125,7 +125,7 @@ Die Extraktionsphase ist ein komplexer Prozess, der voraussetzt, dass verschiede
 
 Die öffentlich zugängliche Dokumentation wird fortlaufend auf Grundlage neuer Erkenntnisse aktualisiert. Im Folgenden werden jedoch einige allgemeine Problemkategorien und die möglichen Gründe dafür aufgeführt.
 
-![AEM as a Cloud Service-Inhaltsmigration – Extraktionsprobleme](../../assets/faq/extraction-issues.jpg) { align=&quot;center&quot; }
+![Probleme bei der Extraktion von AEM as a Cloud Service-Inhalten](../../assets/faq/extraction-issues.jpg) {align="center"}
 
 ### F: Welche Probleme sind während der Aufnahme zu erwarten?
 
@@ -133,7 +133,7 @@ Die Aufnahmephase erfolgt vollständig auf der Cloud-Plattform und ist auf die H
 
 Im Folgenden finden Sie mögliche Problemkategorien (bitte betrachten Sie dies nicht als erschöpfende Liste)
 
-![AEM as a Cloud Service-Inhaltsmigration – Aufnahmeprobleme](../../assets/faq/ingestion-issues.jpg) { align=&quot;center&quot; }
+![Probleme bei der Aufnahme von AEM as a Cloud Service-Inhalten bei der Migration](../../assets/faq/ingestion-issues.jpg) {align="center"}
 
 
 

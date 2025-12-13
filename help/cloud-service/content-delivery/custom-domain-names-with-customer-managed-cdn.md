@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie einen benutzerdefinierten Domain-Namen in der
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ Wenn Sie keinen Zugang zu Drittanbieterdiensten haben, _führen Sie diese Schrit
 
 ## Generieren eines SSL-Zertifikats
 
->[!VIDEO](https://video.tv.adobe.com/v/3441501?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 Es gibt zwei Optionen:
 
@@ -222,7 +222,7 @@ Führen Sie die folgenden Schritte aus, um die CDN-Regel für die HTTP-Header-Va
 
 ## Übergeben des Geheimnisses im HTTP-Header „X-AEM-Edge-Schlüssel“
 
->[!VIDEO](https://video.tv.adobe.com/v/3445054?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
 Aktualisieren Sie das Kunden-CDN, um das Geheimnis im HTTP-Header `X-AEM-Edge-Key` zu übergeben. Das Geheimnis wird von Adobe CDN verwendet, um zu überprüfen, ob die Anfrage vom Kunden-CDN stammt, und den Wert des Headers `Host` in den Wert des vom Kunden-CDN empfangenen `X-Forwarded-Host` umzuwandeln.
 

@@ -3,7 +3,7 @@ title: Erste Schritte mit SPA-Editor und Remote-SPA – Übersicht
 description: Willkommen beim mehrteiligen Tutorial für Entwicklerinnen und Entwickler, die eine vorhandene Remote-SPA mit bearbeitbaren AEM-Inhalten mithilfe des AEM-SPA-Editors erweitern möchten.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7630
 thumbnail: 333272.jpeg
@@ -12,8 +12,8 @@ doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React
 
 Dieses Tutorial baut auf der [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de) auf, einer React-App, die AEM Inhaltsfragmentinhalte über GraphQL-APIs von AEM nutzt, jedoch keine kontextbezogene Bearbeitung von SPA-Inhalten bereitstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444856?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Über das Tutorial
 

@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie einen benutzerdefinierten Domain-Namen auf de
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 1042
@@ -12,8 +12,8 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 
@@ -46,7 +46,7 @@ Wenn Sie keinen Zugang zu Drittanbieterdiensten haben, _führen Sie diese Schrit
 
 ## Generieren eines SSL-Zertifikats
 
->[!VIDEO](https://video.tv.adobe.com/v/3441501?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 Es gibt zwei Optionen:
 
@@ -93,7 +93,7 @@ Gehen Sie wie folgt vor, um den Domänennamen zu verifizieren:
 
 - Fügen Sie den Domain-Namen in Cloud Manager hinzu, indem Sie die Dokumentation zum [Hinzufügen eines benutzerdefinierten Domain-Namens](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name) befolgen.
 - Fügen Sie einen AEM-spezifischen [TXT-Eintrag](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) in Ihrem DNS-Hosting-Dienst hinzu.
-- Verifizieren Sie die oben genannten Schritte, indem Sie die DNS-Server mithilfe des `dig`-Befehls abrufen.
+- Verifizieren Sie die oben genannten Schritte, indem Sie die DNS-Server mithilfe des `dig`-Befehls abfragen.
 
 ```bash
 # General syntax, the `_aemverification` is prefix provided by Adobe

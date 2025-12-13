@@ -4,13 +4,13 @@ description: Ein Überblick über die wichtigsten Funktionen für Kundinnen und 
 version: Experience Manager 6.5
 topic: Upgrade
 feature: Release Information
-role: Leader, Architect, Developer, Admin, User
+role: Leader, Developer, Admin, User
 level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 538
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '2576'
 ht-degree: 100%
 
@@ -136,7 +136,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=de" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=de" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
  Möglichkeit zum Hinzufügen benutzerdefinierter Indexdefinitionen zur Optimierung der Abfrageleistung und Suchrelevanz.</td>
             <td> </td>
             <td>✔</td>
@@ -158,7 +158,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/storage-elements-in-aem-6.html?lang=de&&amp;lang=de" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/storage-elements-in-aem-6.html?&amp;lang=de" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
  <br> Optionen zur Verwendung eines einfachen, leistungsstarken dateibasierten TarMK-Speichers (TarPM-Version der nächsten Generation)
  <br> oder horizontalen Skalierung mit einem MongoDB-unterstützten Repository mit MongoMK.</td>
             <td> </td>
@@ -170,7 +170,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?lang=de&&amp;lang=de" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=de" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
  MongoMK wurde seit seiner Einführung in AEM 6.0 kontinuierlich verbessert.</td>
             <td> </td>
             <td> </td>
@@ -624,7 +624,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/de/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Tags in Adobe Experience Platform-Integration</a>:</strong>
-Integrieren in den Tag Management Cloud Service der nächsten Generation von Adobe.</td>
+Integrieren in den Tag-Management-Cloud-Service der nächsten Generation von Adobe.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -645,7 +645,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang=de&lang-de" target="_blank">eCommerce</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang-de" target="_blank">eCommerce</a>:</strong>
  Bereitstellen von markenspezifischen, personalisierten Einkaufserlebnissen über Web-, Mobile- und Social-Touchpoints hinweg.
             </td>
             <td>✔</td>
@@ -674,7 +674,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
 
 Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Einige dieser Funktionen wurden in früheren Versionen eingeführt, mit inkrementellen Verbesserungen in jeder Version.
 
-+ [AEM Assets-Versionshinweise](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/assets.html?lang=de)
++ [AEM Assets-Versionshinweise](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html?lang=de)
 
 ***✔bedeutet, dass die Funktion in dieser Version erheblich verbessert wurde.***
 
@@ -794,7 +794,7 @@ Vorkonfigurierte Workflows und Aufgaben zur Überprüfung und Genehmigung digita
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/multilingual-assets.html?lang=de" target="_blank">Mehrsprachige Assets</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html?lang=de" target="_blank">Mehrsprachige Assets</a>:</strong>
  Automatische Übersetzungsunterstützung von Asset-Metadaten mit Sprachstämmen.</td>
             <td> </td>
             <td> </td>
@@ -827,7 +827,7 @@ Verwenden Sie Adobe-KI, um Bilder automatisch mit nützlichen Metadaten zu verse
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/indesign.html?lang=de" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html?lang=de" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
  Generieren von Produktkatalogen. Erstellen von Broschüren, Flyern und Druckanzeigen anhand von InDesign-Vorlagen.</td>
             <td> </td>
             <td> </td>
@@ -908,7 +908,7 @@ Verwenden Sie Adobe-KI, um Bilder automatisch mit nützlichen Metadaten zu verse
     <tbody>
         <tr>
             <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/managing-assets.html?lang=de" target="_blank">Bildbearbeitung</a>:</strong>
- Dynamisches Bereitstellen von Bildern in unterschiedlichen Größen und Formaten, einschließlich Smartem Zuschnitt.</td>
+ Dynamisches Bereitstellen von Bildern in unterschiedlichen Größen und Formaten, einschließlich intelligentem Zuschnitt.</td>
             <td> </td>
             <td></td>
             <td></td>

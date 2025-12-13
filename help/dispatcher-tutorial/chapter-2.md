@@ -3,12 +3,12 @@ title: Kapitel 2 – Dispatcher-Infrastruktur
 description: Machen Sie sich mit der Veröffentlichungs- und Dispatcher-Topologie vertraut. Erfahren Sie mehr über die häufigsten Topologien und Setups.
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: a25b6f74-3686-40a9-a148-4dcafeda032f
 duration: 403
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 100%
@@ -141,4 +141,4 @@ Wir empfehlen nicht, dieses vernetzte Schema als Standardoption zu verwenden. We
 
 ## Nächster Schritt
 
-* [3. Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)
+* [&#x200B;3. Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)

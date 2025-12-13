@@ -7,12 +7,12 @@ kt: 6872, 6875
 thumbnail: 26317.jpg
 topic: Architecture
 feature: Cloud Manager, CI-CD Pipeline
-role: Architect, Developer, Admin
+role: Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 408
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 100%
 
@@ -31,10 +31,10 @@ ht-degree: 100%
 
 Die Konfiguration der [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=de) definiert den Auslöser, der die Pipeline initiiert, sowie die Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/327785?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Pipeline-Ausführung
 
 Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=de) wird zum Erstellen und Bereitstellen von Code von der Staging-bis zur Produktionsumgebung verwendet, wodurch sich die Amortisierungszeit verkürzt.
 
->[!VIDEO](https://video.tv.adobe.com/v/327608?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)

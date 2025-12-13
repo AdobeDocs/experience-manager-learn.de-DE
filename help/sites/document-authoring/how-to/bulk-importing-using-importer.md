@@ -4,15 +4,15 @@ description: Erfahren Sie, wie Sie während der Site-Migration einen Massenimpor
 version: Experience Manager as a Cloud Service
 feature: Migration
 topic: Content Management
-role: Developer, User, Architect
+role: Developer, User
 level: Intermediate, Experienced
 doc-type: Technical Video
 duration: 208
 last-substantial-update: 2024-06-07T00:00:00Z
 jira: KT-15677
 exl-id: 8c40c16d-b5c4-4796-aae8-dfb838de574f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 100%
 
@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie während der Site-Migration einen Massenimport von Web-Seiten mit dem AEM-Import-Tool durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3445894/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3429597/?learn=on)

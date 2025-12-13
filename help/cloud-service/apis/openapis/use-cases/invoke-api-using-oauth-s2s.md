@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 jira: KT-16516
@@ -12,8 +12,8 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 100%
 
@@ -431,9 +431,9 @@ Gehen Sie wie folgt vor, um die Erstellung des Benutzerprofils des technischen K
 
   ![Benutzerprofil des technischen Kontos](../assets/s2s/technical-account-user.png)
 
-- Klicken Sie auf das Benutzerprofil des technischen Kontos, um Benutzerdetails anzuzeigen, z. B. die **Gruppenmitgliedschaft**. Wie unten dargestellt, ist das Benutzerprofil des technischen Kontos den Benutzergruppen für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** und **AEM Assets-Mitarbeiter-Benutzende – Service** zugeordnet.
+- Klicken Sie auf das Benutzerprofil des technischen Kontos, um Benutzerdetails anzuzeigen, z. B. die **Gruppenzugehörigkeit**. Wie unten dargestellt, ist das Benutzerprofil des technischen Kontos den Benutzergruppen für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** und **AEM Assets-Mitarbeiter-Benutzende – Service** zugeordnet.
 
-  ![Mitgliedschaft des Benutzerprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
+  ![Zugehörigkeit des Produktprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
 
 - Beachten Sie, dass das Benutzerprofil des technischen Kontos dem Produktprofil für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** zugeordnet ist. Das Produktprofil ist mit den Services für **AEM Assets-API-Benutzende** und **AEM Assets-Mitarbeiter-Benutzende** verknüpft.
 

@@ -12,8 +12,8 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 100%
 
@@ -42,7 +42,7 @@ Der Funktionsfluss der Beispielerweiterung lautet wie folgt:
 1. Beim Übermitteln des Formulars werden der von der Benutzerin oder dem Benutzer angegebene `Image Description`-Text, das ausgewählte Inhaltsfragment und der AEM-Host an die [benutzerdefinierte Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) gesendet.
 1. Die [Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) validiert die Eingaben.
 1. Als Nächstes wird die OpenAI-API zur [Bildgenerierung](https://beta.openai.com/docs/guides/images/image-generation-beta) aufgerufen. Mithilfe des `Image Description`-Textes gibt diese an, welches Bild generiert werden soll.
-1. Der [Bildgenerierungs](https://beta.openai.com/docs/guides/images/image-generation-beta)-Endpunkt erstellt ein Originalbild mit einer Größe von _1024 x 1024_ Pixeln unter Verwendung des Parameterwerts der Eingabeaufforderung und gibt die URL des generierten Bildes als Antwort zurück.
+1. Der [Bildgenerierungs](https://beta.openai.com/docs/guides/images/image-generation-beta)-Endpunkt erstellt ein Originalbild mit einer Größe von _1024 x 1024_ Pixeln unter Verwendung des Parameterwerts des Prompts und gibt die URL des generierten Bildes als Antwort zurück.
 1. Die [Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) lädt das generierte Bild in die App Builder Runtime herunter.
 1. Anschließend wird das Bild von der App Builder Runtime unter einem vordefinierten Pfad nach AEM DAM hochgeladen.
 1. AEM as a Cloud Service speichert das Bild in DAM und gibt Erfolgs- oder Fehlerantworten für die Adobe I/O Runtime-Aktion zurück. Die erfolgreiche Upload-Antwort aktualisiert den Bildeigenschaftswert des ausgewählten Inhaltsfragments mithilfe einer anderen HTTP-Anfrage an AEM, die über die Adobe I/O Runtime-Aktion erfolgt.
@@ -53,7 +53,7 @@ Der Funktionsfluss der Beispielerweiterung lautet wie folgt:
 Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar`, um der Inhaltsfragment-Konsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/?lang=de) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/?lang=de) |
 
 ## Beispielhafte Erweiterung

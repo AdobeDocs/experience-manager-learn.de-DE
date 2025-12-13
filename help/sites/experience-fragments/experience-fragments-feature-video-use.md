@@ -4,7 +4,7 @@ description: Mit Experience Fragments können Inhaltsautorinnen und -autoren Inh
 sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
-role: Architect, Developer, Admin, User
+role: Developer, Admin, User
 level: Beginner
 doc-type: Feature Video
 version: Experience Manager as a Cloud Service
@@ -13,8 +13,8 @@ thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
 duration: 228
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 Mit Experience Fragments können Inhaltsautorinnen und -autoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersysteme.
 
->[!VIDEO](https://video.tv.adobe.com/v/3445616?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
 Ein Experience Fragment ist ein gruppierter Satz von Komponenten, der bei Kombination ein Erlebnis erstellt. Beispielsweise können *Titel*, *Bild*, *Beschreibung* und eine *Aktionsaufruf-Schaltfläche* kombiniert werden und so ein Teaser-Erlebnis bilden.
 

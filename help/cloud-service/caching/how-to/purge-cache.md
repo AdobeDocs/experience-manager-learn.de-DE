@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie die Cache-gespeicherte HTTP-Antwort aus dem C
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,8 +12,8 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ Erfahren Sie, wie Sie die Cache-gespeicherte HTTP-Antwort aus dem CDN von AEM as
 
 In diesem Tutorial erfahren Sie, wie Sie das API-Bereinigungs-Token einrichten und verwenden, um den CDN-Cache der Beispiel-Site [AEM WKND](https://github.com/adobe/aem-guides-wknd) mithilfe der Self-Service-Funktion zu bereinigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3436941?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
 
 ## Cache-Invalidierung vs. explizite Bereinigung
 

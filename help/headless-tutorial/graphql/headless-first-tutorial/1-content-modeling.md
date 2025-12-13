@@ -12,8 +12,8 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 100%
 
@@ -55,8 +55,8 @@ Im gesamten Tutorial werden Erklärungen, Code-Beispiele und praktische Tipps be
    | Datentyp | Name | Erforderlich | Optionen |
    |----------|------|----------|---------|
    | Inhaltsreferenz | Asset | ja | Fügen Sie, sofern gewünscht, ein Standardbild hinzu, z. B. „/content/dam/wknd-headless/assets/AdobeStock_307513975.mp4“. |
-   | Einzeilentext | Titel | ja |
-   | Einzeilentext | Vortitel | nein |
+   | Einzeilentext | Titel | ja | |
+   | Einzeilentext | Vortitel | nein | |
    | Mehrzeilentext | Beschreibung | nein | Stellen Sie sicher, dass als Standardtyp „Rich-Text“ angegeben ist. |
    | Aufzählung | Stil | ja | Rendern Sie diesen Datentyp als Dropdown-Liste. Die Optionen sind „Hero“, „Hero und ausgewählt“ und „Ausgewählt“. |
 

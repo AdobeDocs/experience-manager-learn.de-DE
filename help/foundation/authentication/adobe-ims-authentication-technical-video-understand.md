@@ -6,14 +6,14 @@ feature: User and Groups
 doc-type: Technical Video
 jira: KT-781
 topic: Architecture
-role: Architect
+role: Developer
 level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 405
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Adobe Experience Manager bietet Admin Console-Unterstützung für AEM-Instanzen und Adobe Identity Management System(IMS)-basierte Authentifizierung für AEM in Managed Services. Diese Integration ermöglicht es AEM Managed Services-Kunden und -kundinnen, alle Experience Cloud-Benutzende in einer einzigen einheitlichen Web-Konsole zu verwalten. Benutzende und Gruppen können Produktprofilen zugewiesen werden, die mit AEM-Instanzen verknüpft sind, und erhalten so zentral verwalteten Zugriff auf die spezifischen AEM-Instanzen.
 
->[!VIDEO](https://video.tv.adobe.com/v/327595?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Die IMS-Authentifizierungsunterstützung von Adobe Experience Manager gilt nur für „interne“ Benutzende (die mit dem Verfassen, Überprüfen, Verwalten, Entwickeln usw. betraut sind) und nicht für externe Endbenutzerinnen und -benutzer, wie z. B. Menschen, die eine Website besuchen.
 * [Admin Console](https://adminconsole.adobe.com/) stellt die Kundinnen und Kunden von AEM Managed Services als IMS-Organisationen und die AEM-Instanzen als Produktkontexte dar. System- und Produktadmins für Admin Console können definieren und verwalten.

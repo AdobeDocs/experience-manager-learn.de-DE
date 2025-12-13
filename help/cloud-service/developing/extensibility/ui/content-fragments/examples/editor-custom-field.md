@@ -11,8 +11,8 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor benutzerdefinierte Felder erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437643?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM-Erweiterungen der Benutzeroberfläche sollten mithilfe des [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Frameworks entwickelt werden, da dies ein konsistentes Look-and-Feel mit dem Rest von AEM beibehält. Es verfügt außerdem über eine umfangreiche Bibliothek vordefinierter Funktionen, was die Entwicklungszeit verkürzt.
 
@@ -31,7 +31,7 @@ AEM-Erweiterungen der Benutzeroberfläche sollten mithilfe des [Adobe React Spec
 Dieses Beispiel ersetzt ein vorhandenes Feld im Inhaltsfragmenteditor durch eine benutzerdefinierte Implementierung.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rendern eines benutzerdefinierten Formularelements](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## Beispiel einer Erweiterung

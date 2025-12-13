@@ -9,10 +9,10 @@ level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 88
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '366'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -23,11 +23,8 @@ In diesem Artikel werden wir uns die Verwendung der Geolocation API von Google a
 Die folgenden Schritte wurden zur Verwendung der Geolocation API in adaptiven Formularen ausgeführt.
 
 1. [Rufen Sie den API-Schlüssel von Google ab](https://developers.google.com/maps/documentation/javascript/get-api-key), um die Google Maps-Plattform zu verwenden. Sie können einen Testschlüssel beziehen, der 1 Jahr gültig ist.
-
 1. Das adaptive Formularfragment wurde mit Feldern für die aktuelle Adresse erstellt.
-
 1. Die Geolocation API wurde beim Klick-Ereignis des Bildobjekts des adaptiven Formulars aufgerufen.
-
 1. Die vom API-Aufruf zurückgegebenen JSON-Daten wurden analysiert und die Feldwerte für das adaptive Formular entsprechend festgelegt.
 
 ```javascript
@@ -94,7 +91,11 @@ Die von der API zurückgegebene JSON-Daten werden dann analysiert, um die Felder
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrem Server bereitzustellen:
 
 * Installieren und starten Sie den AEM Forms-Server.
-> Diese Funktion wurde mit AEM Forms 6.3 und höher getestet.
+
+  >[!NOTE]
+  >
+  >Diese Funktion wurde mit AEM Forms 6.3 und höher getestet
+
 * [Rufen Sie den Google-API-Schlüssel ab](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * [Importieren Sie die mit diesem Artikel verbundenen Assets in AEM.](assets/geolocationapi.zip)
 * [Öffnen Sie das adaptive Formularfragment im Bearbeitungsmodus.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)

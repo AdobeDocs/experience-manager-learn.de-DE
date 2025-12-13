@@ -11,8 +11,8 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
 duration: 269
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM-Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
 
->[!VIDEO](https://video.tv.adobe.com/v/36993?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
 
 In diesem Video werden die folgenden Funktionen behandelt:
 
@@ -34,7 +34,9 @@ In diesem Video werden die folgenden Funktionen behandelt:
 
      | Konsole | Zweck |
      |---|---|
-     | Assets | In diesen Konsolen können Sie digitale Assets, wie etwa Bilder, Videos, Dokumente und Audiodateien, importieren und verwalten. Diese Assets können dann von jeder Website verwendet werden, die auf derselben AEM-Instanz ausgeführt wird | Communitys | In dieser Konsole können Sie Community-Sites für die Interaktion und die Aktivierung erstellen und verwalten | Commerce  | Damit können Sie Produkte, Produktkataloge und Bestellungen verwalten, die zu Ihren Commerce-Sites gehören |
+     | Assets | In diesen Konsolen können Sie digitale Assets, wie etwa Bilder, Videos, Dokumente und Audiodateien, importieren und verwalten. Diese Assets können dann von jeder Website verwendet werden, die auf derselben AEM-Instanz ausgeführt wird |
+     | Communitys | In dieser Konsole können Sie Community-Sites für die Interaktion und die Aktivierung erstellen und verwalten |
+     | Commerce  | Damit können Sie Produkte, Produktkataloge und Bestellungen verwalten, die zu Ihren Commerce-Sites gehören |
      | Experience Fragments | Bei einem Experience Fragment handelt es sich um ein einzelnes Erlebnis, das kanalübergreifend wiederverwendet werden kann und Varianten aufweist. So erübrigt sich das wiederholte Kopieren und Einfügen von Erlebnissen oder Teilen von Erlebnissen |
      | Formulare | In dieser Konsole können Sie Ihre Formulare und Dokumente erstellen und verwalten |
      | Personalisierung | Diese Konsole bietet ein Framework aus Tools für die Bearbeitung von Inhalten für eine bestimmte Zielgruppe und die Darstellung personalisierter Erlebnisse |
@@ -42,6 +44,7 @@ In diesem Video werden die folgenden Funktionen behandelt:
      | Sites | Mit der Konsole „Sites“ können Sie Websites erstellen, anzeigen und verwalten, die auf Ihrer AEM-Instanz ausgeführt werden. Über diese Konsolen können Sie Website-Seiten erstellen, bearbeiten, kopieren, verschieben und löschen, Workflows starten und Seiten veröffentlichen |
 
    * Tools – dargestellt durch einen Hammer
+
 * Omni-Suche
 * Lösungsauswahl
 * Hilfe

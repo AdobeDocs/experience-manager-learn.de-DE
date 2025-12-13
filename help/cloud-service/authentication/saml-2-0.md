@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie die SAML 2.0-Authentifizierung für den Publi
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '4262'
-ht-degree: 100%
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '4233'
+ht-degree: 99%
 
 ---
 
@@ -45,10 +45,10 @@ Eine SAML-Integration in AEM Publish läuft normalerweise wie folgt ab:
 1. Der IDP generiert eine SAML-Assertion mit den Benutzerdaten und signiert sie mit dem privaten Zertifikat des IDP.
 1. Der IDP sendet die SAML-Assertion per HTTP-POST über den Webbrowser der Benutzerin bzw. des Benutzers (RESPECTIVE_PROTECTED_PATH/saml_login) an AEM Publish.
 1. AEM Publish erhält die SAML-Assertion und überprüft die Integrität und Authentizität der SAML-Assertion mithilfe des öffentlichen IDP-Zertifikats.
-1. AEM Publish verwaltet den AEM-Benutzerdatensatz basierend auf der SAML 2.0-OSGi-Konfiguration und den Inhalten der SAML-Assertion.
+1. AEM Publish verwaltet den AEM-Benutzereintrag basierend auf der SAML 2.0-OSGi-Konfiguration und den Inhalten der SAML-Assertion.
    + Erstellt eine Benutzerin oder einen Benutzer
    + Synchronisiert Benutzerattribute
-   + Aktualisiert AEM-Benutzergruppen-Mitgliedschaften
+   + Aktualisiert AEM-Benutzergruppen-Zugehörigkeiten
 1. AEM Publish legt das `login-token`AEM-Cookie in der HTTP-Antwort fest. Dadurch werden nachfolgende Anfragen bei AEM Publish authentifiziert.
 1. AEM Publish leitet die Benutzerin bzw. den Benutzer um, wie durch das `saml_request_path`-Cookie festgelegt.
 
@@ -56,7 +56,7 @@ Eine SAML-Integration in AEM Publish läuft normalerweise wie folgt ab:
 
 ## Konfigurationsanleitung
 
->[!VIDEO](https://video.tv.adobe.com/v/3455353?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 In diesem Video werden die Einrichtung der SAML 2.0-Integration im Publish-Service von AEM as a Cloud Service und die Verwendung von Okta als IDP erläutert.
 
@@ -76,7 +76,7 @@ SAML 2.0 wird nur zur Authentifizierung von Benutzenden für AEM Publish oder di
 
 Das öffentliche Zertifikat des IDP wird zum AEM Global Trust Store hinzugefügt und dient zur Überprüfung der vom IDP gesendeten SAML-Assertion.
 
-+ + + SAML-Assertion – Ablauf des Signiervorgangs
++++SAML-Assertionssignierungsfluss
 
 ![SAML 2.0 – IDP-Signatur der SAML-Assertion](./assets/saml-2-0/idp-signing-diagram.png)
 
@@ -141,7 +141,7 @@ _Für „authentication-service“ muss ein Keystore erstellt werden, wenn die [
 1. Klicken Sie auf __Speichern und schließen__.
 1. Erstellen Sie ein Paket mit der aktualisierten Benutzerin bzw. dem aktualisierten Benutzer __authentication-service__.
 
-   _Nutzen Sie die folgende temporäre Problemumgehung unter Verwendung von Paketen:_
+   _Verwenden Sie die folgende temporäre Problemumgehung mithilfe von Paketen :_
 
    1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
    1. Erstellen Sie ein Paket:
@@ -228,7 +228,7 @@ Die Signierung der AuthnRequest und Verschlüsselung der SAML-Assertion sind opt
 1. Klicken Sie auf __Speichern und schließen__.
 1. Erstellen Sie ein Paket mit der aktualisierten Benutzerin bzw. dem aktualisierten Benutzer __authentication-service__.
 
-   _Nutzen Sie die folgende temporäre Problemumgehung unter Verwendung von Paketen:_
+   _Verwenden Sie die folgende temporäre Problemumgehung mithilfe von Paketen :_
 
    1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
    1. Erstellen Sie ein Paket:
@@ -269,7 +269,7 @@ Die Konfiguration ist eine OSGi-Werkskonfiguration, d. h., ein Publish-Service 
 | Zwischenpfad für AEM-Benutzende | `userIntermediatePath` | ✘ | Zeichenfolge |                           | Bei der Erstellung von AEM-Benutzenden wird dieser Wert als Zwischenpfad verwendet (z. B. `/home/users/<userIntermediatePath>/jane@wknd.com`). Erfordert, dass für `createUser` der Wert `true` festgelegt wird. |
 | AEM-Benutzerattribute | `synchronizeAttributes` | ✘ | Zeichenfolgen-Array |                           | Liste der SAML-Attributzuordnungen, die für AEM-Benutzende gespeichert werden sollen. Dies geschieht im Format `[ "saml-attribute-name=path/relative/to/user/node" ]` (z. B. `[ "firstName=profile/givenName" ]`). Siehe die [vollständige Liste nativer AEM-Attribute](#aem-user-attributes). |
 | Hinzufügen einer Benutzerin oder eines Benutzers zu AEM-Gruppen | `addGroupMemberships` | ✘ | Boolesch | `true` | Gibt an, ob eine AEM-Benutzerin oder ein AEM-Benutzer nach erfolgreicher Authentifizierung automatisch zu AEM-Benutzergruppen hinzugefügt wird. |
-| Attribut der AEM-Gruppenmitgliedschaft | `groupMembershipAttribute` | ✘ | Zeichenfolge | `groupMembership` | Der Name des SAML-Assertionsattributs mit einer Liste der AEM-Benutzergruppen, zu denen die Benutzerin oder der Benutzer hinzugefügt werden soll. Erfordert, dass für `addGroupMemberships` der Wert `true` festgelegt wird. |
+| Attribut der AEM-Gruppenzugehörigkeit | `groupMembershipAttribute` | ✘ | Zeichenfolge | `groupMembership` | Der Name des SAML-Assertionsattributs mit einer Liste der AEM-Benutzergruppen, zu denen die Benutzerin oder der Benutzer hinzugefügt werden soll. Erfordert, dass für `addGroupMemberships` der Wert `true` festgelegt wird. |
 | AEM-Standardgruppen | `defaultGroups` | ✘ | Zeichenfolgen-Array |                           | Eine Liste der AEM-Benutzergruppen, zu denen authentifizierte Benutzende immer hinzugefügt werden (z. B. `[ "wknd-user" ]`). Erfordert, dass für `addGroupMemberships` der Wert `true` festgelegt wird. |
 | NameIDPolicy-Format | `nameIdFormat` | ✘ | Zeichenfolge | `urn:oasis:names:tc:SAML:2.0:nameid-format:transient` | Der Wert des NameIDPolicy-Formatparameters, der in der AuthnRequest-Nachricht gesendet werden soll. |
 | Speichern der SAML-Antwort | `storeSAMLResponse` | ✘ | Boolesch | `false` | Gibt an, ob der Wert von `samlResponse` im `cq:User`AEM-Knoten gespeichert wird. |
@@ -335,7 +335,7 @@ OSGi-Konfigurationen pro Umgebung (`config.publish.dev`, `config.publish.stage` 
 
 Beim [Verschlüsseln der AuthnRequest und SAML-Assertion](#encrypting-the-authnrequest-and-saml-assertion) sind die folgenden Eigenschaften erforderlich: `useEncryption`, `spPrivateKeyAlias` und `keyStorePassword`. `keyStorePassword` enthält ein Passwort. Daher darf der Wert nicht in der OSGi-Konfigurationsdatei gespeichert werden, sondern muss stattdessen mithilfe [geheimer Konfigurationswerte](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=de#secret-configuration-values) eingefügt werden.
 
-+++ (Optional) Aktualisieren Sie die OSGi-Konfiguration, damit verschlüsselt wird.
++++Aktualisieren Sie optional die OSGi-Konfiguration, um eine Verschlüsselung zu verwenden
 
 1. Öffnen Sie `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` in Ihrer IDE.
 1. Fügen Sie die drei Eigenschaften `useEncryption`, `spPrivateKeyAlias` und `keyStorePassword` hinzu, wie unten dargestellt.
@@ -445,13 +445,13 @@ Nach erfolgreicher Authentifizierung beim IDP orchestriert der IDP eine HTTP-POS
 
 Wenn das Umschreiben von URLs auf dem Apache-Webserver konfiguriert ist (`dispatcher/src/conf.d/rewrites/rewrite.rules`) stellen Sie sicher, dass Anfragen an `.../saml_login`-Endpunkte nicht versehentlich beschädigt werden.
 
-## Dynamische Gruppenmitgliedschaft
+## Dynamische Gruppenzugehörigkeit
 
-Die dynamische Gruppenmitgliedschaft ist eine Funktion in [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html), mit der die Leistung der Gruppenauswertung und -bereitstellung erhöht wird. In diesem Abschnitt wird beschrieben, wie Benutzende und Gruppen gespeichert werden, wenn diese Funktion aktiviert ist, und wie sich die Konfiguration des SAML-Authentifizierungs-Handlers ändern lässt, um ihn für neue oder bestehende Umgebungen zu aktivieren.
+Die dynamische Gruppenzugehörigkeit ist eine Funktion in [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html), mit der die Leistung der Gruppenauswertung und -bereitstellung erhöht wird. In diesem Abschnitt wird beschrieben, wie Benutzende und Gruppen gespeichert werden, wenn diese Funktion aktiviert ist, und wie sich die Konfiguration des SAML-Authentifizierungs-Handlers ändern lässt, um ihn für neue oder bestehende Umgebungen zu aktivieren.
 
-### Aktivieren der dynamischen Gruppenmitgliedschaft für SAML-Benutzende in neuen Umgebungen
+### Aktivieren der dynamischen Gruppenzugehörigkeit für SAML-Benutzende in neuen Umgebungen
 
-Um die Leistung bei der Gruppenbewertung in neuen AEM as a Cloud Service-Umgebungen deutlich zu verbessern, wird die Aktivierung der Funktion „Dynamische Gruppenmitgliedschaft“ in neuen Umgebungen empfohlen.
+Um die Leistung bei der Gruppenbewertung in neuen AEM as a Cloud Service-Umgebungen deutlich zu verbessern, wird die Aktivierung der Funktion „Dynamische Gruppenzugehörigkeit“ in neuen Umgebungen empfohlen.
 Dies ist auch ein notwendiger Schritt bei der Aktivierung der Datensynchronisation. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
 Fügen Sie dazu der OSGi-Konfigurationsdatei die folgende Eigenschaft hinzu:
 
@@ -462,7 +462,7 @@ Beachten Sie, dass Zugriffssteuerungslisten (ACL) mit dem PrincipalName von Benu
 Wenn diese Konfiguration in einer bestehenden Bereitstellung eingesetzt wird, in der zuvor `identitySyncType` nicht angegeben oder auf `default` festgelegt wurde, werden neue Benutzende und Gruppen erstellt und die ACL muss auf diese neuen Benutzenden und Gruppen angewendet werden. Beachten Sie, dass externe Gruppen keine lokalen Benutzenden enthalten können. [Repoinit](https://sling.apache.org/documentation/bundles/repository-initialization.html) kann verwendet werden, um ACL für externe SAML-Gruppen zu erstellen, wobei diese erst erstellt werden, wenn die Benutzenden eine Anmeldung durchführen.
 Um diese Umgestaltung der ACL zu vermeiden, wurde eine [Standard-Migrationsfunktion](#automatic-migration-to-dynamic-group-membership-for-existing-environments) implementiert.
 
-### Speicherung von Mitgliedschaften in lokalen und externen Gruppen mit dynamischer Gruppenmitgliedschaft
+### Speicherung von Mitgliedschaften in lokalen und externen Gruppen mit dynamischer Gruppenzugehörigkeit
 
 Bei lokalen Gruppen werden die Gruppenmitglieder im folgenden Oak-Attribut gespeichert: `rep:members`. Das Attribut enthält die Liste der UID jedes Gruppenmitglieds. Weitere Informationen finden Sie [hier](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository).
 Zum Beispiel:
@@ -481,8 +481,8 @@ Zum Beispiel:
 }
 ```
 
-Externe Gruppen mit dynamischer Gruppenmitgliedschaft speichern keine Mitglieder im Gruppeneintrag.
-Die Gruppenmitgliedschaft wird stattdessen in den Benutzereinträgen gespeichert. Weitere Einzelheiten finden Sie [hier](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html). Dies ist beispielsweise der OAK-Knoten für die Gruppe:
+Externe Gruppen mit dynamischer Gruppenzugehörigkeit speichern keine Mitglieder im Gruppeneintrag.
+Die Gruppenzugehörigkeit wird stattdessen in den Benutzereinträgen gespeichert. Weitere Einzelheiten finden Sie [hier](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html). Dies ist beispielsweise der OAK-Knoten für die Gruppe:
 
 ```
 {
@@ -522,15 +522,15 @@ Dies ist der Knoten für ein Benutzermitglied dieser Gruppe:
 }
 ```
 
-### Aktivieren der dynamischen Gruppenmitgliedschaft für SAML-Benutzende in bestehenden Umgebungen
+### Aktivieren der dynamischen Gruppenzugehörigkeit für SAML-Benutzende in bestehenden Umgebungen
 
 Wie im vorherigen Abschnitt erläutert, unterscheidet sich das Format für externe Benutzende und Gruppen geringfügig von dem für lokale Benutzende und Gruppen. Es ist möglich, eine neue ACL für externe Gruppen zu definieren und neue externe Benutzende bereitzustellen, oder das Migrations-Tool wie unten beschrieben zu verwenden.
 
-#### Aktivieren der dynamischen Gruppenmitgliedschaft für bestehende Umgebungen mit externen Benutzenden
+#### Aktivieren der dynamischen Gruppenzugehörigkeit für bestehende Umgebungen mit externen Benutzenden
 
-Der SAML-Authentifizierungs-Handler erstellt externe Benutzende, wenn die folgende Eigenschaft angegeben ist: `"identitySyncType": "idp"`. In diesem Fall kann die dynamische Gruppenmitgliedschaft aktiviert werden, indem diese Eigenschaft wie folgt geändert wird: `"identitySyncType": "idp_dynamic"`. Es ist keine Migration erforderlich.
+Der SAML-Authentifizierungs-Handler erstellt externe Benutzende, wenn die folgende Eigenschaft angegeben ist: `"identitySyncType": "idp"`. In diesem Fall kann die dynamische Gruppenzugehörigkeit aktiviert werden, indem diese Eigenschaft wie folgt geändert wird: `"identitySyncType": "idp_dynamic"`. Es ist keine Migration erforderlich.
 
-#### Automatische Migration zur dynamischen Gruppenmitgliedschaft für bestehende Umgebungen mit lokalen Benutzenden
+#### Automatische Migration zur dynamischen Gruppenzugehörigkeit für bestehende Umgebungen mit lokalen Benutzenden
 
 Der SAML-Authentifizierungs-Handler erstellt lokale Benutzende, wenn die folgende Eigenschaft angegeben ist: `"identitySyncType": "default"`. Dies ist auch der Standardwert, wenn die Eigenschaft nicht angegeben ist. In diesem Abschnitt werden die Schritte beschrieben, die bei der automatischen Migration durchgeführt werden.
 
@@ -547,9 +547,9 @@ Wenn beispielsweise vor der Migration `user1` eine lokale Benutzerin bzw. ein lo
 `group1;idp` ist Mitglied der lokalen Gruppe: `group1`.
 `user1` ist durch Vererbung dann ein Mitglied der lokalen Gruppe: `group1`
 
-Die Gruppenmitgliedschaft für externe Gruppen wird im Benutzerprofil in der Eigenschaft `rep:externalPrincipalNames` gespeichert.
+Die Gruppenzugehörigkeit für externe Gruppen wird im Benutzerprofil in der Eigenschaft `rep:externalPrincipalNames` gespeichert.
 
-### Konfigurieren der automatischen Migration zu einer dynamischen Gruppenmitgliedschaft
+### Konfigurieren der automatischen Migration zu einer dynamischen Gruppenzugehörigkeit
 
 1. Aktivieren Sie die Eigenschaft `"identitySyncType": "idp_dynamic_simplified_id"` in der SAML-OSGI-Konfigurationsdatei: `com.adobe.granite.auth.saml.SamlAuthenticationHandler~...cfg.json`:
 2. Konfigurieren Sie den neuen OSGi-Dienst mit werksseitiger PID, beginnend mit: `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~`. Eine PID kann folgendermaßen lauten: `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration~myIdP`. Legen Sie die folgende Eigenschaft fest:

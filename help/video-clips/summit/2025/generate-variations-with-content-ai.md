@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit Content-KI schnell und effizient ansprech
 cloud: Experience Cloud
 solution: Experience Manager
 feature-set: Experience Manager
-role: Developer, Leader, Admin, Architect
+role: Developer, Leader, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 885dd083-79f1-49c4-88cc-7594aaa3fdbf
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Content-KI schnell und effizient ansprechende Inhaltsvarianten erstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461886/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)

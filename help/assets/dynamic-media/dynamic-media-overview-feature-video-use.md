@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '855'
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+workflow-type: tm+mt
+source-wordcount: '854'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,7 @@ Erkunden Sie die Möglichkeiten von Adobe Dynamic Media mit unserer [**Live-Demo
 
 ## Überblick über Dynamic Media
 
->[!VIDEO](https://video.tv.adobe.com/v/34933?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -40,11 +40,11 @@ In diesem Video wird beschrieben, wie Medieninhalte mit Adobe Experience Manager
 * Bildverarbeitungsoptionen
 * Content Viewer-Optionen
 * Kopieren von URLs in Bilder und responsive Viewer
-* Variationen des smarten Zuschneidens auf URLs
+* Variationen des intelligenten Zuschnitts auf URLs
 
 ## Verwenden mit AEM Sites
 
->[!VIDEO](https://video.tv.adobe.com/v/34938?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,13 +58,13 @@ In diesem Video wird beschrieben, wie Medieninhalte in Adobe Experience Manager 
 
 ## Erstellen einer gemischten Mediensammlung
 
->[!VIDEO](https://video.tv.adobe.com/v/34944?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
 >Die hier gezeigte Funktionalität ist mit dem Dynamic Media DMS7-Ausführungsmodus verfügbar, unserem derzeit unterstützten Ausführungsmodus, nicht unbedingt mit dem DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat. In diesem Video werden die in Teil 1 (Dynamic Media-Überblick) beschriebenen Konzepte erläutert.
 
-In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung mit gemischten Medien-Assets beschrieben, einschließlich eines Rotationssets, Videos und einer Sammlung von Produktbildern. Fügen Sie dem gemischten Medien-Set Inhalte hinzu und erstellen Sie einen benutzerdefinierten Viewer, aus dem Sie in der endgültigen Komponente URLs kopieren oder AEM Sites auswählen können.
+In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung mit gemischten Medien-Assets beschrieben, einschließlich eines Rotations-Sets, Videos und einer Sammlung von Produktbildern. Fügen Sie dem gemischten Medien-Set Inhalte hinzu und erstellen Sie einen benutzerdefinierten Viewer, aus dem Sie in der endgültigen Komponente URLs kopieren oder AEM Sites auswählen können.
 
 * Erstellen von Rotations-Sets aus entsprechenden Produktfotos
 * Hochladen und Codieren von Videos für Dynamic Media-Videos
@@ -73,7 +73,7 @@ In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung m
 
 ## Bildvorgaben
 
->[!VIDEO](https://video.tv.adobe.com/v/34581?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine Bildvorgabe ist, ein URL-Kürzel für eine Reihe von Bild-Server-Argumenten, die auf ein Bild wirken, wenn eine URL es anfordert. Erfahren Sie wertvolle Techniken zur Erweiterung und Bearbeitung von Bildvorgaben.
 
@@ -84,7 +84,7 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine 
 
 ## Erweiterte URL-Modifikatoren
 
->[!VIDEO](https://video.tv.adobe.com/v/34579?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic Media nicht nur die Größe von Bildern ändern, sondern auch die Funktionen der Quelldatei selbst nutzen können – Hintergrundtransparenz, integrierte Beschneidungspfade und Zuschnitte sowie Text als Variablen.
 
@@ -96,7 +96,7 @@ In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic 
 
 ## JPEG-Dateigrößenverwaltung
 
->[!VIDEO](https://video.tv.adobe.com/v/35195?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ Bringen Sie die JPEG-Bildqualität mit der resultierenden Dateigröße (in Kilob
 
 ## Verdeckter Untertitel
 
->[!VIDEO](https://video.tv.adobe.com/v/34399?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 Fügen Sie ganz einfach verdeckte Untertitel zu Dynamic Media-Videos hinzu, indem Sie die Kopier-URL an ein zusätzliches Dokument mit verdeckten Untertiteln anhängen, eine web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
 
@@ -115,4 +115,8 @@ Fügen Sie ganz einfach verdeckte Untertitel zu Dynamic Media-Videos hinzu, inde
 
 In diesem Video wird erläutert, warum das Scharfzeichnen eines Bildes für die Wahrung der Bildtreue von entscheidender Bedeutung ist und wie erweiterte Einstellungen verwendet werden können, um das perfekte Bild zu erstellen.
 
->[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&amp;config=/etc/dam/presets/viewer/Video_social&amp;serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&amp;contenturl=%2F&amp;config2=/etc/dam/presets/analytics&amp;videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&amp;posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+<!--
+This link is broken
+
+>[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
+-->
