@@ -30,7 +30,7 @@ In diesem Kapitel nehmen wir Konfigurationsänderungen am __WKND Sites-Projekt__
 
 ## Überblick über die Konfigurationsänderungen im Full-Stack-AEM-Projekt
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453618?captions=ger&quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 

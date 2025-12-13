@@ -22,4 +22,4 @@ ht-degree: 100%
 
 [Cloud Manager-Umgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=de) bestehen aus AEM Author-, AEM Publish- und Dispatcher-Services. Verschiedene Umgebungen unterstützen Rollen und können mit verschiedenen CI/CD-Pipelines interagieren. Cloud Manager-Umgebungen verfügen in der Regel über eine Produktions-, eine Staging- und eine Entwicklungsumgebung.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34566?captions=ger&quality=12&learn=on)

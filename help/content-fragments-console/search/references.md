@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Inhaltsfragmentkonsole und -editor von AEM das Verstehen und Verwalten referenzierter Inhalte erleichtern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423638/?captions=ger&learn=on)

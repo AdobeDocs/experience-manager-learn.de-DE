@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit der semantischen Suche in AEM Assets Inhalte finden können, die Ihren Absichten besser entsprechen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461897/?captions=ger&learn=on&enablevpops)

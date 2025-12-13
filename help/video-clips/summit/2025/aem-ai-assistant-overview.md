@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie der KI-Assistent für AEM das Aneignen von Produktkenntnissen vereinfacht und das Erstellen von Support-Tickets automatisiert.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461930/?captions=ger&learn=on&enablevpops)

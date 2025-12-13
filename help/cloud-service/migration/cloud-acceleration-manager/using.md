@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Eine kommentierte Einführung in die Verwendung der Tools von Cloud Acceleration Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454679?captions=ger&quality=12&learn=on)

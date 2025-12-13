@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Einführung in die Technologien von [!DNL OSGi], [!DNL JCR], [!DNL Oak] und [!DNL Sling] als Teil des Technologiestapels von Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/32034?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36765?captions=ger&quality=12&learn=on)

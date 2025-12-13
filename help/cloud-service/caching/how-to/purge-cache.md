@@ -25,7 +25,7 @@ Erfahren Sie, wie Sie die Cache-gespeicherte HTTP-Antwort aus dem CDN von AEM as
 
 In diesem Tutorial erfahren Sie, wie Sie das API-Bereinigungs-Token einrichten und verwenden, um den CDN-Cache der Beispiel-Site [AEM WKND](https://github.com/adobe/aem-guides-wknd) mithilfe der Self-Service-Funktion zu bereinigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436941?captions=ger&quality=12&learn=on)
 
 ## Cache-Invalidierung vs. explizite Bereinigung
 

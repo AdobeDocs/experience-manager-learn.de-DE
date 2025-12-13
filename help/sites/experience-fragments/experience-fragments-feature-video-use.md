@@ -26,7 +26,7 @@ ht-degree: 100%
 
 Mit Experience Fragments können Inhaltsautorinnen und -autoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersysteme.
 
->[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445616?captions=ger&quality=12&learn=on)
 
 Ein Experience Fragment ist ein gruppierter Satz von Komponenten, der bei Kombination ein Erlebnis erstellt. Beispielsweise können *Titel*, *Bild*, *Beschreibung* und eine *Aktionsaufruf-Schaltfläche* kombiniert werden und so ein Teaser-Erlebnis bilden.
 

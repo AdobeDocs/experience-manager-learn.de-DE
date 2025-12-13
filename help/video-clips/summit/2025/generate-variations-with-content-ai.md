@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Content-KI schnell und effizient ansprechende Inhaltsvarianten erstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461886/?captions=ger&learn=on&enablevpops)

@@ -25,7 +25,7 @@ AEM Content Services ermöglicht dieselbe Inhaltsabstraktionen wie bei der Erste
 
 In diesem Tutorial wird beschrieben, wie Inhalte mithilfe von AEM erstellt und bereitgestellt und von einer nativen App in einem Headless-CMS-Anwendungsszenario genutzt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33072?captions=ger&quality=12&learn=on)
 
 In diesem Tutorial erfahren Sie, wie AEM Content Services verwendet werden kann, um das Erlebnis einer Mobile App zu verbessern, in der Ereignisinformationen (Musik, Performance, Kunst usw.) angezeigt werden, die vom WKND-Team kuratiert sind.
 

@@ -27,7 +27,7 @@ Erfahren Sie, wie Sie Ihre SEO durch die Erstellung von Sitemaps für AEM Sites 
 >
 >In diesem Video wird die Verwendung von relativen URLs in der Sitemap veranschaulicht. Sitemaps [sollten absolute URLs verwenden](https://sitemaps.org/protocol.html). Informationen dazu, wie Sie absolute URLs aktivieren, finden Sie unter [Konfigurationen](#absolute-sitemap-urls), da dies im Video unten nicht behandelt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454370?captions=ger&quality=12&learn=on)
 
 ## Konfigurationen
 

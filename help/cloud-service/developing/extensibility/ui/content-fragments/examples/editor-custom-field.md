@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor benutzerdefinierte Felder erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437643?captions=ger&learn=on)
 
 AEM-Erweiterungen der Benutzeroberfläche sollten mithilfe des [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Frameworks entwickelt werden, da dies ein konsistentes Look-and-Feel mit dem Rest von AEM beibehält. Es verfügt außerdem über eine umfangreiche Bibliothek vordefinierter Funktionen, was die Entwicklungszeit verkürzt.
 

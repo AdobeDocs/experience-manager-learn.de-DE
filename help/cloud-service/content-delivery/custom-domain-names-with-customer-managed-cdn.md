@@ -47,7 +47,7 @@ Wenn Sie keinen Zugang zu Drittanbieterdiensten haben, _führen Sie diese Schrit
 
 ## Generieren eines SSL-Zertifikats
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441501?captions=ger&quality=12&learn=on)
 
 Es gibt zwei Optionen:
 
@@ -222,7 +222,7 @@ Führen Sie die folgenden Schritte aus, um die CDN-Regel für die HTTP-Header-Va
 
 ## Übergeben des Geheimnisses im HTTP-Header „X-AEM-Edge-Schlüssel“
 
->[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445054?captions=ger&quality=12&learn=on)
 
 Aktualisieren Sie das Kunden-CDN, um das Geheimnis im HTTP-Header `X-AEM-Edge-Key` zu übergeben. Das Geheimnis wird von Adobe CDN verwendet, um zu überprüfen, ob die Anfrage vom Kunden-CDN stammt, und den Wert des Headers `Host` in den Wert des vom Kunden-CDN empfangenen `X-Forwarded-Host` umzuwandeln.
 

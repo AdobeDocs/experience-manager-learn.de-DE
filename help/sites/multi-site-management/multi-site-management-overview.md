@@ -19,4 +19,4 @@ ht-degree: 100%
 
 Das folgende Video bietet einen Überblick über die grundlegenden Konzepte von Multi-Site-Management in AEM Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/33594?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36740?captions=ger&quality=12&learn=on)

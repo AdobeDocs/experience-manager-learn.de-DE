@@ -23,6 +23,6 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie das [Asset-Kit](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) von Asset Share Common verwenden, um maßgeschneiderte, freigebbare Webseiten zu generieren, auf denen Assets aus AEM Assets-Ordnern oder -Sammlungen aufgelistet werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453461?captions=ger&quality=12&learn=on)
 
 _[Asset-Kit](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) ist nur in Asset Share Commons 2.5.4 oder höher verfügbar_

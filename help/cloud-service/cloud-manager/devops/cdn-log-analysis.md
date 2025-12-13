@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Informationen zu den _AEM Cloud Service-Tools zur Analyse von CDN-Protokollen_, die Adobe bietet, und dazu, wie sie Einblicke in Ihre CDN-Leistung und AEM-Implementierung ermöglichen.
  
->[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446114?captions=ger&quality=12&learn=on)
 
 ## Überblick
 

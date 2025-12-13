@@ -31,10 +31,10 @@ ht-degree: 100%
 
 Die Konfiguration der [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html?lang=de) definiert den Auslöser, der die Pipeline initiiert, sowie die Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327785?captions=ger&quality=12&learn=on)
 
 ### Pipeline-Ausführung
 
 Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=de) wird zum Erstellen und Bereitstellen von Code von der Staging-bis zur Produktionsumgebung verwendet, wodurch sich die Amortisierungszeit verkürzt.
 
->[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327608?captions=ger&quality=12&learn=on)

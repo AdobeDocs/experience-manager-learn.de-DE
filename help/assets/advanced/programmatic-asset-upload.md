@@ -23,7 +23,7 @@ ht-degree: 2%
 Erfahren Sie, wie Sie Assets mithilfe des Client-Programms, das die Bibliothek [aem-upload](https://github.com/adobe/aem-upload) Node.js verwendet, in die AEM as a Cloud Service-Umgebung hochladen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476961?captions=ger&quality=12&learn=on)
 
 
 ## Lerninhalt

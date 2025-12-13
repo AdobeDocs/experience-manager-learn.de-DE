@@ -22,7 +22,7 @@ ht-degree: 93%
 Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil des AEM-Workflows zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodell-Schritts im AEM-Workflow erforderlich sind
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330117?captions=ger&quality=12&learn=on)
 
 Um dies auf Ihrem Server zu testen, folgen Sie den folgenden Anweisungen
 
