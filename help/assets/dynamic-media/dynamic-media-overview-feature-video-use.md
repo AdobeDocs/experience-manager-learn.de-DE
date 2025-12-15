@@ -28,7 +28,7 @@ Erkunden Sie die Möglichkeiten von Adobe Dynamic Media mit unserer [**Live-Demo
 
 ## Überblick über Dynamic Media
 
->[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34933?captions=ger&quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ In diesem Video wird beschrieben, wie Medieninhalte mit Adobe Experience Manager
 
 ## Verwenden mit AEM Sites
 
->[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34938?captions=ger&quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ In diesem Video wird beschrieben, wie Medieninhalte in Adobe Experience Manager 
 
 ## Erstellen einer gemischten Mediensammlung
 
->[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34944?captions=ger&quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung m
 
 ## Bildvorgaben
 
->[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34581?captions=ger&quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine Bildvorgabe ist, ein URL-Kürzel für eine Reihe von Bild-Server-Argumenten, die auf ein Bild wirken, wenn eine URL es anfordert. Erfahren Sie wertvolle Techniken zur Erweiterung und Bearbeitung von Bildvorgaben.
 
@@ -84,7 +84,7 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine 
 
 ## Erweiterte URL-Modifikatoren
 
->[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34579?captions=ger&quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic Media nicht nur die Größe von Bildern ändern, sondern auch die Funktionen der Quelldatei selbst nutzen können – Hintergrundtransparenz, integrierte Beschneidungspfade und Zuschnitte sowie Text als Variablen.
 
@@ -96,7 +96,7 @@ In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic 
 
 ## JPEG-Dateigrößenverwaltung
 
->[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35195?captions=ger&quality=12&learn=on)
 
 
 >[!NOTE]
@@ -107,7 +107,7 @@ Bringen Sie die JPEG-Bildqualität mit der resultierenden Dateigröße (in Kilob
 
 ## Untertitel
 
->[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34399?captions=ger&quality=12&learn=on)
 
 Fügen Sie ganz einfach verdeckte Untertitel zu Dynamic Media-Videos hinzu, indem Sie die Kopier-URL an ein zusätzliches Dokument mit verdeckten Untertiteln anhängen, eine web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
 
