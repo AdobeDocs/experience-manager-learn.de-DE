@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 99%
+source-wordcount: '472'
+ht-degree: 98%
 
 ---
 
@@ -144,6 +144,7 @@ ht-degree: 99%
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
+      + [URL-Syntax und Bildvorgaben](dynamic-media/dynamic-media-urls-and-image-presets.md)
       + [Bildautomatisierung](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media-Vorlagen](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
@@ -168,7 +169,7 @@ ht-degree: 99%
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials {#tutorials}
-      + [Erstellen von Karussell-Sets &#x200B;](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [Erstellen von Karussell-Sets ](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bild-Sets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
       + [Erstellen von Bildprofilen mit intelligentem Zuschnitt](dynamic-media/tutorials/creating-image-profile-smart-crop.md)

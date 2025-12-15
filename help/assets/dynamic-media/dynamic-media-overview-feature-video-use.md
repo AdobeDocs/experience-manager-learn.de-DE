@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 100%
+source-wordcount: '828'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,7 @@ Erkunden Sie die Möglichkeiten von Adobe Dynamic Media mit unserer [**Live-Demo
 
 ## Überblick über Dynamic Media
 
->[!VIDEO](https://video.tv.adobe.com/v/34933?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ In diesem Video wird beschrieben, wie Medieninhalte mit Adobe Experience Manager
 
 ## Verwenden mit AEM Sites
 
->[!VIDEO](https://video.tv.adobe.com/v/34938?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ In diesem Video wird beschrieben, wie Medieninhalte in Adobe Experience Manager 
 
 ## Erstellen einer gemischten Mediensammlung
 
->[!VIDEO](https://video.tv.adobe.com/v/34944?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung m
 
 ## Bildvorgaben
 
->[!VIDEO](https://video.tv.adobe.com/v/34581?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine Bildvorgabe ist, ein URL-Kürzel für eine Reihe von Bild-Server-Argumenten, die auf ein Bild wirken, wenn eine URL es anfordert. Erfahren Sie wertvolle Techniken zur Erweiterung und Bearbeitung von Bildvorgaben.
 
@@ -84,7 +84,7 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine 
 
 ## Erweiterte URL-Modifikatoren
 
->[!VIDEO](https://video.tv.adobe.com/v/34579?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
 In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic Media nicht nur die Größe von Bildern ändern, sondern auch die Funktionen der Quelldatei selbst nutzen können – Hintergrundtransparenz, integrierte Beschneidungspfade und Zuschnitte sowie Text als Variablen.
 
@@ -96,7 +96,7 @@ In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic 
 
 ## JPEG-Dateigrößenverwaltung
 
->[!VIDEO](https://video.tv.adobe.com/v/35195?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
 
 >[!NOTE]
@@ -105,18 +105,9 @@ In diesem Video wird beschrieben, wie Sie mit den URL-Modifikatoren von Dynamic 
 
 Bringen Sie die JPEG-Bildqualität mit der resultierenden Dateigröße (in Kilobyte) in Übereinstimmung, um die Seitenladegeschwindigkeit zu erhöhen. Verwenden Sie dazu zwei Befehle zum Anpassen der JPEG-Komprimierungseinstellungen. QLT definiert die Bildqualität durch Anpassung der Qualitätseinstellungen der JPEG-Komprimierung. Mit dem Befehl „JPEG-Größe“ können Sie angeben, welche Dateigröße mithilfe der Komprimierung erreicht werden soll.
 
-## Verdeckter Untertitel
+## Untertitel
 
->[!VIDEO](https://video.tv.adobe.com/v/34399?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 Fügen Sie ganz einfach verdeckte Untertitel zu Dynamic Media-Videos hinzu, indem Sie die Kopier-URL an ein zusätzliches Dokument mit verdeckten Untertiteln anhängen, eine web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
 
-## Scharfzeichnen von Bildern
-
-In diesem Video wird erläutert, warum das Scharfzeichnen eines Bildes für die Wahrung der Bildtreue von entscheidender Bedeutung ist und wie erweiterte Einstellungen verwendet werden können, um das perfekte Bild zu erstellen.
-
-<!--
-This link is broken
-
->[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
--->
