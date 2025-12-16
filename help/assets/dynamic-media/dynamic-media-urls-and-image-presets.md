@@ -23,4 +23,4 @@ Erfahren Sie mehr über die AEM Assets Dynamic Media-URL-Syntax und darüber, wi
 
 >[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
 
-Sehen Sie sich dieses kurze Video über [Erstellen von Bildvorgaben in AEM Assets&quot; &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
+Sehen Sie sich dieses kurze Video über [Erstellen von Bildvorgaben in AEM Assets&quot; &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
