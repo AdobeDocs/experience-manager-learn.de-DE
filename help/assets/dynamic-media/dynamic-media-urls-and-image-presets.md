@@ -21,6 +21,6 @@ ht-degree: 0%
 
 Erfahren Sie mehr über die AEM Assets Dynamic Media-URL-Syntax und darüber, wie Sie mithilfe von Bildvorgaben den Wert maximieren können. Verbessern Sie Ihre Asset-Management-Funktionen und verbessern Sie die Effizienz Ihres Workflows.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477945/?captions=ger&learn=on&enablevpops)
 
 Sehen Sie sich dieses kurze Video über [Erstellen von Bildvorgaben in AEM Assets&quot; &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
