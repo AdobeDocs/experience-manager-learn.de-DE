@@ -127,11 +127,11 @@ So rufen Sie die React-App ab:
 >   Diese React-App ist teilweise implementiert. Führen Sie die Schritte in diesem Tutorial aus, um die Implementierung abzuschließen. Die JavaScript-Dateien, für die Implementierungsarbeiten erforderlich sind, enthalten den folgenden Kommentar: Stellen Sie sicher, dass Sie dem Code in diesen Dateien den in diesem Tutorial angegebenen Code hinzufügen bzw. ihn aktualisieren.
 >
 >
-> //*********************************
+> //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 >  // TODO  Implementieren Sie dies, indem Sie die Schritte aus dem AEM Headless-Tutorial befolgen
 >
->  //*********************************
+>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 
 ## Anatomie der React-App
@@ -520,7 +520,7 @@ Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Team-Ansicht 
 
 Diese Beispiel-React-App erfordert während der Entwicklung keine Cross-Origin Resource Sharing (CORS), da sie über einen lokalen Proxy eine Verbindung zu AEM herstellt. Die Verwendung des lokalen Proxys dient nur der beschleunigten Entwicklung und ist nicht für Anwendungsfälle vorgesehen, die nicht mit der Entwicklung zusammenhängen.
 
-In Produktionsszenarien ist es jedoch in der Regel Best Practice, wenn die Client-Anwendung direkt über den Browser des Benutzers mit AEM kommuniziert. Um dies zu aktivieren[ muss CORS möglicherweise in AEM konfiguriert werden, ](../deployment/overview.md) Anfragen von Ihrer Web-Anwendung abzurufen.
+In Produktionsszenarien ist es jedoch in der Regel Best Practice, wenn die Client-Anwendung direkt über den Browser des Benutzers mit AEM kommuniziert. Um dies zu aktivieren[&#x200B; muss CORS möglicherweise in AEM konfiguriert werden, &#x200B;](../deployment/overview.md) Anfragen von Ihrer Web-Anwendung abzurufen.
 
 ## Testen der App
 
@@ -528,7 +528,7 @@ In Produktionsszenarien ist es jedoch in der Regel Best Practice, wenn die Clien
 
 >[!IMPORTANT]
 >
->Informationen zum Überprüfen Ihrer Implementierungsänderungen oder für den Fall, dass Sie die Anwendung nach den oben genannten Änderungen nicht zum Laufen bringen können, finden Sie im [ ](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial)basic-tutorial`solution`.
+>Informationen zum Überprüfen Ihrer Implementierungsänderungen oder für den Fall, dass Sie die Anwendung nach den oben genannten Änderungen nicht zum Laufen bringen können, finden Sie im [&#x200B; &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial)basic-tutorial`solution`.
 
 ## Unter der Haube
 
