@@ -12,10 +12,10 @@ level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
 duration: 54
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
-source-wordcount: '237'
-ht-degree: 100%
+source-git-commit: e7f556737cdf6a92c0503d3b4a52eef1f71c8330
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 88%
 
 ---
 
@@ -54,6 +54,7 @@ Starten Sie das Tutorial mit [Definieren von Inhaltsfragmentmodellen](content-fr
 
 ## GitHub-Projekt
 
-Der Quell-Code und die Inhaltspakete sind verfügbar in den [AEM Handbüchern – WKND GraphQL GitHub-Projekt](https://github.com/adobe/aem-guides-wknd-graphql).
+Der Quell-Code und die Inhaltspakete sind im `basic-tutorial` im GitHub-Projekt [AEM Guides - WKND GraphQL verfügbar](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial).
+
 
 Wenn Sie ein Problem mit dem Tutorial oder dem Code feststellen, hinterlassen Sie ein [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
