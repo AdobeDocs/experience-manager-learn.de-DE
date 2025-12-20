@@ -23,4 +23,4 @@ In diesem Video werden die Schritte zum Erstellen von Bildvorgaben in Dynamic Me
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
 
-Lernen Sie die Best Practices zum Erstellen von Dynamic Media-URLs und Bildvorgaben in AEM Assets kennen und erfahren Sie, wie alles funktioniert! [Video hier ansehen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets).
+Lernen Sie die Best Practices zum Erstellen von Dynamic Media-URLs und Bildvorgaben in AEM Assets kennen und erfahren Sie, wie alles funktioniert! [Video hier ansehen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets).
