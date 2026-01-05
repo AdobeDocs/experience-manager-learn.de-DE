@@ -12,10 +12,10 @@ badgeLicense: label="Erfordert eine Lizenz" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1376'
-ht-degree: 100%
+source-wordcount: '1386'
+ht-degree: 98%
 
 ---
 
@@ -27,10 +27,10 @@ Komplexe Angriffe zeichnen sich durch hohe Anfrageraten, komplizierte Muster und
 
 >[!IMPORTANT]
 >
-> WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für **WAF-DDoS-Schutz** oder **Erweiterte Sicherheit**. Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
+> WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für erweiterte Sicherheit (früher WAF-DDoS-Schutz genannt) oder erweiterte Sicherheit für das Gesundheitswesen (früher Enhanced Security genannt). Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469439/?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## Lernziele
 

@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 100%
+source-wordcount: '619'
+ht-degree: 93%
 
 ---
 
@@ -43,7 +43,7 @@ Diese integrierten Schutzmechanismen sollten als Grundlage für die Fähigkeit e
 Sehen wir uns einige zusätzliche, empfohlene Maßnahmen an, die kundenseitig ergriffen werden können, um ihre Websites vor DDoS-Angriffen zu schützen:
 
 - Implementieren Sie die von Adobe empfohlenen [Standard-Traffic-Filterregeln](./traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md), um potenziell schädliche Traffic-Muster zu identifizieren, indem Sie verdächtiges Verhalten protokollieren und darauf hinweisen.
-- Verwenden Sie das Add-on **WAF-DDoS-Schutz** oder **Erweiterte Sicherheit** und implementieren Sie die von Adobe empfohlenen [WAF-Traffic-Filterregeln](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md), um sich vor komplexen Angriffen zu schützen, einschließlich solcher, die erweiterte Protokoll- oder Payload-basierte Methoden verwenden.
+- Verwenden Sie das Add-on Erweiterte Sicherheit (früher WAF-DDoS-Schutz genannt) oder Erweiterte Sicherheit für das Gesundheitswesen (früher Enhanced Security genannt) und implementieren Sie von Adobe empfohlene [WAF-Traffic-Filterregeln](./traffic-filter-and-waf-rules/use-cases/using-waf-rules.md) zum Schutz vor komplexen Angriffen, einschließlich solcher, die erweiterte Protokoll- oder Payload-basierte Techniken verwenden.
 - Erhöhen Sie die Cache-Abdeckung, indem Sie [Anfragetransformationen](./traffic-filter-and-waf-rules/how-to/request-transformation.md) so konfigurieren, dass sie Abfrageparameter ignorieren.
 
 ## Erste Schritte

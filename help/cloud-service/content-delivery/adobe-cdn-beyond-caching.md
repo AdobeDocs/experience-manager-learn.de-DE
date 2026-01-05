@@ -12,10 +12,10 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 100%
+source-wordcount: '555'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ Neben dem Caching von Inhalten bietet Adobe CDN mehrere erweiterte Funktionen, m
 
 Diese Funktionen sind **Self-Service**-Funktionen. Sie werden in der Datei `cdn.yaml` Ihres AEM-Projekts konfiguriert und mithilfe der Cloud Manager-Konfigurations-Pipeline bereitgestellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440283?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
 
 ## Konfigurieren von Traffic im CDN
 
@@ -39,7 +39,7 @@ Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfiguriere
 
 - **DoS-Angriffsprävention:** Das Adobe CDN fängt DoS-Angriffe auf der Netzwerkebene ab und hindert sie daran, Ihren Herkunfts-Server zu erreichen.
 - **Ratenbegrenzung:** Um zu verhindern, dass Ihr Herkunfts-Server mit zu vielen Anfragen überlastet wird, können Sie die Ratenbegrenzung für das CDN konfigurieren.
-- **Web Application Firewall (WAF):** Die WAF schützt Ihre Website vor allgemeinen Sicherheitslücken durch Web-Anwendungen wie SQL-Injection, Cross-Site-Scripting und mehr. Für die Verwendung dieser Funktion ist die Lizenz für erweiterte Sicherheit oder eine WAF-DDoS-Schutzlizenz erforderlich.
+- **Web Application Firewall (WAF):** Die WAF schützt Ihre Website vor allgemeinen Sicherheitslücken durch Web-Anwendungen wie SQL-Injection, Cross-Site-Scripting und mehr. Für die Verwendung dieser Funktion ist die Lizenz für erweiterte Sicherheit (früher WAF-DDoS Protection) oder erweiterte Sicherheit für das Gesundheitswesen (früher Enhanced Security) erforderlich.
 - **Anfrageumwandlung:** Ändern eingehender Anfragen durch Festlegen oder Aufheben von Headern, Ändern von Abfrageparametern, Cookies und mehr.
 - **Reaktionsumwandlung:** Ändern ausgehender Antworten durch Festlegen oder Aufheben von Headern.
 - **Herkunftsauswahl:** Weiterleiten von Traffic je nach Anfrage-URL zu verschiedenen Herkunfts-Servern (Adobe und Nicht-Adobe).

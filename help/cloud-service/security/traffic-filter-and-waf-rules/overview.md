@@ -11,10 +11,10 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 100%
+source-wordcount: '1195'
+ht-degree: 98%
 
 ---
 
@@ -26,7 +26,7 @@ Außerdem erfahren Sie mehr über die Unterschiede zwischen Standard-Traffic-Fil
 
 >[!IMPORTANT]
 >
-> WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für **WAF-DDoS-Schutz** oder **Erweiterte Sicherheit**. Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
+> WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für erweiterte Sicherheit (früher WAF-DDoS-Schutz genannt) oder erweiterte Sicherheit für das Gesundheitswesen (früher Enhanced Security genannt). Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
