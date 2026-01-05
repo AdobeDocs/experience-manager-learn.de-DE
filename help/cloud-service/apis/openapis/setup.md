@@ -216,7 +216,7 @@ Führen wir die Schritte aus, um die AEM-Instanz so zu konfigurieren, dass die o
 
    ![Bereitstellen der YAML-Datei](./assets/setup/config-pipeline.png)
 
-Beachten Sie, dass die `api.yaml`-Datei auch in einer [RDE](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/overview) installiert werden kann [mithilfe von Befehlszeilen-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Dies ist nützlich, um die Konfigurationsänderungen zu testen, bevor sie in der Produktionsumgebung bereitgestellt werden.
+Beachten Sie, dass die `api.yaml`-Datei auch in einer [RDE](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/overview) installiert werden kann [mithilfe von Befehlszeilen-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Dies ist nützlich, um die Konfigurationsänderungen zu testen, bevor sie in der Produktionsumgebung bereitgestellt werden.
 
 >[!CAUTION]
 >
