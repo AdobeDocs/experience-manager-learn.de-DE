@@ -24,7 +24,7 @@ Um den AEM-KI-Assistenten und die Agenten in AEM verwenden zu können, müssen S
 
 Erfahren Sie, wie Sie den Zugriff auf den KI-Assistenten in Adobe Experience Manager mithilfe von [Adobe Admin Console konfigurieren](https://adminconsole.adobe.com). Dieser Schritt ist erforderlich, damit die Benutzer Antworten vom Assistenten erhalten und die automatische Ticketerstellung nutzen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474075/?captions=ger&learn=on&enablevpops)
 
 ### Agenten in AEM
 
