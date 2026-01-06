@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie den Zugriff auf den KI-Assistenten in Adobe Experience Man
 
 ### Agenten in AEM
 
-Um Agenten in AEM verwenden zu können, muss zuerst der Zugriff auf den [AEM AI Assistant](#aem-ai-assistant) konfiguriert werden. Agenten in AEM müssen von Adobe bereitgestellt werden. Um Zugriff auf Agenten in AEM anzufordern, wenden Sie sich an Ihren Adobe-Support oder an den [Adobe-Support](https://experienceleague.adobe.com/en/support).
+Um Agenten in AEM verwenden zu können, muss zuerst der Zugriff auf den [AEM AI Assistant](#aem-ai-assistant) konfiguriert werden. Agenten in AEM müssen von Adobe bereitgestellt werden. Um Zugriff auf Agenten in AEM anzufordern, wenden Sie sich an Ihren Adobe-Support oder an den [Adobe-Support](https://experienceleague.adobe.com/de/support).
 
 ## Playground
 
