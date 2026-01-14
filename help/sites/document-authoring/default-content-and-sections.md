@@ -1,7 +1,7 @@
 ---
 title: Standardinhalt und -abschnitte
 description: Erhalten Sie ausführliche Informationen zu den Konzepten des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung.
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,8 +12,8 @@ jira: KT-14468
 thumbnail: 3425702.jpeg
 duration: 91
 exl-id: 17c7919e-3216-4f71-a553-bc5b2e1b6014
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
+workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erhalten Sie ausführliche Informationen zu den Konzepten des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung und dazu, wie diese Ihnen dabei helfen, eine bessere Site zu schaffen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437984/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
