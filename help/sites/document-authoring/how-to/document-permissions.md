@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Berechtigungsdokumente mit der AEM-Dokumenterstellung.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438110/?captions=ger&learn=on)

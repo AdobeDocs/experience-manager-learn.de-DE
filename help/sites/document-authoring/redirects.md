@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Ein umfassender Einblick in die Funktionsweise von Weiterleitungen bei der Dokumenterstellung und die einfache Einrichtung von Weiterleitungen ohne technisches Fachwissen durch Autoren und Autorinnen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438552/?captions=ger&learn=on)

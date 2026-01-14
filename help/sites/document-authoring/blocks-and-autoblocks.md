@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Blöcke und automatische Blöcke bei der Dokumenterstellung verwendet werden und wie sie die Site- und Erstellungserlebnisse verbessern können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439513/?captions=ger&learn=on)

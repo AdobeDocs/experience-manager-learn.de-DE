@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Massenmetadaten bei der Dokumenterstellung verarbeitet werden und wie Autorinnen und Autoren Massenmetadaten ohne technisches Fachwissen aktualisieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438431/?captions=ger&learn=on)
