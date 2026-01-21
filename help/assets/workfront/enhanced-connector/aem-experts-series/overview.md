@@ -100,4 +100,4 @@ In dieser vierteiligen Expertenreihe diskutieren verschiedene Adobe-Fachleute au
 
 Wenn Sie Workfront Fusion verwenden, um Workfront und AEM Assets zu verknüpfen und die Projekterstellung und Workflow-Orchestrierung zu automatisieren, lesen Sie die Dokumentation zur Integration von Workfront und AEM Assets .
 
-[Verwenden Sie Workfront Fusion, um ein Workfront-Problem mit AEM-Workflows in ein Projekt zu konvertieren](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
+[Verwenden Sie Workfront Fusion, um ein Workfront-Problem mit AEM-Workflows in ein Projekt zu konvertieren](https://experienceleague.adobe.com/de/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
