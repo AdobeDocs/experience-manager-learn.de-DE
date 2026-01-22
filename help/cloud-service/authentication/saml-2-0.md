@@ -11,10 +11,10 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 2ed303e316577363f6d1c265ef7f9cd6d81491d8
 workflow-type: tm+mt
-source-wordcount: '4233'
-ht-degree: 99%
+source-wordcount: '4277'
+ht-degree: 98%
 
 ---
 
@@ -56,7 +56,7 @@ Eine SAML-Integration in AEM Publish läuft normalerweise wie folgt ab:
 
 ## Konfigurationsanleitung
 
->[!VIDEO](https://video.tv.adobe.com/v/3455353?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 In diesem Video werden die Einrichtung der SAML 2.0-Integration im Publish-Service von AEM as a Cloud Service und die Verwendung von Okta als IDP erläutert.
 
@@ -68,6 +68,7 @@ Folgendes ist beim Einrichten der SAML 2.0-Authentifizierung erforderlich:
 + AEM-Adminzugriff auf AEM as a Cloud Service-Umgebungen
 + Administratorzugriff auf den IDP
 + (Optional) Zugriff auf ein öffentliches/privates Schlüsselpaar, das zum Verschlüsseln von SAML-Payloads verwendet wird
++ AEM Sites-Seiten (oder Seitenbäume), die in der AEM-Veröffentlichungsinstanz veröffentlicht und [durch geschlossene Benutzergruppen (CUGs) geschützt) wurden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 wird nur zur Authentifizierung von Benutzenden für AEM Publish oder die Vorschau unterstützt. Um die Authentifizierung von AEM Author mit einem IDP zu verwalten, [integrieren Sie den IDP in Adobe IMS](https://helpx.adobe.com/de/enterprise/using/set-up-identity.html).
 
@@ -326,7 +327,7 @@ AEM verwendet die folgenden Benutzerattribute, die über die Eigenschaft `synchr
    }
    ```
 
-1. Aktualisieren Sie die Werte entsprechend den Anforderungen Ihres Projekts. Beschreibungen der Konfigurationseigenschaften finden Sie oben unter __SAML 2.0-Authentifizierungs-Handler – OSGi-Konfigurationsglossar__.
+1. Aktualisieren Sie die Werte entsprechend den Anforderungen Ihres Projekts. Beschreibungen zu Konfigurationseigenschaften finden Sie im __SAML 2.0 Authentication Handler OSGi__ Konfigurationsglossar oben. Die `path` sollte die Inhaltsstrukturen enthalten, die durch geschlossene Benutzergruppen (CUGs) geschützt sind und eine Authentifizierung erfordern. Dieser Authentifizierungs-Handler sollte für den Schutz verantwortlich sein.
 1. Es wird empfohlen, ist jedoch nicht erforderlich, OSGi-Umgebungsvariablen und -Geheimnisse zu verwenden, wenn Werte nicht mehr mit dem Versionszyklus synchron sind oder sich die Werte zwischen ähnlichen Umgebungstypen/Service-Ebenen unterscheiden. Standardwerte können mithilfe der Syntax `$[env:..;default=the-default-value]"` festgelegt werden, wie oben dargestellt.
 
 OSGi-Konfigurationen pro Umgebung (`config.publish.dev`, `config.publish.stage` und `config.publish.prod`) können mit bestimmten Attributen definiert werden, wenn die SAML-Konfiguration zwischen Umgebungen variiert.
