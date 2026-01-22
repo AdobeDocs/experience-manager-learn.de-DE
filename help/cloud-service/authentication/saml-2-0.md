@@ -56,7 +56,7 @@ Eine SAML-Integration in AEM Publish läuft normalerweise wie folgt ab:
 
 ## Konfigurationsanleitung
 
->[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455353?captions=ger&quality=12&learn=on)
 
 In diesem Video werden die Einrichtung der SAML 2.0-Integration im Publish-Service von AEM as a Cloud Service und die Verwendung von Okta als IDP erläutert.
 
