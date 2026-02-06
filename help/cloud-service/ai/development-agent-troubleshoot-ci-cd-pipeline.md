@@ -25,7 +25,7 @@ Der AEM-Entwicklungsagent unterstützt technische Teams, einschließlich Entwick
 
 >[!TIP]
 >
-> Siehe auch [Überblick über Agenten in AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview), um eine vollständige Liste der in AEM as a Cloud Service verfügbaren Agenten, ihrer Funktionen und ihrer Zugriffsmöglichkeiten zu erhalten.
+> Siehe auch [Überblick über Agenten in AEM](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview), um eine vollständige Liste der in AEM as a Cloud Service verfügbaren Agenten, ihrer Funktionen und ihrer Zugriffsmöglichkeiten zu erhalten.
 
 
 ## Übersicht
@@ -41,9 +41,9 @@ Der Einfachheit halber wird in diesem Tutorial ein Modultest-Fehler in der `Byli
 Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 - KI-Assistent und Agenten in AEM aktiviert. Siehe [Einrichten von KI in AEM](./setup.md) für Details, und beachten Sie, dass die in diesem Artikel erwähnten Playgrounds keine Funktionen eines AEM-Entwicklungsagenten haben.
-- Zugriff auf Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) mit der Rolle Entwickler oder Programm-Manager. Weitere Informationen finden [&#x200B; unter &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions)Rollendefinitionen“.
+- Zugriff auf Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) mit der Rolle Entwickler oder Programm-Manager. Weitere Informationen finden [&#x200B; unter &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions)Rollendefinitionen“.
 - Eine AEM as a Cloud Service-Umgebung
-- Zugriff auf Agenten in AEM über das [Beta-Programm](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)
+- Zugriff auf Agenten in AEM über das [Beta-Programm](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)
 - Das [WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) wurde auf Ihren lokalen Computer geklont
 
 ### Aktuelle Funktionen des AEM Development Agents
@@ -122,7 +122,7 @@ In diesem Tutorial wird die `tutorial/dev-agent/unit-test-failure`-Verzweigung d
 
 ### Erstellen und Konfigurieren einer Code-Qualitäts-Pipeline
 
-In diesem Tutorial wird zur Fehlerbehebung eine Code-Qualitäts-Pipeline (produktionsfremd) verwendet, um den Pipeline-Trigger auszuführen. Weitere [&#x200B; zu Code-Qualitäts-Pipelines finden &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction) unter „Einführung in CI/CD-Pipelines“.
+In diesem Tutorial wird zur Fehlerbehebung eine Code-Qualitäts-Pipeline (produktionsfremd) verwendet, um den Pipeline-Trigger auszuführen. Weitere [&#x200B; zu Code-Qualitäts-Pipelines finden &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction) unter „Einführung in CI/CD-Pipelines“.
 
 - Navigieren Sie in Cloud Manager zum Abschnitt **Pipelines** und wählen Sie **Hinzufügen** > **Produktionsfremde Pipeline hinzufügen** aus.
 - Konfigurieren **im Dialogfeld „Produktionsfremde Pipeline**&quot; Folgendes:
@@ -210,17 +210,17 @@ Das WKND Sites-Projekt enthält zusätzliche Beispiele für fehlerhaften Code un
 
 ![Verzweigungen vergleichen](./assets/dev-agent/compare-branches.png)
 
-Siehe auch [Beispielaufforderungen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts), um weitere Ideen zur Verwendung des AEM-Entwicklungsagenten zu erhalten.
+Siehe auch [Beispielaufforderungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts), um weitere Ideen zur Verwendung des AEM-Entwicklungsagenten zu erhalten.
 
 ## Zusammenfassung
 
 In diesem Tutorial haben Sie gelernt, wie Sie mit dem AEM Development Agent eine fehlgeschlagene CI/CD-Pipeline mithilfe des KI-Assistenten beheben und beheben können. Außerdem haben Sie gelernt, wie die Agentic AI die technischen Workflows beschleunigt, indem sie umsetzbare Einblicke und Code-Änderungen bereitstellt.
 
-Beginnen Sie mit der Verwendung des AEM-Entwicklungsagenten und anderer Agenten in AEM AEM, um Ihre Workflows zu beschleunigen. Weitere Informationen finden Sie [Übersicht über Agenten in &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)).
+Beginnen Sie mit der Verwendung des AEM-Entwicklungsagenten und anderer Agenten in AEM AEM, um Ihre Workflows zu beschleunigen. Weitere Informationen finden Sie [Übersicht über Agenten in &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)).
 
 ## Zusätzliche Ressourcen
 
 - [KI in Experience Manager](./overview.md)
-- [Überblick über Agenten in AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
-- [Übersicht über den Entwicklungsagenten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
-- [Überblick über Agenten in AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [Überblick über Agenten in AEM](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [Übersicht über den Entwicklungsagenten](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
+- [Überblick über Agenten in AEM](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
