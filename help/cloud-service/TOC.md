@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 6fa0f88c231f7b68392a77a60491d4f741140a5a
+source-git-commit: 6c5b911d1d59573338dd1a30eb95289bc1339f19
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1433'
 ht-degree: 98%
 
 ---
@@ -121,6 +121,7 @@ ht-degree: 98%
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [Ausführen eines Auftrags auf der führenden Instanz in AEM Author](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
+      + [Suchen und Entfernen veralteter APIs](./developing/advanced/deprecated-apis-find-removal.md)
    + Schnelle Entwicklungsumgebung{#rde}
       + [Überblick](./developing/rde/overview.md)
       + [Einrichtung](./developing/rde/how-to-setup.md)
