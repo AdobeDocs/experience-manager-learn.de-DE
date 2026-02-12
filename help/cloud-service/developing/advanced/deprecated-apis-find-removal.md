@@ -9,13 +9,13 @@ duration: null
 jira: KT-20288
 thumbnail: KT-20288.png
 last-substantial-update: 2026-02-09T00:00:00Z
-source-git-commit: 6c5b911d1d59573338dd1a30eb95289bc1339f19
+exl-id: 287894ea-9cc1-4c27-ac7e-967ad46f4789
+source-git-commit: effacd58725dab502f6fb6a4750646c1ea956de2
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '519'
 ht-degree: 3%
 
 ---
-
 
 # Suchen und Entfernen veralteter APIs in AEM as a Cloud Service
 
@@ -23,9 +23,9 @@ Erfahren Sie, wie Sie veraltete APIs in AEM as a Cloud Service finden und entfer
 
 ## Übersicht
 
-AEM as a Cloud Service **Action Center** benachrichtigt Sie über _veraltete APIs_ in Ihrem Projekt. Um die neuesten Funktionen, Sicherheitsaktualisierungen und reibungslose Bereitstellungen Ihres Codes für AEM as a Cloud Service mithilfe von Cloud Manager-Pipelines zu erhalten, entfernen Sie veraltete APIs aus Ihrem Projekt.
+AEM as a Cloud Service **Aktionszentrum** benachrichtigt Sie über _veraltete APIs_ in Ihrem Projekt. Um sicherzustellen, dass Ihre Anwendung sicher und leistungsfähig ist und Sie Code mithilfe von Cloud Manager-Pipelines weiter bereitstellen können, entfernen Sie veraltete APIs aus Ihrem Projekt.
 
-In diesem Tutorial erfahren Sie, wie Sie veraltete APIs in Ihrer AEM as a Cloud Service-Umgebung mithilfe des [AEM Analyzer Maven-Plug-ins&rbrace; suchen und &#x200B;](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md).
+In diesem Tutorial erfahren Sie, wie Sie veraltete APIs in Ihrer AEM as a Cloud Service-Umgebung mithilfe des [AEM Analyzer Maven-Plug-ins} suchen und ](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md).
 
 ## So finden Sie veraltete APIs
 
@@ -117,10 +117,10 @@ Der AEM Analyzer meldet **Was** als veraltet und bietet die **Empfehlung** zur F
 
 | Warnungstyp des Analyzers | Was es anzeigt | Empfohlene Aktion | Verweis |
 | --------------------- | ----------------- | ------------------ | --------- |
-| Veraltete AEM-API | API muss aus AEM as a Cloud Service entfernt werden | Ersetzen der Verwendung durch die unterstützte öffentliche API | [API-Entfernungsanleitung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| Veraltetes AEM-Paket oder veraltete Klasse | Paket oder Klasse wird nicht mehr unterstützt | Code zur Verwendung der empfohlenen Alternative umgestalten | [Veraltete APIs](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| Veraltete Drittanbieterbibliothek | Bibliothek wird in zukünftigen SDKs nicht unterstützt | Aktualisieren der Abhängigkeit und Refaktorierung der Nutzung | [Allgemeine Richtlinien](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| Veraltete Sling-/OSGi-Muster | Alte Anmerkungen oder APIs erkannt | Migrieren zu modernen Sling- und OSGi-APIs | [Entfernen von Sling-/OSGi-Mustern](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Veraltete AEM-API | API muss aus AEM as a Cloud Service entfernt werden | Ersetzen der Verwendung durch die unterstützte öffentliche API | [API-Entfernungsanleitung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Veraltetes AEM-Paket oder veraltete Klasse | Paket oder Klasse wird nicht mehr unterstützt | Code zur Verwendung der empfohlenen Alternative umgestalten | [Veraltete APIs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| Veraltete Drittanbieterbibliothek | Bibliothek wird in zukünftigen SDKs nicht unterstützt | Aktualisieren der Abhängigkeit und Refaktorierung der Nutzung | [Allgemeine Richtlinien](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Veraltete Sling-/OSGi-Muster | Alte Anmerkungen oder APIs erkannt | Migrieren zu modernen Sling- und OSGi-APIs | [Entfernen von Sling-/OSGi-Mustern](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
 | Geplante Entfernung (Datum in der Zukunft) | Die API funktioniert weiterhin, aber die Entfernung wird später erzwungen | Planen der Bereinigung vor der Pipeline-Durchsetzung | [Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### Praktische Leitlinien
@@ -134,5 +134,4 @@ Durch die frühzeitige Behebung veralteter APIs bleibt Ihr Projekt **sicher und 
 ## Zusätzliche Ressourcen
 
 - [AEM Analyzer-Maven-Plug-in](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [Veraltete und entfernte Funktionen und APIs](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
-
+- [Veraltete und entfernte Funktionen und APIs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
