@@ -27,7 +27,7 @@ ht-degree: 100%
 
 Adobe IMS-Produktprofile gestatten es Benutzenden, sich bei einem AEM-Author-Service anzumelden, und bieten allgemeine Zugriffsfunktionen (abhängig davon, welchem Produktprofil die Benutzenden angehören).
 
->[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327576?captions=ger&quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
