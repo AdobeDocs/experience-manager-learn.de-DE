@@ -25,7 +25,7 @@ Erfahren Sie, wie Sie veraltete APIs in AEM as a Cloud Service finden und entfer
 
 Um sicherzustellen, dass Ihre Anwendung sicher und leistungsfähig ist und Sie Code mithilfe von Cloud Manager-Pipelines weiter bereitstellen können, entfernen Sie veraltete APIs aus Ihrem Projekt.
 
-In diesem Tutorial erfahren Sie, wie Sie veraltete APIs in Ihrer AEM as a Cloud Service-Umgebung mithilfe des [AEM Analyzer Maven-Plug-ins} suchen und ](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md).
+In diesem Tutorial erfahren Sie, wie Sie veraltete APIs in Ihrer AEM as a Cloud Service-Umgebung mithilfe des [AEM Analyzer Maven-Plug-ins&rbrace; suchen und &#x200B;](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md).
 
 ## Benachrichtigungen zu veralteten APIs
 
