@@ -52,7 +52,7 @@ Experience Manager as a Cloud Service bietet erweiterte KI-Funktionen zur Verbes
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./setup.md" title="Einrichten von KI in AEM" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474066/?format=jpeg&nocache=1771440888392" alt="Einrichten von KI in AEM"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474075/?captions=ger&format=jpeg&nocache=1771440888392" alt="Einrichten von KI in AEM"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -75,7 +75,7 @@ Experience Manager as a Cloud Service bietet erweiterte KI-Funktionen zur Verbes
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./ai-assistant.md" title="AEM-KI-Assistent" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475357/?format=jpeg&nocache=1771440888441" alt="AEM-KI-Assistent"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475367/?captions=ger&format=jpeg&nocache=1771440888441" alt="AEM-KI-Assistent"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -98,7 +98,7 @@ Experience Manager as a Cloud Service bietet erweiterte KI-Funktionen zur Verbes
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./agents-in-aem.md" title="Agenten in AEM" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478455/?format=jpeg&nocache=1771440888404" alt="Agenten in AEM"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3478464/?captions=ger&format=jpeg&nocache=1771440888404" alt="Agenten in AEM"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
