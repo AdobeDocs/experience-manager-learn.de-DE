@@ -21,7 +21,7 @@ ht-degree: 2%
 
 Erstellen Sie interaktive Kommunikationsdokumente mithilfe vordefinierter Vorlagen und wiederverwendbarer Fragmente. Dadurch wird Konsistenz und Effizienz bei der Dokumenterstellung gewährleistet. Betten Sie dynamische Daten ein, indem Sie das richtige Formulardatenmodell (FDM) auswählen und Fragmente in bestimmte Zielbereiche einfügen. Testen Sie die endgültige Ausgabe auf Genauigkeit und Formatierung.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480074/?captions=ger&learn=on&enablevpops)
 
 ## Nächste Schritte
 

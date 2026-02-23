@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Erfahren Sie, wie Sie interaktive Kommunikationsvorlagen erstellen, um ausgehende Kommunikationen zu standardisieren. Diese Vorlagen gewährleisten Konsistenz, Governance und Markenausrichtung in der Kundenkommunikation. Erfahren Sie, wie Sie Vorlagen mithilfe von Tools wie IC Web Designer und Object Library erstellen, bearbeiten und für die zukünftige Verwendung aktivieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480029/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480051/?captions=ger&learn=on&enablevpops)
 
 ## Nächste Schritte
 

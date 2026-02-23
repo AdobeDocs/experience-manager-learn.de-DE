@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie interaktive Kommunikationsdokumente mithilfe der -API und Postman generieren. Dieser Prozess umfasst das Abrufen der Dokument-ID, das Authentifizieren von Anfragen und die Verwendung von Konfigurationen zum Vorbefüllen, um PDFs zu rendern. Erfahren Sie, wie diese API in Programme integriert werden kann, um die Übergabe dynamischer Laufzeitparameter und eine sichere Authentifizierung zu ermöglichen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480017/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480038/?captions=ger&learn=on&enablevpops)

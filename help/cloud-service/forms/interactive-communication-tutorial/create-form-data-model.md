@@ -25,7 +25,7 @@ Es wurde ein Pseudo-API-Server implementiert, der den Auftrags-Service zu Entwic
 
 Die Swagger-Datei, die bei der Erstellung des Formulardatenmodells verwendet wurde, kann [hier heruntergeladen werden](assets/UsersAndOrders.json)
 
->[!VIDEO](https://video.tv.adobe.com/v/3480005/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480026/?captions=ger&learn=on&enablevpops)
 
 ## Nächste Schritte
 

@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Erfahren Sie, wie Sie wiederverwendbare Fragmente für interaktive Kommunikationsdokumente entwickeln. Optimieren Sie die Layouts und stellen Sie eine dynamische Datenbindung für die Abschnitte Kundenadresse und Briefkörper sicher. Verbessern Sie den Dokumentenentwurf mit Formatierungs-, Positionierungs- und Randsteuerelementen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480042/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480063/?captions=ger&learn=on&enablevpops)
 
 ## Nächste Schritte
 
