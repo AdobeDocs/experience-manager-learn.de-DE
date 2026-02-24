@@ -12,18 +12,14 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 60ea92e57f2bd8bcbc204ccb48abea172e61c969
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1482'
 ht-degree: 100%
 
 ---
 
 # AEM Assets-Ereignisse für die PIM-Integration
-
->[!IMPORTANT]
->
->In diesem Tutorial werden OpenAPI-basierte AEM-APIs verwendet, die im Rahmen eines Early-Access-Programms verfügbar sind. Wenn Sie auf diese APIs zugreifen möchten, sollten Sie eine E-Mail mit einer Beschreibung Ihres Anwendungsfalls an [aem-apis@adobe.com](mailto:aem-apis@adobe.com) senden.
 
 Erfahren Sie, wie Sie ein AEM-Ereignis empfangen und darauf reagieren, um den Inhaltsstatus in AEM mithilfe der OpenAPI-basierten Assets Author-API zu aktualisieren.
 
