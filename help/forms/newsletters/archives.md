@@ -4,10 +4,10 @@ description: Laden Sie archivierte Versionen des Newsletters herunter.
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: 5de1edcc2349330d31f1adb8944acab1eb2b9352
+source-git-commit: 8f60e8aff04942a3fc1edabac1c5f22f5e9ab2a8
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 85%
+source-wordcount: '58'
+ht-degree: 86%
 
 ---
 
@@ -34,5 +34,6 @@ Unsere monatlichen Newsletter mit Inhalten zu Experience League stehen auf diese
 | Newsletter 2026 |
 |------------|
 | [Januar](assets/Jan-2026.pdf) |
+| [Februar](assets/Feb-2026.pdf) |
 
 
