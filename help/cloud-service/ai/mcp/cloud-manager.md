@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Mit dem Cloud Manager MCP-Server können AEM-Entwicklerinnen und -Entwickler Pipelines ausführen, Fehler debuggen und direkt in ihrer IDE auf Cloud Manager-Tools zugreifen - ohne Kontextwechsel.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480351/?captions=ger&learn=on&enablevpops)
