@@ -24,7 +24,7 @@ In diesem Tutorial _Sie_ Details zu Adventure-Inhaltsfragmenten, _aktualisieren_
 
 ## Überblick
 
-AEM as a Cloud Service stellt _MCP-Server_ bereit, damit Ihre IDE- oder Chat-App sicher mit AEM arbeiten kann. Der **Content MCP Server** unterstützt Seiten, Fragmente und Assets. Weitere Informationen finden [ unter „MCP-](./overview.md) in AEM&quot;.
+AEM as a Cloud Service stellt _MCP-Server_ bereit, damit Ihre IDE- oder Chat-App sicher mit AEM arbeiten kann. Der **Content MCP Server** unterstützt Seiten, Fragmente und Assets. Weitere Informationen finden [&#x200B; unter „MCP-](./overview.md) in AEM&quot;.
 
 ## So können Entwickler es verwenden
 
