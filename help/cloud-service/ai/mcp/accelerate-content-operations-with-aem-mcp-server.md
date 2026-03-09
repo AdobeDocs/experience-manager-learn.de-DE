@@ -8,13 +8,13 @@ doc-type: tutorial
 duration: null
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20474
-source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
+exl-id: 843209cb-2f31-466c-b5b1-a9fb26965bc0
+source-git-commit: 6a0eb6e8f5fa9d7152f46d6b8054dc89ff656507
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 0%
 
 ---
-
 
 # Beschleunigen von AEM-Inhaltsvorgängen mithilfe des Content MCP-Servers
 
@@ -22,9 +22,11 @@ Verwenden Sie den **Content MCP Server** von einer KI-gestützten IDE wie [Curso
 
 In diesem Tutorial _Sie_ Details zu Adventure-Inhaltsfragmenten, _aktualisieren_ ein Fragment (z. B. den Preis eines Abenteuers) und _überprüfen_ die Änderung in der [WKND Adventures React-App](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app) alle von Ihrer IDE aus in einer _unteren AEM-Umgebung_ (RDE oder Entwicklung), ohne den MCP-Fluss verlassen zu müssen.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+
 ## Überblick
 
-AEM as a Cloud Service stellt _MCP-Server_ bereit, damit Ihre IDE- oder Chat-App sicher mit AEM arbeiten kann. Der **Content MCP Server** unterstützt Seiten, Fragmente und Assets. Weitere Informationen finden [&#x200B; unter „MCP-](./overview.md) in AEM&quot;.
+AEM as a Cloud Service stellt _MCP-Server_ bereit, damit Ihre IDE- oder Chat-App sicher mit AEM arbeiten kann. Der **Content MCP Server** unterstützt Seiten, Fragmente und Assets. Weitere Informationen finden [ unter „MCP-](./overview.md) in AEM&quot;.
 
 ## So können Entwickler es verwenden
 
@@ -92,7 +94,7 @@ Richten Sie als Nächstes die [WKND Adventures React App](https://github.com/ado
    $ git clone git@github.com:adobe/aem-guides-wknd.git
    ```
 
-1. Stellen Sie das [WKND Site](https://github.com/adobe/aem-guides-wknd)-Projekt in Ihrer RDE bereit. Ausführliche Anweisungen finden Sie unter [Verwenden der schnellen Entwicklungsumgebung](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin).
+1. Stellen Sie das [WKND Site](https://github.com/adobe/aem-guides-wknd)-Projekt in Ihrer RDE bereit. Ausführliche Anweisungen finden Sie unter [Verwenden der schnellen Entwicklungsumgebung](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin).
 
 1. Öffnen Sie den `react-app` Ordner in Ihrer IDE.
 
