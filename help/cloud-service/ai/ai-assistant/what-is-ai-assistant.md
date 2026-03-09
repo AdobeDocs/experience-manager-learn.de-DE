@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Der KI-Assistent beschleunigt AEM-Aufgaben, gibt sofortige Antworten, führt die Verwendung von Funktionen durch, behebt Probleme und erstellt Support-Tickets - alles über die Experience Manager-Benutzeroberfläche. Es hilft Teams, Inhalte schneller bereitzustellen, die Anzahl der Dokumentationssuchen zu reduzieren und die betriebliche Effizienz zu verbessern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480859/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480879/?captions=ger&learn=on&enablevpops)

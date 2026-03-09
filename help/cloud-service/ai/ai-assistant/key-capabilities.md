@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie der KI-Assistent AEM-Workflows beschleunigt, indem er sofortige Anleitungen, Codeausschnitte und Schritte zur Fehlerbehebung bereitstellt. Dies reduziert den Support-Aufwand und hilft Teams, Inhalte schneller und mit höherer Qualität bereitzustellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480858/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480868/?captions=ger&learn=on&enablevpops)
