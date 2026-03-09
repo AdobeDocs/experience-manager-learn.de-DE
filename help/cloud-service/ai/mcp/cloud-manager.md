@@ -24,4 +24,4 @@ Mit dem Cloud Manager MCP-Server können AEM-Entwicklerinnen und -Entwickler Pip
 >
 > Cloud Manager MCP-Server befindet sich jetzt in der Beta-Phase. Um den Zugriff anzufordern, senden Sie eine E-Mail [0&rbrace;aemcs-mcp-feedback@adobe.com) mit einer Beschreibung Ihres Anwendungsfalls.](mailto:aemcs-mcp-feedback@adobe.com)
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480351/?captions=ger&learn=on&enablevpops)
