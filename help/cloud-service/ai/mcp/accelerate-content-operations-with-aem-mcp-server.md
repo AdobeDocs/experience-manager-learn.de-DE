@@ -22,7 +22,7 @@ Verwenden Sie den **Content MCP Server** von einer KI-gestützten IDE wie [Curso
 
 In diesem Tutorial _Sie_ Details zu Adventure-Inhaltsfragmenten, _aktualisieren_ ein Fragment (z. B. den Preis eines Abenteuers) und _überprüfen_ die Änderung in der [WKND Adventures React-App](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app) alle von Ihrer IDE aus in einer _unteren AEM-Umgebung_ (RDE oder Entwicklung), ohne den MCP-Fluss verlassen zu müssen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480904/?captions=ger&learn=on&enablevpops)
 
 ## Überblick
 
