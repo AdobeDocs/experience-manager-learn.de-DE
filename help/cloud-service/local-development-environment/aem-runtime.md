@@ -11,10 +11,10 @@ level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 411
-source-git-commit: 99e3cadc71ca4e26f9e4034085788dfc5407d1bb
-workflow-type: ht
-source-wordcount: '1696'
-ht-degree: 100%
+source-git-commit: dce730466f7004798dd57d7c030dccf5c15a9513
+workflow-type: tm+mt
+source-wordcount: '1797'
+ht-degree: 87%
 
 ---
 
@@ -35,8 +35,8 @@ Beachten Sie, dass `~` als Abkürzung für das Benutzerverzeichnis verwendet wir
 
 Experience Manager ist eine Java™-Anwendung und erfordert daher das Oracle Java™-SDK, um die Entwicklungs-Tools zu unterstützen.
 
-1. [Laden Sie das neueste Java™ 11-SDK herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Stellen Sie sicher, dass das Oracle Java™ 11-SDK installiert ist, indem Sie den folgenden Befehl ausführen:
+1. [Laden Sie die neueste Java™ JDK 21 herunter und installieren Sie sie](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=java*+21*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11)
+1. Stellen Sie sicher, dass Oracle Java™ 21 JDK installiert ist, indem Sie den folgenden Befehl ausführen:
 
 >[!BEGINTABS]
 
@@ -60,7 +60,9 @@ $ java --version
 
 >[!ENDTABS]
 
-![Java](./assets/aem-runtime/java.png)
+>[!CAUTION]
+>
+>Wenn Sie eine ältere Version von AEM SDK ausführen, müssen Sie möglicherweise stattdessen [Java 11 JDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=java*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11) herunterladen. Es empfiehlt sich jedoch, die neueste Version von AEM SDK zu verwenden.
 
 ## Herunterladen des AEM as a Cloud Service-SDK
 
@@ -87,8 +89,8 @@ Der lokale AEM-Author-Service bietet Entwicklerinnen und Entwicklern ein lokales
    + `java -jar aem-author-p4502.jar`
       + Geben Sie das Admin-Passwort als `admin` an. Jedes Admin-Kennwort ist akzeptabel, es wird jedoch empfohlen, für die lokale Entwicklung das Standardkennwort zu verwenden, um die Notwendigkeit einer Neukonfiguration zu verringern.
 
-   Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht* [durch einen Doppelklick](#troubleshooting-double-click) starten.
-1. Greifen Sie in einem Webbrowser auf den lokalen AEM-Author-Service unter [http://localhost:4502](http://localhost:4502) zu
+   Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht*[durch einen Doppelklick](#troubleshooting-double-click) starten.
+1. Greifen Sie unter [http://localhost:4502](http://localhost:4502) in einem Webbrowser auf den lokalen AEM-Autoren-Service zu. Beim ersten Starten müssen Sie möglicherweise einige Minuten warten, bis die Installation abgeschlossen ist. In der Regel wird eine Browser-Registerkarte automatisch geöffnet.
 
 >[!BEGINTABS]
 
@@ -132,8 +134,14 @@ Der lokale AEM-Publish-Service bietet Entwicklerinnen und Entwicklern das lokale
    + `java -jar aem-publish-p4503.jar`
       + Geben Sie das Admin-Passwort als `admin` an. Jedes Admin-Kennwort ist akzeptabel, es wird jedoch empfohlen, für die lokale Entwicklung das Standardkennwort zu verwenden, um die Notwendigkeit einer Neukonfiguration zu verringern.
 
-   Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht* [durch einen Doppelklick](#troubleshooting-double-click) starten.
-1. Greifen Sie in einem Webbrowser auf den lokalen AEM-Veröffentlichungs-Service unter [http://localhost:4503](http://localhost:4503) zu
+   Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht*[durch einen Doppelklick](#troubleshooting-double-click) starten.
+
+1. Sie können Ihr AEM-Projekt oder ein [AEM WKND Sites-Beispielprojekt](https://github.com/adobe/aem-guides-wknd) mithilfe der folgenden Befehle klonen und für die lokale AEM-Laufzeit bereitstellen:
+
+```shell
+$ cd <your-aem-project-directory or aem-guides-wknd>
+$ mvn clean install -PautoInstallSinglePackage -PautoInstallSinglePackagePublish
+```
 
 >[!BEGINTABS]
 
@@ -166,6 +174,40 @@ $ java -jar aem-publish-p4503.jar
 
 >[!ENDTABS]
 
+## Simulieren der Inhaltsverteilung {#content-distribution}
+
+In einer echten Cloud Service-Umgebung werden die Inhalte mithilfe von [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) und der Adobe-Pipeline vom Author-Service zum Publish-Service verteilt. Die [Adobe-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=de#content-distribution) ist ein isolierter Microservice, der nur in der Cloud-Umgebung verfügbar ist.
+
+Bei der Entwicklung kann es wünschenswert sein, die Verteilung von Inhalten mithilfe des lokalen Author- und Publish-Service zu simulieren. Dies kann durch Aktivierung der Legacy-Replikationsagenten erreicht werden.
+
+>[!NOTE]
+>
+> Replikationsagenten sind nur für die Verwendung in der lokalen Schnellstart-JAR verfügbar und bieten nur eine Simulation der Inhaltsverteilung.
+
+1. Melden Sie sich beim Service **author** an und navigieren Sie zu [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
+1. Klicken Sie auf **Standardagent (Publish)**, um den Standard-Replikationsagenten zu öffnen.
+1. Klicken Sie auf **Bearbeiten**, um die Konfiguration des Agenten zu öffnen.
+1. Aktualisieren Sie auf der Registerkarte **Einstellungen** die folgenden Felder:
+
+   + **Aktiviert**: Setzen Sie ein Häkchen
+   + **Agenten-Benutzer-ID**: Lassen Sie dieses Feld leer
+
+   ![Konfiguration des Replikationsagenten – Einstellungen](assets/aem-runtime/settings-config.png)
+
+1. Aktualisieren Sie auf der Registerkarte **Transport** die folgenden Felder:
+
+   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **Benutzer** - `admin`
+   + **Passwort** – `admin`
+
+   ![Konfiguration des Replikationsagenten – Transport](assets/aem-runtime/transport-config.png)
+
+1. Klicken Sie auf **Ok**, um die Konfiguration zu speichern und den **standardmäßigen** Replikationsagenten zu aktivieren.
+1. Sie können jetzt Änderungen an Inhalten im Author-Service vornehmen und sie im Publish-Service veröffentlichen.
+
+   ![Seite veröffentlichen](assets/aem-runtime/publish-page-changes.png)
+
+1. Sie können den veröffentlichten Inhalt unter `http://localhost:4503/<your-page-path>.html` anzeigen. In der Regel müssen Sie sich nicht beim Veröffentlichungs-Service anmelden, um die veröffentlichten Inhalte anzuzeigen. Wenn jedoch Probleme auftreten oder Sie Protokolle, Konfigurationen usw. überprüfen, können Sie sich beim Veröffentlichungs-Service unter [http://localhost:4503/libs/granite/core/content/login.html](http://localhost:4503/libs/granite/core/content/login.html) anmelden.
 
 ## Einrichten lokaler AEM-Dienste im Vorabversionsmodus
 
@@ -206,39 +248,6 @@ $ java -jar aem-publish-p4503.jar -r prerelease
 
 >[!ENDTABS]
 
-## Simulieren der Inhaltsverteilung {#content-distribution}
-
-In einer echten Cloud-Service-Umgebung werden die Inhalte mithilfe von [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) und der Adobe-Pipeline vom Author-Service zum Publish-Service verteilt. Die [Adobe-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=de#content-distribution) ist ein isolierter Microservice, der nur in der Cloud-Umgebung verfügbar ist.
-
-Bei der Entwicklung kann es wünschenswert sein, die Verteilung von Inhalten mithilfe des lokalen Author- und Publish-Service zu simulieren. Dies kann durch Aktivierung der Legacy-Replikationsagenten erreicht werden.
-
->[!NOTE]
->
-> Replikationsagenten sind nur für die Verwendung in der lokalen Schnellstart-JAR verfügbar und bieten nur eine Simulation der Inhaltsverteilung.
-
-1. Melden Sie sich beim **Authoring**-Service an und navigieren Sie zu [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
-1. Klicken Sie auf **Standardagent (Publish)**, um den Standard-Replikationsagenten zu öffnen.
-1. Klicken Sie auf **Bearbeiten**, um die Konfiguration des Agenten zu öffnen.
-1. Aktualisieren Sie auf der Registerkarte **Einstellungen** die folgenden Felder:
-
-   + **Aktiviert**: Setzen Sie ein Häkchen
-   + **Agenten-Benutzer-ID**: Lassen Sie dieses Feld leer
-
-   ![Konfiguration des Replikationsagenten – Einstellungen](assets/aem-runtime/settings-config.png)
-
-1. Aktualisieren Sie auf der Registerkarte **Transport** die folgenden Felder:
-
-   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
-   + **Benutzer** - `admin`
-   + **Passwort** – `admin`
-
-   ![Konfiguration des Replikationsagenten – Transport](assets/aem-runtime/transport-config.png)
-
-1. Klicken Sie auf **Ok**, um die Konfiguration zu speichern und den **standardmäßigen** Replikationsagenten zu aktivieren.
-1. Sie können jetzt Änderungen an Inhalten im Author-Service vornehmen und sie im Publish-Service veröffentlichen.
-
-![Seite veröffentlichen](assets/aem-runtime/publish-page-changes.png)
-
 ## Schnellstart-JAR-Startmodi
 
 Die Benennung der Schnellstart-JAR-Datei, `aem-<tier>_<environment>-p<port number>.jar` gibt an, wie es gestartet wird. Sobald AEM in einer bestimmten Ebene (Author oder Publish) gestartet wurde, kann es nicht mehr in die alternative Ebene geändert werden. Dazu muss der beim ersten Lauf erzeugte Ordner `crx-Quickstart` gelöscht und die Schnellstart-JAR erneut ausgeführt werden. Umgebung und Ports können geändert werden, dies erfordert jedoch das Anhalten/Starten der lokalen AEM-Instanz.
@@ -265,9 +274,9 @@ Beachten Sie, dass die Port-Nummer ein beliebiger verfügbarer Port auf dem loka
 
 Eine Änderung dieser Einstellungen kann Anpassungen der AEM SDK-Konfigurationen erfordern
 
-## Beenden einer lokalen AEM-Laufzeit
+## Stoppen einer lokalen AEM-Laufzeit
 
-Um eine lokale AEM-Laufzeit zu beenden, entweder den AEM-Author- oder -Publish-Service, öffnen Sie das Befehlszeilenfenster, das zum Starten der AEM-Laufzeit verwendet wurde, und drücken Sie `Ctrl-C`. Warten Sie, bis AEM heruntergefahren ist. Wenn der Prozess des Herunterfahrens abgeschlossen ist, ist die Eingabeaufforderung für die Befehlszeile verfügbar.
+Um eine lokale AEM-Laufzeit zu stoppen, entweder den AEM-Author- oder -Publish-Service, öffnen Sie das Befehlszeilenfenster, das zum Starten der AEM-Laufzeit verwendet wurde, und drücken Sie `Ctrl-C`. Warten Sie, bis AEM heruntergefahren ist. Wenn der Prozess des Herunterfahrens abgeschlossen ist, ist die Eingabeaufforderung für die Befehlszeile verfügbar.
 
 ## Optionale Aufgaben zur Einrichtung der lokalen AEM-Laufzeit
 
@@ -287,7 +296,7 @@ Durch die Aktualisierung des AEM SDK wird effektiv eine brandneue AEM-Laufzeit e
 
 1. Erstellen Sie ein Inhaltspaket mit Beispielinhalten, um die Entwicklung zu unterstützen, und verwalten Sie es in Git. Alle Inhalte, die durch AEM SDK-Upgrades hindurch persistiert werden sollen, werden in diesem Paket persistiert und nach der Aktualisierung des AEM SDK erneut bereitgestellt.
 1. Verwenden Sie [oak-upgrade](https://jackrabbit.apache.org/oak/docs/migration.html) mit der Direktive `includepaths`, um Inhalte aus dem vorherigen AEM SDK-Repository in das neue AEM SDK-Repository zu kopieren.
-1. Sichern Sie alle Inhalte und Inhaltspakete mit AEM Package Manager auf dem vorherigen AEM SDK und installieren Sie sie erneut auf dem neuen AEM SDK.
+1. Sichern Sie alle Inhalte und Inhaltspakete mit dem AEM-Paket-Manager auf dem vorherigen AEM SDK und installieren Sie sie erneut auf dem neuen AEM SDK.
 
 Denken Sie daran, dass die Verwendung der oben genannten Ansätze zur Wartung von Code zwischen AEM SDK-Upgrades ein negatives Verhaltensmuster bei der Entwicklung darstellt. Nicht verfügbarer Code sollte aus Ihrer Entwicklungs-IDE stammen und über Implementierungen in das AEM SDK fließen.
 
@@ -364,9 +373,9 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Dies liegt daran, dass AEM as a Cloud Service Java™ SDK 11 erfordert und Sie eine andere Version verwenden, höchstwahrscheinlich Java™ 8. Um dieses Problem zu beheben, laden Sie das [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) herunter und installieren Sie es.
+Dies liegt daran, dass für AEM as a Cloud Service Java™ JDK 21 erforderlich ist und Sie eine andere Version ausführen, höchstwahrscheinlich Java™ 11 oder 8. Um dieses Problem zu beheben, laden Sie [Oracle Java™ JDK 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Java*+21*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=11) herunter und installieren Sie es.
 
-Sobald das Oracle Java™ 11 SDK installiert wurde, vergewissern Sie sich, dass es sich um die aktive Version handelt, indem Sie folgenden Befehl in der Befehlszeile ausführen:
+Nachdem Oracle Java™ 21 JDK installiert wurde, überprüfen Sie, ob es sich um die aktive Version handelt, indem Sie den Befehl über die Befehlszeile ausführen:
 
 >[!BEGINTABS]
 
