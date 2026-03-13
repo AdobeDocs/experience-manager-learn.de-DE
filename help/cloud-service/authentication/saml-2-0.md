@@ -66,7 +66,7 @@ Folgendes ist beim Einrichten der SAML 2.0-Authentifizierung erforderlich:
 + AEM-Adminzugriff auf AEM as a Cloud Service-Umgebungen
 + Administratorzugriff auf den IDP
 + (Optional) Zugriff auf ein öffentliches/privates Schlüsselpaar, das zum Verschlüsseln von SAML-Payloads verwendet wird
-+ AEM Sites-Seiten (oder Seitenbäume), die in der AEM-Veröffentlichungsinstanz veröffentlicht und [durch geschlossene Benutzergruppen (CUGs) geschützt) wurden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites-Seiten (oder Seitenbäume), die in der AEM-Veröffentlichungsinstanz veröffentlicht und [durch geschlossene Benutzergruppen (CUGs) geschützt) wurden](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
 SAML 2.0 wird nur zur Authentifizierung von Benutzenden für AEM Publish oder die Vorschau unterstützt. Um die Authentifizierung von AEM Author mit einem IDP zu verwalten, [integrieren Sie den IDP in Adobe IMS](https://helpx.adobe.com/de/enterprise/using/set-up-identity.html).
 
@@ -74,7 +74,7 @@ SAML 2.0 wird nur zur Authentifizierung von Benutzenden für AEM Publish oder di
 
 SAML 2.0 wird auf AEM as a Cloud Service unterstützt, einschließlich der AEM-Vorschau. Allerdings sind SAML-Konfigurationen in AEM auf OSGi-Konfigurationen angewiesen, und sowohl AEM Preview als auch AEM Publish verwenden dieselbe OSGi-Ausführungsmodus-Auflösung (`config.publish`). Daher können Sie keine separaten SAML-Konfigurationsdateien für Vorschau und Veröffentlichung erstellen.
 
-Verwenden Sie stattdessen [umgebungsspezifischen Konfigurationswerte](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#environment-specific-configuration-values) in Ihren OSGi-Konfigurationen und [&#x200B; Sie die entsprechenden Variablenwerte &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#cloud-manager-api-format-for-setting-properties) die Vorschau- und Veröffentlichungsumgebung fest.
+Verwenden Sie stattdessen [umgebungsspezifischen Konfigurationswerte](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#environment-specific-configuration-values) in Ihren OSGi-Konfigurationen und [&#x200B; Sie die entsprechenden Variablenwerte &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#cloud-manager-api-format-for-setting-properties) die Vorschau- und Veröffentlichungsumgebung fest.
 
 ## Installieren des öffentlichen IDP-Zertifikats in AEM
 

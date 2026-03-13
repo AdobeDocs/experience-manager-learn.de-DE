@@ -81,7 +81,7 @@ public void postSyncUserProcess(
 **Wichtig:** Um Benutzereigenschaften im Repository zu ändern, ist für die Hook-Implementierung Folgendes erforderlich:
 
 + Eine `SlingRepository` Referenz, die über `@Reference` eingefügt wird
-+ Ein konfigurierter [Dienstbenutzer](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) mit entsprechenden Berechtigungen (konfiguriert in „Apache Sling Service User Mapper Service Amendment„)
++ Ein konfigurierter [Dienstbenutzer](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) mit entsprechenden Berechtigungen (konfiguriert in „Apache Sling Service User Mapper Service Amendment„)
 + Richtige Sitzungsverwaltung mit try-catch-finally-Blöcken
 
 ## Implementieren eines benutzerdefinierten SAML-Hooks
@@ -267,7 +267,7 @@ Das `aem-sdk-api`-Artefakt enthält alle erforderlichen Adobe Granite SAML-Schni
 
 ### Service-Benutzer konfigurieren (optional)
 
-Wenn der SAML-Hook Inhalte im JCR-Repository von AEM ändern muss, z. B. Benutzereigenschaften (wie im `postSyncUserProcess` Beispiel gezeigt), muss ein [Dienstbenutzer](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfiguriert werden:
+Wenn der SAML-Hook Inhalte im JCR-Repository von AEM ändern muss, z. B. Benutzereigenschaften (wie im `postSyncUserProcess` Beispiel gezeigt), muss ein [Dienstbenutzer](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfiguriert werden:
 
 1. Erstellen Sie eine Service-Benutzerzuordnung im Projekt unter `/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`:
 
@@ -310,7 +310,7 @@ Bereitstellen des benutzerdefinierten SAML-Hooks für AEM as a Cloud Service:
 + **Testen**: Testen Sie benutzerdefinierte Hooks gründlich in niedrigeren Umgebungen, bevor Sie sie in der Produktion bereitstellen
 + **Mehrere Hooks**: Es können mehrere SAML-Hook-Implementierungen konfiguriert werden; alle übereinstimmenden Hooks werden ausgeführt. Verwenden Sie die `service.ranking`-Eigenschaft in der OSGi-Komponente, um die Ausführungsreihenfolge zu steuern (höhere Rangwerte werden zuerst ausgeführt). Um einen SAML-Hook über mehrere SAML Authentication Handler Factory-Konfigurationen (`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`) hinweg wiederzuverwenden, erstellen Sie mehrere Hook-Konfigurationen (OSGi-Factory-Konfigurationen) mit jeweils unterschiedlichen `idpIdentifier`, die dem entsprechenden SAML Authentication Handler entsprechen
 + **Sicherheit**: Überprüfen und bereinigen Sie alle Daten aus SAML-Assertionen, bevor Sie sie in der Geschäftslogik verwenden
-+ **Repository-Zugriff**: Verwenden Sie beim Ändern von Benutzereigenschaften in `postSyncUserProcess` immer einen [Service-Benutzer](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) mit entsprechenden Berechtigungen anstelle von Verwaltungssitzungen
-+ **Service-Benutzerberechtigungen**: Gewähren minimaler erforderlicher Berechtigungen für den [Service-Benutzer](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (z. B. nur `jcr:read` und `rep:write` auf `/home/users`, keine vollständigen Administratorrechte)
++ **Repository-Zugriff**: Verwenden Sie beim Ändern von Benutzereigenschaften in `postSyncUserProcess` immer einen [Service-Benutzer](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) mit entsprechenden Berechtigungen anstelle von Verwaltungssitzungen
++ **Service-Benutzerberechtigungen**: Gewähren minimaler erforderlicher Berechtigungen für den [Service-Benutzer](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (z. B. nur `jcr:read` und `rep:write` auf `/home/users`, keine vollständigen Administratorrechte)
 + **Sitzungsverwaltung**: Verwenden Sie immer try-catch-finally-Blöcke, um sicherzustellen, dass Repository-Sitzungen ordnungsgemäß geschlossen werden, auch wenn Ausnahmen auftreten
 + **Zeitpunkt der Benutzersynchronisierung**: Der `postSyncUserProcess`-Hook wird ausgeführt, nachdem der Benutzer mit OAK synchronisiert wurde. Das Benutzerobjekt ist also zu diesem Zeitpunkt garantiert im Repository vorhanden
