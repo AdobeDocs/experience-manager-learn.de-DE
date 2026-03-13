@@ -74,7 +74,7 @@ SAML 2.0 wird nur zur Authentifizierung von Benutzenden für AEM Publish oder di
 
 SAML 2.0 wird auf AEM as a Cloud Service unterstützt, einschließlich der AEM-Vorschau. Allerdings sind SAML-Konfigurationen in AEM auf OSGi-Konfigurationen angewiesen, und sowohl AEM Preview als auch AEM Publish verwenden dieselbe OSGi-Ausführungsmodus-Auflösung (`config.publish`). Daher können Sie keine separaten SAML-Konfigurationsdateien für Vorschau und Veröffentlichung erstellen.
 
-Verwenden Sie stattdessen [umgebungsspezifischen Konfigurationswerte](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#environment-specific-configuration-values) in Ihren OSGi-Konfigurationen und [ Sie die entsprechenden Variablenwerte ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#cloud-manager-api-format-for-setting-properties) die Vorschau- und Veröffentlichungsumgebung fest.
+Verwenden Sie stattdessen [umgebungsspezifischen Konfigurationswerte](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#environment-specific-configuration-values) in Ihren OSGi-Konfigurationen und [&#x200B; Sie die entsprechenden Variablenwerte &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#cloud-manager-api-format-for-setting-properties) die Vorschau- und Veröffentlichungsumgebung fest.
 
 ## Installieren des öffentlichen IDP-Zertifikats in AEM
 
