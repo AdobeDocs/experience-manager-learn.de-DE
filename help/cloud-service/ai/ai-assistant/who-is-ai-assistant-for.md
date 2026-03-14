@@ -20,5 +20,5 @@ ht-degree: 0%
 
 Der KI-Assistent steigert die Produktivität in verschiedenen Rollen in Adobe Experience Manager. Inhaltsautoren optimieren die Erstellung und Bereitstellung von Inhalten, technische Teams vereinfachen Workflows und die Fehlerbehebung, und Manager treffen fundierte Entscheidungen schneller. Mit Funktionen wie Schritt-für-Schritt-Anleitung, sofortigen Antworten und vordefinierten Eingabeaufforderungen stellt KI-Assistent sicher, dass Teams effizient arbeiten und einen Vorsprung haben. Erfahren Sie, wie der KI-Assistent Ihre Rollen- und Team-Ziele unterstützt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3481163/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481172/?captions=ger&learn=on&enablevpops)
 
