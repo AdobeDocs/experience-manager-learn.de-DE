@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 34f098de6bd15875e5534250b28c08bdb62e74fa
+source-git-commit: 4c5bec95d74d3611dc96d1d23dcd4d3d708e0243
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 95%
+source-wordcount: '1499'
+ht-degree: 94%
 
 ---
 
@@ -335,6 +335,9 @@ ht-degree: 95%
       + [&#x200B;4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
    + Verwenden des Ausgabe- und Formular-Dienstes{#forms-cs-output-and-forms-service}
       + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
+   + Erstellen eines Profils in AEP bei der Formularübermittlung{#aep-integration}
+      + [Erstellen einer Cloud-Konfiguration](./forms/aep-integration/create-cloud-configuration.md)
+      + [Konfigurieren des Formulars für die Übermittlung mit AEP](./forms/aep-integration/create-integration-with-aep.md)
    + Tutorial zur interaktiven Kommunikation{#interactive-communication-tutorial}
       + [&#x200B;1. Einführung](./forms/interactive-communication-tutorial/introduction.md)
       + [&#x200B;2. Erstellen von FDM](./forms/interactive-communication-tutorial/create-form-data-model.md)
