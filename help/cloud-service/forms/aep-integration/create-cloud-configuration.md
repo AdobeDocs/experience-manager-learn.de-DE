@@ -22,7 +22,7 @@ ht-degree: 2%
 
 Erfahren Sie, wie Sie eine Cloud-Konfiguration in AEM Forms einrichten, um eine sichere Integration mit Adobe Experience Platform zu gewährleisten. Verwenden Sie Adobe Developer Console-Anmeldedaten, um eine nahtlose Datenübermittlung und einen nahtlosen Datenabruf für Ihre Formulare zu ermöglichen. Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum effizienten Konfigurieren der Verbindung.
 
->[!VIDEO](https://video.tv.adobe.com/v/3481496/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481505/?captions=ger&learn=on&enablevpops)
 
 
 ## Nächste Schritte

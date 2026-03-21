@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie in Adobe Experience Platform über AEM Forms-Übermittlungen Profile erstellen und verwalten. Diese Integration optimiert die Datenverwaltung und verbessert das Benutzererlebnis.
 
->[!VIDEO](https://video.tv.adobe.com/v/3481508/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481518/?captions=ger&learn=on&enablevpops)
