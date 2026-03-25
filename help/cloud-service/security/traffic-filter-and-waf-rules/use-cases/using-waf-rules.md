@@ -12,7 +12,7 @@ badgeLicense: label="Erfordert eine Lizenz" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
 exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 98%
@@ -30,7 +30,7 @@ Komplexe Angriffe zeichnen sich durch hohe Anfrageraten, komplizierte Muster und
 > WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für erweiterte Sicherheit (früher WAF-DDoS-Schutz genannt) oder erweiterte Sicherheit für das Gesundheitswesen (früher Enhanced Security genannt). Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469439/?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## Lernziele
 
@@ -233,7 +233,8 @@ In diesem Tutorial haben Sie erfahren, wie Sie AEM-Websites mit den von Adobe em
 
 Für komplexere Szenarien können Sie die folgenden Anwendungsfälle erkunden. Diese demonstrieren, wie Sie benutzerdefinierte Traffic-Filterregeln basierend auf bestimmten Unternehmensanforderungen implementieren:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md

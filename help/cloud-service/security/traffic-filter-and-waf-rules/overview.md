@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 98%
@@ -95,7 +95,8 @@ Beispiele:
 
 Erfahren Sie anhand des Setup-Handbuchs und der folgenden Anwendungsfälle, wie Sie Traffic-Filterregeln, einschließlich WAF-Regeln, in AEM as a Cloud Service definieren, bereitstellen, testen und analysieren. Dadurch erhalten Sie Hintergrundwissen, damit Sie später die von Adobe empfohlenen Regeln sicher anwenden können.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -136,7 +137,8 @@ Erfahren Sie anhand des Setup-Handbuchs und der folgenden Anwendungsfälle, wie 
 
 Dieses Handbuch enthält Schritt-für-Schritt-Anleitungen zum Einrichten und Bereitstellen der von Adobe empfohlenen Standard-Traffic-Filter- und WAF-Traffic-Filterregeln in Ihrer AEM as a Cloud Service-Umgebung.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/using-traffic-filter-rules.md
@@ -206,7 +208,8 @@ Dieses Handbuch enthält Schritt-für-Schritt-Anleitungen zum Einrichten und Ber
 
 Für komplexere Szenarien können Sie die folgenden Anwendungsfälle erkunden. Diese demonstrieren, wie Sie benutzerdefinierte Traffic-Filterregeln basierend auf bestimmten Unternehmensanforderungen implementieren:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./how-to/request-logging.md

@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 885dd083-79f1-49c4-88cc-7594aaa3fdbf
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Content-KI schnell und effizient ansprechende Inhaltsvarianten erstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461886/?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)

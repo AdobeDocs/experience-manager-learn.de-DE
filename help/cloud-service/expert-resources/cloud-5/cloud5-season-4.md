@@ -7,8 +7,8 @@ recommendations: noDisplay, noCatalog
 duration: 30
 last-substantial-update: 2024-12-15T00:00:00Z
 exl-id: ede3fb19-d803-4b21-8c03-4283f7b4f7f4
-source-git-commit: 155fc2ec8df735888be303242d6221a64e31daad
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 100%
 
@@ -28,7 +28,8 @@ Besuchen Sie das [Vorschlagsfeld](https://forms.office.com/r/74P5Xz4UH0) zum Ein
 
 Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröffentlicht. Besuchen Sie diese Seite für wöchentliche Updates oder folgen Sie uns im sozialen Netzwerk Ihrer Wahl.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./season-4/cloud5-edge-delivery-services-best-practices.md {title=Development best practices for Edge Delivery Services}
 * ./season-4/cloud5-search-optimization.md {title=Search optimization in Edge Delivery Services}
@@ -42,7 +43,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Best Practices zur Entwicklung für Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441009/?format=jpeg&nocache=1734040055526&captions=ger" alt="Best Practices zur Entwicklung für Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Best Practices zur Entwicklung für Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -65,7 +66,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Suchoptimierung in Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440987/?format=jpeg&nocache=1734040055519&captions=ger" alt="Suchoptimierung in Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Suchoptimierung in Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -88,7 +89,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="Integrieren mit Google Maps" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440998/?format=jpeg&nocache=1734040055523&captions=ger" alt="Integrieren mit Google Maps"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="Integrieren mit Google Maps"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

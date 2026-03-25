@@ -10,7 +10,7 @@ doc-type: Catalog
 duration: 60
 last-substantial-update: 2024-11-20T00:00:00Z
 exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
-source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 96%
@@ -28,15 +28,16 @@ Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und wie der Genehmigungs-W
 Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes Video bietet klare Anleitungen und praktische Tipps, wie Sie Assets verwalten und mit Ihrem Team zusammenarbeiten können, um AEM Assets Content Hub in Ihrer täglichen Arbeit optimal zu nutzen.
 
 
-<!-- CARDS
+<!-- 
+CARDS
 
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up {title = Set up}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure {title = Configure}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets {title = Add assets}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/download-assets {title = Download assets}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/image-variants {title = Create image variants}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections {title = Collections}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share {title = Sharing}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up {title = Set up}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure {title = Configure}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets {title = Add assets}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets {title = Download assets}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants {title = Create image variants}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections {title = Collections}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share {title = Sharing}
 * ./attribute-based-access-control.md {title = Attribute-based access control}
 
 -->
@@ -47,7 +48,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472944/?format=jpeg&nocache=1759339176339&captions=ger" alt="Setup"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472918/?format=jpeg&nocache=1759339176339" alt="Setup"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -70,7 +71,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurieren" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472955/?format=jpeg&nocache=1759339176369&captions=ger" alt="Konfigurieren"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472917/?format=jpeg&nocache=1759339176369" alt="Konfigurieren"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -93,7 +94,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" title="Hinzufügen von Assets" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450291/?format=jpeg&nocache=1759339176806&captions=ger" alt="Hinzufügen von Assets"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1759339176806" alt="Hinzufügen von Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -162,7 +163,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" title="Sammlungen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445309/?format=jpeg&nocache=1759339176447&captions=ger" alt="Sammlungen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1759339176447" alt="Sammlungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +186,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" title="Freigabe" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474928/?format=jpeg&nocache=1759339176327&captions=ger" alt="Freigabe"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474890/?format=jpeg&nocache=1759339176327" alt="Freigabe"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -208,7 +209,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./attribute-based-access-control.md" title="Attributbasierte Zugriffssteuerung" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475423/?format=jpeg&nocache=1759339175804&captions=ger" alt="Attributbasierte Zugriffssteuerung"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475413/?format=jpeg&nocache=1759339175804" alt="Attributbasierte Zugriffssteuerung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -234,7 +235,8 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
 
 Untersuchen Sie Anwendungsfälle und Szenarien, die zeigen, wie AEM Assets Content Hub in verschiedenen Kontexten effektiv genutzt werden kann. Diese Beispiele bieten Erkenntnisse zu den praktischen Anwendungen von Content Hub und verdeutlichen seine Vielseitigkeit und Anpassungsfähigkeit an verschiedene Asset-Management-Anforderungen.
 
-<!-- CARDS
+<!-- 
+CARDS
 * ./use-cases/manage-assets.md
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -244,7 +246,7 @@ Untersuchen Sie Anwendungsfälle und Szenarien, die zeigen, wie AEM Assets Conte
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="Verwalten von Assets mit AEM Assets Content Hub" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463067/?format=jpeg&nocache=1759339177153&captions=ger" alt="Verwalten von Assets mit AEM Assets Content Hub"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1759339177153" alt="Verwalten von Assets mit AEM Assets Content Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -271,11 +273,12 @@ Untersuchen Sie Anwendungsfälle und Szenarien, die zeigen, wie AEM Assets Conte
 Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hub von AEM Assets zu erfahren und die Funktionen vollständig nutzen zu können. Diese Ressourcen enthalten ausführliche Anleitungen zur Verwendung der Funktionen, um sicherzustellen, dass Sie die notwendige Unterstützung für ein effizientes Asset-Management erhalten.
 
 
-<!-- CARDS
+<!-- 
+CARDS
 
-* https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview {title=Content Hub documentation} {description=This documentation serves as your entry point to learn about Content Hub's key benefits, access methods, and how to provide feedback on the available options.}
-* https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub {description=Learn how to deploy and activate Content Hub, providing users with various privileges, including asset uploads and administrator access.}
-* https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub {title = Content Hub FAQs}
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview {title=Content Hub documentation} {description=This documentation serves as your entry point to learn about Content Hub's key benefits, access methods, and how to provide feedback on the available options.}
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub {description=Learn how to deploy and activate Content Hub, providing users with various privileges, including asset uploads and administrator access.}
+* https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub {title = Content Hub FAQs}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -331,7 +334,7 @@ Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hu
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Häufig gestellte Fragen zum Content-Hub" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="Häufig gestellte Fragen zum Content-Hub"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="Häufig gestellte Fragen zum Content-Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

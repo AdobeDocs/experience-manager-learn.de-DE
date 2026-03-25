@@ -10,8 +10,8 @@ topic: Integrations
 jira: KT-14794
 exl-id: c4257567-76bd-417e-a1a2-38a0647767d9
 duration: 147
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 100%
 
@@ -62,9 +62,7 @@ Der benutzerdefinierte Übermittlungsdienst extrahiert die Anhänge und speicher
     },
     "Message": "We would like to renew our annual contract "
 }
-``
 ```
-
 
 [Der beispielhafte benutzerdefinierte Übermittlungs-Handler für auf Kernkomponenten basierende adaptive Formulare ist hier verfügbar](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Die folgende benutzerdefinierte Übermittlung wurde geschrieben, um die Formularübermittlung zu verarbeiten
 

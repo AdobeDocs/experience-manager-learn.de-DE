@@ -12,7 +12,7 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 100%
@@ -74,7 +74,8 @@ Weitere Informationen zu OpenAPI-basierten AEM-APIs und wichtigen Konzepte für 
 
 ### Anwendungsfälle
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./openapis/use-cases/invoke-api-using-oauth-s2s.md
@@ -172,18 +173,19 @@ Weitere Informationen zu den GraphQL-APIs und deren Verwendung finden Sie unter 
 
 ### Anwendungsfälle
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app
   {title = Single Page Application (SPA)}
   {description = Learn how to build a Single Page Application (SPA) that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/react-app-card.png}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps
   {title = Mobile App}
   {description = Learn how to build a mobile app that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/ios-app-card.png}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component
   {title = Web Component}
   {description = Learn how to build a web component that fetches content from AEM using GraphQL APIs.}
   {image = ./assets/web-component-card.png}
@@ -268,14 +270,15 @@ Erfahren Sie mehr über RESTful-APIs, z. B. [Assets HTTP-API](https://experienc
 
 ### Anwendungsfälle
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview
   {title = Using Content Services for Headless App}
   {description = Learn how to build a native mobile app that fetches content from AEM using Content Services RESTful APIs.}
   {image = ./assets/RESTful-Content-Service.png}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview
   {title = Token-based Authentication for RESTful APIs}
   {description = Learn how to invoke RESTful APIs using JSON Web Token (JWT) authentication.}
   {image = ./assets/RESTful-TokenAuth.png}

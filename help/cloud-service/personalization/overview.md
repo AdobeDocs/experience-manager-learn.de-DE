@@ -11,7 +11,7 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 51%
@@ -44,7 +44,8 @@ Erleben Sie die Personalisierung in Aktion auf der [WKND-Website](https://wknd.e
 >
 > Wenn Sie sich zuerst die Live-Demo ansehen, können Sie den Wert und die Funktionen der einzelnen Personalisierungstechniken verstehen, bevor Sie Zeit in die Einrichtung und Implementierung investieren.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./live-demo.md
@@ -85,7 +86,8 @@ Erleben Sie die Personalisierung in Aktion auf der [WKND-Website](https://wknd.e
 
 Bevor Sie sich konkrete Anwendungsszenarien ansehen, konfigurieren Sie zunächst AEM as a Cloud Service für die Personalisierung. Integrieren Sie zunächst Adobe Target und Tags, um die Client-seitige Personalisierung mithilfe der Web-SDK zu ermöglichen. Mit diesen grundlegenden Schritten können Ihre AEM-Seiten Experimente, Zielgruppen-Targeting und die Echtzeit-Personalisierung unterstützen.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup/integrate-adobe-target.md
@@ -158,7 +160,8 @@ Bevor Sie sich konkrete Anwendungsszenarien ansehen, konfigurieren Sie zunächst
 
 Erkunden Sie die folgenden gängigen Anwendungsszenarien für die Personalisierung, die von AEMCS, Adobe Target und Adobe Experience Platform unterstützt werden.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/experimentation.md

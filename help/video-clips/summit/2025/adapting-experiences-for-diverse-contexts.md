@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 71c0c58e-5789-417b-9a61-f290ca1b4ae5
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
 
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Marketing-Fachkräfte mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und geografische Regionen anpassen und gleichzeitig steuern können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462414/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)

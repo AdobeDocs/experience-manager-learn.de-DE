@@ -11,7 +11,7 @@ index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
 duration: 155
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 88%
@@ -174,7 +174,7 @@ Anpassungen, die entweder an den Abfragen, Indizes oder beidem vorgenommen werde
 
 ![Abfrage erläutern](./assets/traversals/verify.gif)
 
-Wenn nur [Anpassungen an der Abfrage](#adjust-the-query) vorgenommen werden, kann die Abfrage über die Developer Console-Option „Abfrage [&quot; direkt auf AEM as a Cloud Service getestet &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"}. Erläutern Sie, wie die Abfrage mit dem AEM-Author-Service ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Author-Service zu validieren.
+Wenn nur [Anpassungen an der Abfrage](#adjust-the-query) vorgenommen werden, kann die Abfrage über die Developer Console-Option „Abfrage [&quot; direkt auf AEM as a Cloud Service getestet ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"}. Erläutern Sie, wie die Abfrage mit dem AEM-Author-Service ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Author-Service zu validieren.
 
 Wenn [Anpassungen am Index](#adjust-the-index) vorgenommen werden, muss der Index in AEM as a Cloud Service bereitgestellt werden. Wenn die Indexanpassungen bereitgestellt sind, kann die [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"} von Developer Console verwendet werden, um die Abfrage auszuführen und weiter zu optimieren.
 

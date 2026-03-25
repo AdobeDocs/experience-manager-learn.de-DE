@@ -9,12 +9,12 @@ topic-tags: forms, adaptive_forms
 topic: Integrations
 discoiquuid: aec562a4-4405-4e6f-9ad5-7477fa1d078f
 targetaudience: target-audience advanced
-index: y
+index: true
 internal: n
 snippet: y
 last-substantial-update: 2020-10-20T00:00:00Z
 duration: 628
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 100%
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 Acrobat Sign mit AEM Forms verwenden
 
->[!VIDEO](https://video.tv.adobe.com/v/38337?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/18696?quality=12&learn=on)
 
 *In diesem Video werden die Einrichtung des Acrobat Sign-Cloud-Dienstes und das Hinzufügen mehrerer Signaturfelder zu einem adaptiven Formular in AEM erläutert.*
 

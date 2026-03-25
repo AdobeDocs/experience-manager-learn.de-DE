@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 100%
@@ -263,7 +263,8 @@ In diesem Tutorial haben Sie gelernt, wie Sie AEM-Websites mit von Adobe empfohl
 
 Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ihre AEM-Websites vor komplexen Bedrohungen zu schützen, die herkömmliche Sicherheitsmaßnahmen durch erweiterte Methoden umgehen.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./using-waf-rules.md
@@ -305,7 +306,8 @@ Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ih
 
 Für komplexere Szenarien können Sie die folgenden Anwendungsfälle erkunden. Diese demonstrieren, wie Sie benutzerdefinierte Traffic-Filterregeln basierend auf bestimmten Unternehmensanforderungen implementieren:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md

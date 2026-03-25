@@ -4,12 +4,14 @@ solution-title: Experience Manager
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-learn.de-DE
 product: experience manager
-index: y
+index: true
 type: Tutorial
 solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
+landing-page-name: experience-manager
+landing-page-breadcrumb-title: AEM
 auto-video-transcripts: true
-source-git-commit: 445e69684160350bb55171cbcecd61325dcfa643
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 100%
@@ -21,7 +23,7 @@ ht-degree: 100%
 
 Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Dateien des Benutzerhandbuchs zu Repo weitergegeben werden. Wenn Sie den Inhalt von metadata.md für ein beliebiges Benutzerhandbuch ändern möchten, tun Sie dies in einer TOC.md-Datei.
 
-| metadata | Funktion |
+| Metadaten | Funktion |
 |--- |--- |
 | solution-title | Wird in der Artikelkopfzeile als Link verwendet |
 | solution-hub-url | Öffnet die helpx-Hub-Seite |
@@ -33,7 +35,7 @@ Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Da
 
 In der Datei TOC.md
 
-| metadata | Funktion |
+| Metadaten | Funktion |
 |--- |--- |
 | user-guide-title | Wird in der Artikelkopfzeile als Link verwendet |
 | user-guide-url | Öffnet die helpx-Hub-Seite |

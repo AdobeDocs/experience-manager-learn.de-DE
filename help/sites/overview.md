@@ -6,7 +6,7 @@ sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 999bbe542e5c71ae537f93a4c89acf6d304a4292
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 89%
@@ -48,7 +48,7 @@ Die folgende Tabelle bietet einen umfassenden Vergleich der drei Pfade. Der Schw
 | **Speicher für erstellte Inhalte** | Dokumente oder AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
 | **Versand** | Edge Delivery Services | AEM Publish (mit Adobe CDN + Dispatcher) | AEM Publish (mit Adobe CDN + Dispatcher) |
 | **Speicher für Versandinhalte** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
-| **Bereitstellungsformat** | HTML  | JSON | HTML  |
+| **Bereitstellungsformat** | HTML | JSON | HTML  |
 | **Entwicklungstechnologie** | JavaScript, CSS | Beliebig (z. B. Swift, React usw.) | Java™, HTL, JavaScript, CSS |
 | **Unterstützung von Such-Bots und GenAI-Agenten** | Optimiert für Bots, Suchmaschinen und GenAI-Agenten | Funktioniert für Bots und Agenten, erfordert jedoch möglicherweise SSR oder ein zusätzliches Setup | Geeignet für Bots, aber die Leistung kann im Vergleich zu Edge Delivery Services langsamer sein |
 
@@ -60,19 +60,20 @@ Wenn Sie von AMS oder On-Premise (OTP) zu AEM as a Cloud Service migrieren, empf
 
 Lernen Sie die drei Ansätze zum Erstellen mit AEM Sites genauer kennen. Die folgenden Tutorials zeigen Ihnen Schritt für Schritt, wie die einzelnen Optionen funktionieren, welche Tools Sie benötigen und wann Sie sie verwenden müssen.
 
-<!-- CARDS
+<!-- 
+CARDS
 
 * https://www.aem.live/docs/
   {title = Edge Delivery Services - Guides}
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with Edge Delivery Services.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}

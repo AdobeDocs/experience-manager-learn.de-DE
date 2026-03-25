@@ -1,7 +1,7 @@
 ---
 title: Entwickler-Tutorial für Edge Delivery Services und den universellen Editor
 description: Lernen Sie die Grundlagen der Entwicklung einer neuen Website kennen, die im universellen Editor von AEM verfasst und mit Edge Delivery Services bereitgestellt wird.
-short-description: Ein Entwickler-Tutorial zum Erstellen von AEM-Websites, die leistungsstarkes Authoring mit dem universellen Editor und eine blitzschnelle Bereitstellung mit Edge Delivery Services kombinieren. Erfahren Sie, wie Sie ein neues Projekt erstellen, eine lokale Entwicklungsumgebung einrichten und benutzerdefinierte Bausteine erstellen.
+short-description: Ein Entwicklungs-Tutorial für die Erstellung von AEM-Websites, die leistungsstarkes Authoring mit dem universellen Editor und eine extrem schnelle Bereitstellung über Edge Delivery Services kombinieren. Erfahren Sie, wie Sie ein neues Projekt erstellen, eine lokale Entwicklungsumgebung einrichten und benutzerdefinierte Bausteine erstellen.
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,10 +11,10 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,8 @@ In diesem Tutorial lernen Sie die Grundlagen zum Erstellen einer AEM-Website ken
 
 Erfahren Sie, wie Sie in AEM as a Cloud Service ein Code-Projekt erstellen und eine neue Site konfigurieren. Dieses Setup ermöglicht eine nahtlose Entwicklung mit dem universellen Editor für die Inhaltserstellung und die schnelle Inhaltsbereitstellung über Edge Delivery Services.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -88,7 +89,8 @@ Erfahren Sie, wie Sie in AEM as a Cloud Service ein Code-Projekt erstellen und e
 ## Entwicklungs-Setup
 
 Erfahren Sie, wie Sie Ihre lokale Entwicklungsumgebung für eine schnelle Website-Entwicklung konfigurieren. Dieses Setup ermöglicht eine nahtlose Site-Erstellung mit dem universellen Editor und eine effiziente Inhaltsbereitstellung über Edge Delivery Services, wodurch ein reibungsloser und optimierter Entwicklungs-Workflow gewährleistet wird.
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -101,7 +103,7 @@ Erfahren Sie, wie Sie Ihre lokale Entwicklungsumgebung für eine schnelle Websit
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Einrichten einer lokalen Entwicklungsumgebung" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443987/?captions=ger&format=jpeg&nocache=1753811862249" alt="Einrichten einer lokalen Entwicklungsumgebung"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="Einrichten einer lokalen Entwicklungsumgebung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -149,7 +151,8 @@ Erfahren Sie, wie Sie Ihre lokale Entwicklungsumgebung für eine schnelle Websit
 
 Erfahren Sie, wie Sie einen neuen Block erstellen, indem Sie sein Inhaltsmodell definieren und Beispielinhalte für Tests und Entwicklung einrichten. Erkunden Sie zwei Methoden zum Rendern des Blocks und erfahren Sie, wie Sie ihn strukturieren, um eine optimale Leistung und Flexibilität in AEM und Edge Delivery Services zu erzielen.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./5-new-block.md {image = ./assets/5-new-block/card.png}
 * ./6-author-block.md {image = ./assets/6-author-block/card.png}
@@ -258,7 +261,8 @@ Erfahren Sie, wie Sie einen neuen Block erstellen, indem Sie sein Inhaltsmodell 
 
 Nachdem Sie dieses Tutorial nun abgeschlossen haben, bauen Sie auf dem auf, was Sie mit diesen zielgerichteten Anleitungen gelernt haben. In diesen Handbüchern wird näher auf den hier behandelten Code und die hier behandelten Konzepte eingegangen. Es werden rollenspezifische Anwendungsfälle, erweiterte Techniken und zusätzliche Tipps zur Verbesserung der Entwicklungsfähigkeiten von Edge Delivery Services und dem universellen Editor untersucht.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./how-to/block-options.md
 * ./how-to/header-and-footer.md

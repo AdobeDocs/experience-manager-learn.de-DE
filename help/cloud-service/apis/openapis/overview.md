@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 100%
@@ -94,7 +94,8 @@ Bevor Sie auf Adobe-APIs zugreifen, müssen Sie diese Schlüsselkonstrukte verst
 
 Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung und ein Adobe Developer Console-Projekt einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren. Sie können auch über den Browser auf das AEM-API zugreifen, um die Einrichtung zu verifizieren und die Anfrage und Antwort zu überprüfen.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -135,7 +136,8 @@ Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung und ein Adobe Develop
 
 Erfahren Sie, wie Sie die OpenAPI-basierten AEM-APIs mit verschiedenen OAuth-Authentifizierungsmethoden verwenden:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

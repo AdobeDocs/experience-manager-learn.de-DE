@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 60%
@@ -23,7 +23,7 @@ ht-degree: 60%
 
 Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren.
 
-In diesem Beispiel wird die **AEM Assets** API unter Verwendung der **Server-zu-Server**-Authentifizierungsmethode verwendet, um den OpenAPI-basierten Einrichtungsprozess von AEM-APIs zu demonstrieren. Sie können ähnliche Schritte ausführen, um ([&#x200B; andere OpenAPI-basierte AEM-APIs) &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis).
+In diesem Beispiel wird die **AEM Assets** API unter Verwendung der **Server-zu-Server**-Authentifizierungsmethode verwendet, um den OpenAPI-basierten Einrichtungsprozess von AEM-APIs zu demonstrieren. Sie können ähnliche Schritte ausführen, um ([ andere OpenAPI-basierte AEM-APIs) ](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -140,7 +140,7 @@ In diesem Fall wird die **AEM Assets-API** verwendet, um den OpenAPI-basierten E
 
 1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **Add API** (API hinzufügen).
 
-   ![Hinzufügen des APIs](./assets/s2s/add-api.png)
+   ![API hinzufügen](./assets/s2s/add-api.png)
 
 1. Filtern Sie im Dialogfeld _Add an API_ (API hinzufügen) auf _Experience Cloud_ und wählen Sie das gewünschte AEM-API aus. In diesem Fall ist beispielsweise das _Asset Author-API_ ausgewählt.
 
@@ -216,7 +216,7 @@ Führen wir die Schritte aus, um die AEM-Instanz so zu konfigurieren, dass die o
 
    ![Bereitstellen der YAML-Datei](./assets/setup/config-pipeline.png)
 
-Beachten Sie, dass die `api.yaml`-Datei auch in einer [RDE](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/overview) installiert werden kann [mithilfe von Befehlszeilen-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Dies ist nützlich, um die Konfigurationsänderungen zu testen, bevor sie in der Produktionsumgebung bereitgestellt werden.
+Beachten Sie, dass die `api.yaml`-Datei auch in einer [RDE](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/overview) installiert werden kann [mithilfe von Befehlszeilen-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Dies ist nützlich, um die Konfigurationsänderungen zu testen, bevor sie in der Produktionsumgebung bereitgestellt werden.
 
 >[!CAUTION]
 >
@@ -227,7 +227,8 @@ Beachten Sie, dass die `api.yaml`-Datei auch in einer [RDE](https://experiencele
 
 Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation aktiviert wird, können Sie die OpenAPI-basierten AEM-APIs verwenden. Erfahren Sie, wie Sie die OpenAPI-basierten AEM-APIs mit verschiedenen OAuth-Authentifizierungsmethoden verwenden:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

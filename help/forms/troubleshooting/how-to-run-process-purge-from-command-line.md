@@ -1,16 +1,16 @@
 ---
 title: Ausführen des Prozessbereinigungs-Tools über die Befehlszeile
-description: Schritte zum Ausführen des Prozessbereinigungs-Tools über die Befehlszeile zum Löschen von Datensätzen aus der Job Manager-Tabelle
+description: Schritte zum Ausführen des Prozessbereinigungs-Tools über die Befehlszeile zum Löschen von Einträgen aus der Job Manager-Tabelle
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: Experience Manager 6.5
 topic: Development
-index: y
+index: true
 exl-id: 1f539f1c-b3be-4e21-b0fe-6f523a453c5f
 duration: 97
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%
 
@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Ausführen des Prozessbereinigungs-Tools über die Befehlszeile erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/3438376?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/335508?quality=12&learn=on)
