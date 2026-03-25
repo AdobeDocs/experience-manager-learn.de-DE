@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Edge Delivery Services schnelle Websites erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453462/?captions=ger&learn=on)
 
 Umfassende Details zu Edge Delivery Services samt Funktionen finden Sie in der zugehörigen [Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/overview).
 
@@ -109,7 +109,7 @@ CARDS
             <a href="./developing/prerequisites.md" title="Voraussetzungen"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434593/?captions=ger&format=jpeg"
                 alt="Voraussetzungen">
             </a>
           </figure>
@@ -141,7 +141,7 @@ CARDS
             <a href="./developing/aem-boilerplate.md" title="Verwenden der Textbausteinvorlage"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Einrichten von
+                src="https://video.tv.adobe.com/v/3434620/?captions=ger&format=jpeg" alt="Einrichten von
 Textbausteinen">
             </a>
           </figure>
@@ -173,7 +173,7 @@ Textbausteinen">
             <a href="./developing/content-repository.md" title="Verknüpfen von Google Drive"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Verknüpfen von Google Drive">
+                src="https://video.tv.adobe.com/v/3434729/?captions=ger&format=jpeg" alt="Verknüpfen von Google Drive">
             </a>
           </figure>
         </div>
@@ -203,7 +203,7 @@ Textbausteinen">
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="Verknüpfen von SharePoint" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3446037/?captions=ger&format=jpeg"
                 alt="Verknüpfen von SharePoint">
             </a>
           </figure>
@@ -235,7 +235,7 @@ Textbausteinen">
             <a href="./developing/preview-and-publish.md" title="Anzeigen einer Vorschau und Veröffentlichen der Inhalte"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Anzeigen einer Vorschau und Veröffentlichen der Inhalte">
+                src="https://video.tv.adobe.com/v/3434718/?captions=ger&format=jpeg" alt="Anzeigen einer Vorschau und Veröffentlichen der Inhalte">
             </a>
           </figure>
         </div>
@@ -266,7 +266,7 @@ Textbausteinen">
             <a href="./developing/sidekick.md" title="Verwenden von Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441295/?captions=ger&format=jpeg"
                 alt="Verwenden von Sidekick">
             </a>
           </figure>
@@ -298,7 +298,7 @@ Textbausteinen">
             <a href="./developing/document-structure.md" title="Dokumentstruktur"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425716/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445198/?captions=ger&format=jpeg"
                 alt="Dokumentstruktur">
             </a>
           </figure>
@@ -330,7 +330,7 @@ Textbausteinen">
             <a href="./developing/local-development.md" title="Lokale Entwicklung"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434740/?captions=ger&format=jpeg"
                 alt="Lokale Entwicklung">
             </a>
           </figure>
@@ -362,7 +362,7 @@ Textbausteinen">
             <a href="./developing/git.md" title="Integrieren mit Git"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441835/?captions=ger&format=jpeg"
                 alt="Integrieren mit Git">
             </a>
           </figure>
@@ -399,7 +399,7 @@ Textbausteinen">
             <a href="./how-to/rss.md" title="Erstellen von RSS-Feeds"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438008/?captions=ger&format=jpeg"
                 alt="Erstellen von RSS-Feeds">
             </a>
           </figure>
@@ -431,7 +431,7 @@ Textbausteinen">
             <a href="./how-to/social-media-sharing.md" title="Freigabe in Social Media"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439446/?captions=ger&format=jpeg"
                 alt="Freigabe in Social Media">
             </a>
           </figure>
@@ -463,7 +463,7 @@ Textbausteinen">
             <a href="./how-to/delete-page.md" title="Löschen von Seiten"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438099/?captions=ger&format=jpeg"
                 alt="Löschen von Seiten">
             </a>
           </figure>

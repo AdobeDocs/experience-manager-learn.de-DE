@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video wird die Erfassung von Sicherheiten zum Debuggen von Schriftartproblemen bei der Konvertierung von Formularen und des Output-Dienstes erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439913?captions=ger&quality=12&learn=on)

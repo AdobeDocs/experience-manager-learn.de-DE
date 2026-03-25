@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Bereinigen von Prozesseinträgenn im Job Manager erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437676?captions=ger&quality=12&learn=on)

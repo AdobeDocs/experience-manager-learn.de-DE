@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Ausführen von Belastungstests über die Benutzeroberfläche mithilfe von FormsIVS- und OutputIVS-Beispielen erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441496?captions=ger&quality=12&learn=on)

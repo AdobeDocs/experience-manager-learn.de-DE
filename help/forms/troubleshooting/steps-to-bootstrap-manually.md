@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *Dieses Video führt durch den Prozess zum manuellen Bootstrapping, wenn die Datenbankinitialisierung nicht funktioniert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335515?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436278?captions=ger&quality=12&learn=on)
