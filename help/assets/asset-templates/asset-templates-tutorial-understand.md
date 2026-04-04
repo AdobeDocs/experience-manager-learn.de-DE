@@ -76,5 +76,5 @@ InDesign-Vorlagendatei und unterstützende Bilder
 
 Laden Sie die [InDesign-Vorlagendatei und unterstützende Bilder](assets/asset-templates-tutorial-video--supporting-files-1.zip) herunter.
 
-* [Laden Sie die InDesign CC-Testversion herunter.](https://creative.adobe.com/products/download/indesign)
+* [Laden Sie die InDesign CC-Testversion herunter.](https://creative.adobe.com/de/products/download/indesign)
 * Die InDesign Server-Testversion kann über die [Adobe-Website für Vorabversionen](https://www.adobeprerelease.com/) heruntergeladen werden. [CC Enterprise-Kundinnen und -Kunden können sich auch an die Kundenbetreuung wenden, um eine InDesign Server-Testlizenz anzufordern.](https://www.adobe.com/de/products/indesignserver/faq.html)

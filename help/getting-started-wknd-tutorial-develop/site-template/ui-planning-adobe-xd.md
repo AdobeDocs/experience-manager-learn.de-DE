@@ -21,13 +21,13 @@ ht-degree: 100%
 
 # Benutzeroberflächenplanung mit Adobe XD {#ui-planning-adobe-xd}
 
-In den meisten Fällen beginnt die Planung einer neuen Website mit Mockups und statischen Designs. [Adobe XD](https://www.adobe.com/products/xd.html?lang=de) ist ein erstklassiges Design-Tool zum Erstellen von Benutzererlebnissen. Adobe empfiehlt, die Implementierung Ihrer Sites mithilfe von UI-Mockups durch den Einsatz von Adobe XD oder anderen Tools.
+In den meisten Fällen beginnt die Planung einer neuen Website mit Mockups und statischen Designs. [Adobe XD](https://www.adobe.com/de/products/xd.html?lang=de) ist ein erstklassiges Design-Tool zum Erstellen von Benutzererlebnissen. Adobe empfiehlt, die Implementierung Ihrer Sites mithilfe von UI-Mockups durch den Einsatz von Adobe XD oder anderen Tools.
 
 ## Voraussetzungen {#prerequisites}
 
 Dies ist ein mehrteiliges Tutorial. Sie sollten dazu die im vorherigen Kapitel beschriebenen Schritte abgeschlossen haben. Dieses Kapitel bietet Ihnen die Möglichkeit, einfach zuzuschauen und zu lernen. Es ist keine Aktion erforderlich, um mit nachfolgenden Kapiteln fortfahren zu können.
 
-Um den Videos folgen zu können, muss [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html?lang=de) installiert sein. Eine [kostenlose Testversion ist verfügbar](https://www.adobe.com/products/xd/pricing/free-trial.html?lang=de).
+Um den Videos folgen zu können, muss [Adobe XD](https://www.adobe.com/de/products/xd/pricing/free-trial.html?lang=de) installiert sein. Eine [kostenlose Testversion ist verfügbar](https://www.adobe.com/de/products/xd/pricing/free-trial.html?lang=de).
 
 ## Ziel
 
@@ -62,7 +62,7 @@ Allgemeine Schritte:
 
 Herzlichen Glückwunsch! Sie haben gelernt, wie Benutzeroberflächen-Kits von Adobe XD zur Zuordnung und Planung einer AEM Sites-Implementierung verwendet werden können.
 
-Diese [zusätzlichen UI-Kits](https://www.adobe.com/products/xd/features/ui-kits.html?lang=de) stehen zur Verfügung und können heruntergeladen und angesehen werden.
+Diese [zusätzlichen UI-Kits](https://www.adobe.com/de/products/xd/features/ui-kits.html?lang=de) stehen zur Verfügung und können heruntergeladen und angesehen werden.
 
 ### Nächste Schritte {#next-steps}
 

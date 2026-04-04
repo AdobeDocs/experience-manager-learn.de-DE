@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # Seitenvorlagen {#page-templates}
 
-In diesem Kapitel werden wir die Beziehung zwischen einer Seitenvorlage und einer Seite erkunden. Wir werden eine unformatierte Zeitschriftenartikel-Vorlage erstellen, die auf einigen Mockups von [AdobeXD](https://www.adobe.com/products/xd.html?lang=de) basiert. Im Laufe des Erstellens der Vorlage werden Kernkomponenten und erweiterte Richtlinienkonfigurationen behandelt.
+In diesem Kapitel werden wir die Beziehung zwischen einer Seitenvorlage und einer Seite erkunden. Wir werden eine unformatierte Zeitschriftenartikel-Vorlage erstellen, die auf einigen Mockups von [AdobeXD](https://www.adobe.com/de/products/xd.html?lang=de) basiert. Im Laufe des Erstellens der Vorlage werden Kernkomponenten und erweiterte Richtlinienkonfigurationen behandelt.
 
 ## Voraussetzungen {#prerequisites}
 

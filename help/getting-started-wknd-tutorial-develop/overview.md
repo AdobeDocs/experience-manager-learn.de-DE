@@ -46,7 +46,7 @@ Es gibt zwei grundlegende Ansätze zum Starten eines AEM Sites-Projekts.
 
 ## Adobe XD-Benutzeroberflächen-Kit
 
-Um dieses Tutorial näher an ein reales Szenario heranzuführen, haben die kompetenten UX-Designer von Adobe die Modelle für die Site mit [Adobe XD](https://www.adobe.com/products/xd.html?lang=de) erstellt. Im Laufe des Tutorials werden verschiedene Teile der Designs zu einer vollständig bearbeitbaren AEM-Site zusammengefügt. Ein besonderer Dank geht an **Lorenzo Buosi** und **Kilian Amenola**, die das schöne Design für die WKND-Site erstellt haben.
+Um dieses Tutorial näher an ein reales Szenario heranzuführen, haben die kompetenten UX-Designer von Adobe die Modelle für die Site mit [Adobe XD](https://www.adobe.com/de/products/xd.html?lang=de) erstellt. Im Laufe des Tutorials werden verschiedene Teile der Designs zu einer vollständig bearbeitbaren AEM-Site zusammengefügt. Ein besonderer Dank geht an **Lorenzo Buosi** und **Kilian Amenola**, die das schöne Design für die WKND-Site erstellt haben.
 
 Laden Sie die XD-Benutzeroberflächen-Kits herunter:
 
