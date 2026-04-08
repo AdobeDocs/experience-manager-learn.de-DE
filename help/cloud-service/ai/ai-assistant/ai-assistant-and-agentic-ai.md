@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie der KI-Assistent in die agentische KI passt, um Ihre Absichten in Aktionen umzusetzen. In diesem Video erfahren Sie, wie der KI-Assistent als Tor zu den KI-Funktionen von Agenten in AEM dient. Sie lernen zudem Agentic AI auf Konzeptebene kennen und stellen Agenten kurz in AEM vor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3483212/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3483221/?captions=ger&learn=on&enablevpops)
