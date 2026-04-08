@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
+source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1505'
 ht-degree: 94%
 
 ---
@@ -32,15 +32,16 @@ ht-degree: 94%
    + [Überblick](./ai/overview.md)
    + [Einrichtung und Bereitstellung](./ai/setup.md)
    + KI-Assistent {#ai-assistant}
-      + [Überblick](./ai/ai-assistant/overview.md)
+      + [Übersicht](./ai/ai-assistant/overview.md)
       + [Was ist KI-Assistent?](./ai/ai-assistant/what-is-ai-assistant.md)
       + [Für wen ist KI-Assistent?](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [Schlüsselfunktionen](./ai/ai-assistant/key-capabilities.md)
+      + [KI-Assistent und agentische KI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
    + Agenten {#agents}
-      + [Überblick](./ai/agents/agents-in-aem.md)
+      + [Übersicht](./ai/agents/agents-in-aem.md)
       + [Entwicklungs-Agent und CI/CD-Fehlerbehebung](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
    + MCP-Server {#mcp-servers}
-      + [Überblick](./ai/mcp/overview.md)
+      + [Übersicht](./ai/mcp/overview.md)
       + [Beschleunigen von AEM-Inhaltsvorgängen mit dem MCP-Server](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP-Server](./ai/mcp/cloud-manager.md)
 + Experience Cloud-Integrationen{#integrations}
