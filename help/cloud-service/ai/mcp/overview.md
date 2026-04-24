@@ -22,7 +22,7 @@ Erfahren Sie, wie Sie die AEM _Model Context Protocol (MCP_-Server) Ihrer bevorz
 
 ## Liste der AEM MCP-Server
 
-Alle AEM MCP-Server sind unter `https://mcp.adobeaemcloud.com/adobe/mcp/` verfügbar. Weitere Informationen finden [ unter „Verwenden von MCP ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service) AEM as a Cloud Service&quot;.
+Alle AEM MCP-Server sind unter `https://mcp.adobeaemcloud.com/adobe/mcp/` verfügbar. Weitere Informationen finden [&#x200B; unter „Verwenden von MCP &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service) AEM as a Cloud Service&quot;.
 
 - **Content** (`/content`) - Inhaltsvorgänge einschließlich Erstellen, Lesen, Aktualisieren und Löschen (CRUD) für Seiten und Inhaltsfragmente sowie Asset-Import.
 - **Inhalt (schreibgeschützt)** (`/content-readonly`) - Nur-Lese-Inhaltsvorgänge (GET, List/Search) für Seiten und Inhaltsfragmente.
