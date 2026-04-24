@@ -9,9 +9,9 @@ duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
 exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Erfahren Sie, wie Sie die AEM _Model Context Protocol (MCP_-Server) Ihrer bevorz
 
 ## Liste der AEM MCP-Server
 
-Alle AEM MCP-Server sind unter `https://mcp.adobeaemcloud.com/adobe/mcp/` verfügbar. Weitere Informationen finden [&#x200B; unter „Verwenden von MCP &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service) AEM as a Cloud Service&quot;.
+Alle AEM MCP-Server sind unter `https://mcp.adobeaemcloud.com/adobe/mcp/` verfügbar. Weitere Informationen finden [ unter „Verwenden von MCP ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service) AEM as a Cloud Service&quot;.
 
-- **Inhalt** (`/content`) - Vollständiger Zugriff zum Erstellen, Lesen, Aktualisieren und Löschen von Seiten, Fragmenten und Assets.
-- **Inhalt (schreibgeschützt)** (`/content-readonly`) - Schreibgeschützt, um Seiten, Fragmente und Assets aufzulisten und abzurufen (keine Änderungen).
+- **Content** (`/content`) - Inhaltsvorgänge einschließlich Erstellen, Lesen, Aktualisieren und Löschen (CRUD) für Seiten und Inhaltsfragmente sowie Asset-Import.
+- **Inhalt (schreibgeschützt)** (`/content-readonly`) - Nur-Lese-Inhaltsvorgänge (GET, List/Search) für Seiten und Inhaltsfragmente.
 - **Cloud Manager** (`/cloudmanager`) - Zum Verwalten von Programmen, Umgebungen, Repositorys und Pipelines für Adobe Cloud Manager.
 
 >[!TIP]
@@ -43,7 +43,7 @@ So vergleichen sich diese beiden Nutzungsmuster:
 
 | Aspekt | am Menschen orientiert | Agentin |
 | ------ | ------------- | ------- |
-| **Wer steuert Aktionen** | Sie. <br> Die KI empfiehlt oder führt Tools für Sie in der IDE oder im Chat-basierten Programm aus. | Die KI. <br> Es wählt die Werkzeuge aus, die verwendet werden sollen, und arbeitet mit minimaler Anleitung. |
+| **Wer steuert Aktionen** | Sie. <br> Die KI empfiehlt oder führt Tools für Sie in der IDE oder im Chat-basierten Programm aus. | Die KI. <br> Es wählt die zu verwendenden Werkzeuge aus und arbeitet mit minimaler Anleitung. |
 | **Entscheidungsbehörde** | Sie behalten die Kontrolle. Sie genehmigen oder Trigger für jeden Schritt. | Die KI hat mehr Freiheit. Für die wirkungsvollen Aktionen sind möglicherweise Schutzmaßnahmen oder Genehmigungen erforderlich. |
 | **Typisches Nutzungsmuster** | **Pro-Entwickler** verwenden Sie es von Ihrer eigenen IDE oder Chat-basierten Anwendung, ein Entwickler pro Sitzung, gut für die tägliche Entwicklungsarbeit. | **Shared** über eine Agentenanwendung als freigegebene Services und Gateways für viele Benutzer oder Agenten. |
 | **Am besten geeignet für** | Überprüfen von Inhalten, Durchführen geführter Aktualisierungen, Erkunden oder Wiederholen von Aufgaben, während Sie in der Schleife bleiben. | Agent-Workflows, Batch-Vorgänge, Pipelines und Ziele, bei denen das System mit minimalem Eingriff ausgeführt werden soll. |
@@ -62,7 +62,7 @@ MCP basiert auf drei Entitäten: **host**, **client** und **server**. Die [MCP-S
 
 | Komponente | Standarddefinition | Bei Verwendung von AEM MCP-Servern |
 | --------- | ------------------- | ---------------- |
-| **Host** | Die App, die alles ausführt, Kontext sammelt, mit der KI kommuniziert, Berechtigungen verarbeitet und Clients erstellt. | Ihre **IDE** (Cursor) oder Chat-basierte Anwendung ist der Host. Es führt den MCP-Client aus und entscheidet, welche Tools und Server Ihre Sitzung verwenden kann. |
+| **host** | Die App, die alles ausführt, Kontext sammelt, mit der KI kommuniziert, Berechtigungen verarbeitet und Clients erstellt. | Ihre **IDE** (Cursor) oder Chat-basierte Anwendung ist der Host. Es führt den MCP-Client aus und entscheidet, welche Tools und Server Ihre Sitzung verwenden kann. |
 | **Client** | Eine einzelne Verbindung vom Host zu einem Server. Er übergibt Nachrichten hin und her und hält den Zugriff dieses Servers von anderen getrennt. | Der **MCP-Client** ist in Ihrer IDE oder Ihrem Chat-basierten Programm verfügbar. Wenn Sie den AEM Content MCP Server in den Einstellungen hinzufügen, erstellt die IDE oder das Chat-basierte Programm einen Client, der mit diesem Server kommuniziert. Ihre Eingabeaufforderungen und Tool-Aufrufe gehen über diesen Client. |
 | **Server** | Ein Service, der Tools, Daten und Eingabeaufforderungen über MCP bereitstellt. Es kann auf Ihrem Computer oder remote ausgeführt werden. | Die von Adobe gehosteten **AEM MCP-Server** bieten Tools zum Erstellen, Lesen, Aktualisieren und Löschen von Seiten, Inhaltsfragmenten und Assets, damit die KI in Ihrer IDE oder Ihrem Chat-basierten Programm mit Ihrer AEM-Umgebung zusammenarbeiten kann. |
 
@@ -71,7 +71,7 @@ Einfach ausgedrückt: **Host** ist Ihre IDE- oder Chat-basierte Anwendung, **Cli
 ## Einrichtung
 
 AEM MCP-Server sind für die Verwendung mit einer definierten Gruppe von MCP-kompatiblen Anwendungen konzipiert.
-Weitere Informationen zum Einrichten der AEM MCP-Server in Ihrer bevorzugten IDE oder Chat-basierten Anwendung finden Sie [Unterstützte MCP](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)Anwendungen“.
+Weitere Informationen zum Einrichten der AEM MCP-Server in Ihrer bevorzugten IDE oder Chat-basierten Anwendung finden Sie [Unterstützte MCP](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications)Anwendungen“.
 
 ## Anwendungsfälle
 

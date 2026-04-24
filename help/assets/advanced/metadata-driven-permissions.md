@@ -11,10 +11,10 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '770'
-ht-degree: 100%
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 90%
 
 ---
 
@@ -46,7 +46,9 @@ Um metadatengesteuerte Berechtigungen zu implementieren, müssen Entwickelnde ei
        "status",
        "brand"
      ],
-     "restrictionContentPropertyNames":[],
+     "restrictionContentPropertyNames":[
+       "dam:rightsManaged"
+     ],
      "enabled":true
    }
    ```
@@ -108,9 +110,8 @@ Zu den Vorteilen von metadatengesteuerten Berechtigungen gehören:
 > Beachten Sie Folgendes:
 > 
 > - Eigenschaften werden anhand der Einschränkungen mit __Zeichenfolgengleichheit__ (`=`) ausgewertet (andere Datentypen oder Operatoren werden noch nicht unterstützt, z. B. größer als (`>`) oder Datumseigenschaften)
-> - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste „Typ auswählen“ auswählen und einen neuen Beschränkungswert eingeben (z B. `status=approved`, `status=wip`) und auf „+“ klicken, um die Einschränkung zum Eintrag hinzuzufügen
-> ![Zulassen von mehreren Werten](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - __UND-Einschränken__ werden mittels mehrerer Einschränkungen in einem einzelnen Zugriffssteuerungseintrag mit verschiedenen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) unterstützt und als UND-Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
+> - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste „Typ auswählen“ auswählen und einen neuen Beschränkungswert eingeben (z B. `status=approved`, `status=wip`) und auf „+“ klicken, um die Einschränkung zum Eintrag hinzuzufügen> ![Zulassen von mehreren Werten](./assets/metadata-driven-permissions/allow-multiple-values.png)
+> - __UND-__ werden über mehrere Einschränkungen in einem einzigen Zugriffssteuerungseintrag mit unterschiedlichen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) unterstützt, die als UND-Bedingung ausgewertet werden, d. h. der ausgewählten Benutzergruppe wird Lesezugriff auf Assets mit gewährt `status=approved AND brand=Adobe`
 > ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - __ODER-Einschränkungen__ werden durch Hinzufügen eines neuen Zugriffssteuerungseintrags mit einer Metadaten-Eigenschaftsbeschränkung beschränkt, die eine ODER-Bedingung für die Einträge festgelegt, z. B. wird ein einzelner Eintrag mit Einschränkungen `status=approved` und ein einzelner Eintrag mit `brand=Adobe` als `status=approved OR brand=Adobe` bewertet
+> - __ODER-__ werden durch Hinzufügen eines neuen Zugriffssteuerungseintrags mit einer Metadateneigenschaftsbeschränkung unterstützt, der eine OR-Bedingung für die Einträge festlegt, z. B. wird ein einzelner Eintrag mit `status=approved` und ein einzelner Eintrag mit `brand=Adobe` wie folgt bewertet `status=approved OR brand=Adobe`
 > ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-aces.png)
