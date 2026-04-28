@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Entdecken Sie die drei wichtigsten Prinzipien zur Optimierung digitaler Erlebnisse: die Verbesserung der Grundlagen, die Nutzung von KI und die Unterstützung strategischer Führungskräfte.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459234/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462051/?captions=ger&learn=on&enablevpops)

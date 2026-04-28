@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Emily Kellman erzählt, wie Adobe.com die Funktion „Varianten generieren“ verwendet hat, um die Inhaltsgeschwindigkeit zu erhöhen, Timelines zu reduzieren und Konversionen zu steigern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462731/?captions=ger&learn=on&enablevpops)
