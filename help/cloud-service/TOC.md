@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
+source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 94%
+source-wordcount: '1642'
+ht-degree: 93%
 
 ---
 
@@ -30,20 +30,26 @@ ht-degree: 94%
 + [Experience Hub](./experience-hub.md)
 + AI {#ai}
    + [Überblick](./ai/overview.md)
-   + [Einrichtung und Bereitstellung](./ai/setup.md)
+   + [Set up and Provisioning](./ai/setup.md)
    + KI-Assistent {#ai-assistant}
-      + [Übersicht](./ai/ai-assistant/overview.md)
-      + [Was ist KI-Assistent?](./ai/ai-assistant/what-is-ai-assistant.md)
-      + [Für wen ist KI-Assistent?](./ai/ai-assistant/who-is-ai-assistant-for.md)
+      + [Überblick](./ai/ai-assistant/overview.md)
+      + [What is AI Assistant?](./ai/ai-assistant/what-is-ai-assistant.md)
+      + [Who is AI Assistant for?](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [Schlüsselfunktionen](./ai/ai-assistant/key-capabilities.md)
-      + [KI-Assistent und agentische KI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
-   + Agenten {#agents}
-      + [Übersicht](./ai/agents/agents-in-aem.md)
-      + [Entwicklungs-Agent und CI/CD-Fehlerbehebung](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
+      + [AI Assistant and Agentic AI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
+   + Agents {#agents}
+      + [Überblick](./ai/agents/agents-in-aem.md)
+      + [Dev Agent and CI/CD Troubleshooting](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
    + MCP-Server {#mcp-servers}
-      + [Übersicht](./ai/mcp/overview.md)
-      + [Beschleunigen von AEM-Inhaltsvorgängen mit dem MCP-Server](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
+      + [Überblick](./ai/mcp/overview.md)
+      + [Accelerate AEM Content Operations with the MCP Server](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP-Server](./ai/mcp/cloud-manager.md)
+   + AI-assisted development {#ai-assisted-development}
+      + [Überblick](./ai/ai-assited-development/overview.md)
+      + Einrichtung{#setup}
+         + [Agent Skills](./ai/ai-assited-development/setup/agent-skills.md)
+      + Anwendungsszenarien{#use-cases}
+         + [Komponentenentwicklung](./ai/ai-assited-development/use-cases/component-development.md)
 + Experience Cloud-Integrationen{#integrations}
    + [Integrationen](./integrations/experience-cloud.md)
    + [AEM Headless und Target](./integrations/target.md)
@@ -55,7 +61,7 @@ ht-degree: 94%
    + [Autoren- und Veröffentlichungs-Service](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick-Plug-in](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=de){target=_blank}
+   + [AEM Assets Sidekick plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=de){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [Programme](./cloud-manager/programs.md)
    + [Umgebungen](./cloud-manager/environments.md)
@@ -63,7 +69,7 @@ ht-degree: 94%
    + [CI/CD Produktions-Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD Produktionsfremde Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
-   + [Benutzerdefinierte Domain-Namen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [Custom Domain Names](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + [Wiederherstellung von Inhalten](./cloud-manager/content-restore.md)
    + Dev Ops{#devops}
       + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
@@ -131,7 +137,7 @@ ht-degree: 94%
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [Ausführen eines Auftrags auf der führenden Instanz in AEM Author](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
-      + [Suchen und Entfernen veralteter APIs](./developing/advanced/deprecated-apis-find-removal.md)
+      + [Find and remove deprecated APIs](./developing/advanced/deprecated-apis-find-removal.md)
    + Schnelle Entwicklungsumgebung{#rde}
       + [Überblick](./developing/rde/overview.md)
       + [Einrichtung](./developing/rde/how-to-setup.md)
@@ -142,7 +148,7 @@ ht-degree: 94%
          + [Überblick](./developing/universal-editor/react-app/overview.md)
          + [Lokale Entwicklungseinrichtung](./developing/universal-editor/react-app/local-development-setup.md)
          + [Instrumentieren der React-App](./developing/universal-editor/react-app/instrument-to-edit-content.md)
-   + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
+   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + Debugging von AEM{#debugging}
    + Debbuging des AEM SDK{#debugging-aem-sdk}
       + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
@@ -168,7 +174,7 @@ ht-degree: 94%
    + Anwendungsszenarien {#use-cases}
       + [Experimente (A/B-Tests)](./personalization/use-cases/experimentation.md)
       + [Verhaltensbasiertes Targeting](./personalization/use-cases/behavioral-targeting.md)
-      + [Personalization mit bekanntem Benutzer](./personalization/use-cases/known-user-personalization.md)
+      + [Known-user Personalization](./personalization/use-cases/known-user-personalization.md)
 + AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
    + OpenAPIs{#openapis}
@@ -207,7 +213,7 @@ ht-degree: 94%
 + Authentifizierung{#authentication}
    + [Überblick](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
-   + [SAML-Anmelde-Hooks](./authentication/saml-2-0-login-hook.md)
+   + [SAML login hooks](./authentication/saml-2-0-login-hook.md)
 + Erweiterte Netzwerkfunktionen{#networking}
    + [Überblick](./networking/advanced-networking.md)
    + [Flexibler Port-Ausgang](./networking/flexible-port-egress.md)
@@ -331,20 +337,20 @@ ht-degree: 94%
       + [Testen der Varianten](./forms/style-system/build.md)
    + Verwenden vertikaler Registerkarten{#using-vertical-tabs}
       + [&#x200B;1. Einführung](./forms/using-vertical-tabs/introduction.md)
-      + [&#x200B;2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
-      + [&#x200B;3. Navigieren](./forms/using-vertical-tabs/navigation.md)
-      + [&#x200B;4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
+      + [&#x200B;2. Erstellen eines Formulars](./forms/using-vertical-tabs/create-af.md)
+      + [3. Navigating](./forms/using-vertical-tabs/navigation.md)
+      + [4. Adding Icons](./forms/using-vertical-tabs/icons.md)
    + Verwenden des Ausgabe- und Formular-Dienstes{#forms-cs-output-and-forms-service}
       + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
-   + Erstellen eines Profils in AEP bei der Formularübermittlung{#aep-integration}
+   + Create profile in AEP on form submission{#aep-integration}
       + [Einführung](./forms/aep-integration/introduction.md)
-      + [Erstellen einer Cloud-Konfiguration](./forms/aep-integration/create-cloud-configuration.md)
-      + [Konfigurieren des Formulars für die Übermittlung mit AEP](./forms/aep-integration/create-integration-with-aep.md)
-   + Tutorial zur interaktiven Kommunikation{#interactive-communication-tutorial}
+      + [Create cloud configuration](./forms/aep-integration/create-cloud-configuration.md)
+      + [Configure form for AEP submission](./forms/aep-integration/create-integration-with-aep.md)
+   + Interactive Communication Tutorial{#interactive-communication-tutorial}
       + [&#x200B;1. Einführung](./forms/interactive-communication-tutorial/introduction.md)
-      + [&#x200B;2. Erstellen von FDM](./forms/interactive-communication-tutorial/create-form-data-model.md)
+      + [2. Create FDM](./forms/interactive-communication-tutorial/create-form-data-model.md)
       + [&#x200B;3. Erstellen einer Vorlage](./forms/interactive-communication-tutorial/create-template.md)
-      + [&#x200B;4. Erstellen von Fragmenten](./forms/interactive-communication-tutorial/create-fragments.md)
+      + [4. Create Fragments](./forms/interactive-communication-tutorial/create-fragments.md)
       + [&#x200B;5. IC-Dokument erstellen](./forms/interactive-communication-tutorial/create-ic-document.md)
       + [&#x200B;6. IC-Dokument generieren](./forms/interactive-communication-tutorial/test-document-generation.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
