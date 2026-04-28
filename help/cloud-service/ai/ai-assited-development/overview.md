@@ -69,8 +69,8 @@ MCP servers expose tools and data to the coding agent through the [Model Context
 
 For **local development** against the AEM SDK and Dispatcher, install these **local MCP servers** from the [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3) portal:
 
-- **AEM Quickstart Local MCP Server**: Zeigt Live-Laufzeitdaten aus einer lokalen AEM SDK-Instanz an, um die Fehlerbehebung und Entwicklung zu unterstützen. Weitere Informationen finden Sie unter [AEM QuickStart MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server).
-- **Dispatcher Local MCP Server**: Ermöglicht die Laufzeitvalidierung und -überprüfung einer lokalen Dispatcher-Instanz. Weitere Informationen finden Sie unter [Dispatcher MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server).
+- **AEM Quickstart Local MCP Server**: Zeigt Live-Laufzeitdaten aus einer lokalen AEM SDK-Instanz an, um die Fehlerbehebung und Entwicklung zu unterstützen. Weitere Informationen finden Sie unter [AEM QuickStart MCP Server](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server).
+- **Dispatcher Local MCP Server**: Ermöglicht die Laufzeitvalidierung und -überprüfung einer lokalen Dispatcher-Instanz. Weitere Informationen finden Sie unter [Dispatcher MCP Server](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server).
 
 Informationen zu von Adobe gehosteten AEM-MCP-Servern (z. B. Inhalt, schreibgeschützter Inhalt und Cloud Manager) finden Sie unter [MCP-Server in AEM](../mcp/overview.md).
 
@@ -157,7 +157,7 @@ CARDS
 
 ## Zusätzliche Ressourcen
 
-- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe-Kenntnisse für KI-Codierungs-Agenten](https://github.com/adobe/skills)
 

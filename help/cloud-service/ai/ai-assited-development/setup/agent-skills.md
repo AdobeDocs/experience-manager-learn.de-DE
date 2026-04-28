@@ -119,7 +119,7 @@ CARDS
 
 ## Zusätzliche Ressourcen
 
-- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe-Kenntnisse für KI-Codierungs-Agenten](https://github.com/adobe/skills)
 
