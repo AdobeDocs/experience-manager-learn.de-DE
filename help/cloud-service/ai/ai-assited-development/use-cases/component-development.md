@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # Komponentenentwicklung mit AEM Agent Skills
 
-Erfahren Sie, wie Sie mit AEM Agent Skills eine AEM-Komponente als Teil der [KI-unterstützten Entwicklung“ ](../overview.md).
+Erfahren Sie, wie Sie mit AEM Agent Skills eine AEM-Komponente als Teil der [KI-unterstützten Entwicklung“ &#x200B;](../overview.md).
 
 In dieser exemplarischen Vorgehensweise verwenden Sie natürliche Sprache in einer KI-gestützten IDE (z. B. Cursor), um eine **Promo-Banner**-Komponente im [WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) zu entwickeln. Der Codierungsagent wendet die `create-component` AEM Agent Skill an, um die Implementierung zu generieren.
 
