@@ -67,9 +67,9 @@ Für die Durchführung dieses Tutorials ist eine lokale Entwicklungsumgebung erf
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Lesen Sie die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
+> **Neu bei AEM as a Cloud Service?** Lesen Sie die [&#x200B; Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 >
-> **Neu bei AEM 6.5?** Sehen Sie sich die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
+> **Neu bei AEM 6.5?** Sehen Sie sich die [&#x200B; Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 

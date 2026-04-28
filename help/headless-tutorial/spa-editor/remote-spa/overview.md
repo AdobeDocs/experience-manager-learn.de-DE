@@ -66,7 +66,7 @@ Dieses Tutorial setzt Folgendes voraus:
 
 >[!NOTE]
 >
-> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Lesen Sie die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
+> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Lesen Sie die [&#x200B; Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 
 ## &#x200B;1. Konfigurieren von AEM für den SPA-Editor
 
