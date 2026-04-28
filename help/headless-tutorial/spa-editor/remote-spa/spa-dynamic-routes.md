@@ -1,5 +1,5 @@
 ---
-title: 'Hinzufügen bearbeitbarer Komponenten zu dynamischen Routen von Remote-SPA '
+title: Hinzufügen bearbeitbarer Komponenten zu dynamischen Routen von Remote-SPA
 description: Erfahren Sie, wie Sie in einem Remote-SPA bearbeitbare Komponenten zu dynamischen Routen hinzufügen.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '919'
 ht-degree: 94%
 
 ---
@@ -64,7 +64,7 @@ Erstellen Sie zunächst das dazwischenliegende `adventure`-Seitensegment:
 1. Melden Sie sich bei AEM Author an
 1. Navigieren Sie zu __Sites > WKND App > us > en > WKND App Home Page__
    1. Diese AEM-Seite wird als Stamm der SPA zugeordnet, sodass hier der Aufbau der AEM-Seitenstruktur für andere SPA-Routen beginnt.
-1. Tippen Sie auf __Erstellen__ und wählen Sie __Seite__
+1. Tippen Sie auf __Erstellen__ und wählen Sie __Seite__
 1. Wählen Sie die Vorlage __Remote-SPA-Seite__ und tippen Sie auf __Weiter__
 1. Füllen Sie die Seiteneigenschaften aus
    1. __Titel__: Adventure
@@ -103,7 +103,7 @@ Durch Platzieren von `<ResponsiveGrid...>` in der Komponente `AdventureDetail` w
    1. `pagePath = '/content/wknd-app/us/en/home/adventure/${slug}'`
    1. `itemPath = 'root/responsivegrid'`
 
-   Hierdurch wird die Komponente `ResponsiveGrid` angewiesen, ihren Inhalt aus der AEM-Ressource abzurufen:
+   Hierdurch wird die `ResponsiveGrid`-Komponente angewiesen, ihren Inhalt aus der AEM-Ressource abzurufen:
 
    1. `/content/wknd-app/us/en/home/adventure/${slug}/jcr:content/root/responsivegrid`
 

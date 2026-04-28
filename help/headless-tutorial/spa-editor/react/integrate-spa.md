@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
 duration: 409
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1689'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '1964'
+ht-degree: 92%
 
 ---
 
@@ -58,7 +58,7 @@ Weitere Informationen zum Frontend-Build [finden Sie hier](https://experiencelea
 
 ## Überprüfen der SPA-Integration {#inspect-spa-integration}
 
-Überprüfen Sie anschließend das `ui.frontend`-Modul, um die SPA zu verstehen, die automatisch vom [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=de) generiert wurde.
+Überprüfen Sie anschließend das Modul `ui.frontend`, um die automatisch vom [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=de) erstellte SPA zu verstehen.
 
 1. Öffnen Sie Ihr AEM-Projekt in der IDE Ihrer Wahl. In diesem Tutorial wird die [Visual Studio Code-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=de#microsoft-visual-studio-code) verwendet.
 
@@ -130,7 +130,7 @@ Weitere Informationen zum Frontend-Build [finden Sie hier](https://experiencelea
    });
    ```
 
-   `index.js` ist der Einstiegspunkt der SPA. `ModelManager` wird vom AEM SPA Editor JS SDK bereitgestellt. Es ist für das Aufrufen und Einfügen von `pageModel` (der JSON-Inhalt) in die Anwendung verantwortlich.
+   `index.js` ist der Einstiegspunkt der SPA. `ModelManager` wird vom AEM SPA Editor JS SDK bereitgestellt. Darüber wird `pageModel` (der JSON-Inhalt) aufgerufen und in die Anwendung eingefügt.
 
 1. Überprüfen Sie die Datei `import-components.js` unter `ui.frontend/src/components/import-components.js`. Diese Datei importiert die vorkonfigurierten **React-Kernkomponenten** und stellt sie für das Projekt zur Verfügung. Wir werden die Zuordnung von AEM-Inhalten zu SPA-Komponenten im nächsten Kapitel untersuchen.
 
@@ -184,7 +184,7 @@ Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die 
         </div>
    ```
 
-1. Öffnen Sie ein neues Terminal, navigieren Sie in den Ordner `ui.frontend` und führen Sie den Befehl `npm run build` aus:
+1. Öffnen Sie ein neues Terminal, navigieren Sie zum Ordner `ui.frontend` und führen Sie den Befehl `npm run build` aus:
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -219,11 +219,11 @@ Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die 
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Dadurch wird das Paket `ui.apps` in einer lokal ausgeführten Instanz von AEM bereitgestellt.
+   Dadurch wird das `ui.apps`-Paket in einer lokalen aktiven AEM-Instanz bereitgestellt.
 
-1. Öffnen Sie eine Browser-Registerkarte und navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Sie sollten nun den Inhalt der `Header`-Komponente in der SPA angezeigt bekommen.
+1. Öffnen Sie eine Browser-Registerkarte und navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Der Inhalt der `Header`-Komponente sollte nun in der SPA zu sehen sein.
 
-   ![Erste Kopfzeilenimplementierung](./assets/integrate-spa/initial-header-implementation.png)
+   ![Anfängliche Header-Implementierung](./assets/integrate-spa/initial-header-implementation.png)
 
    Die oben genannten Schritte werden automatisch ausgeführt, wenn ein Maven-Build aus dem Stammverzeichnis des Projekts (d. h. `mvn clean install -PautoInstallSinglePackage`) ausgelöst wird. Sie sollten jetzt die Grundlagen der Integration zwischen der SPA und Client-seitigen AEM-Bibliotheken verstehen. Beachten Sie, dass Sie in AEM weiterhin `Text`-Komponenten unterhalb der statischen `Header`-Komponente bearbeiten und hinzufügen können.
 
@@ -243,7 +243,7 @@ Ein [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann 
 
    Die [Create React App](https://create-react-app.dev/docs/proxying-api-requests-in-development) bietet einen einfachen Mechanismus, um API-Anfragen zu proxieren. Alle unbekannten Anfragen werden über `localhost:4502`, den lokalen AEM-Schnellstart, weitergeleitet.
 
-1. Öffnen Sie ein Terminalfenster und navigieren Sie zum Ordner `ui.frontend`. Führen Sie den Befehl `npm start` aus:
+1. Öffnen Sie ein Terminal-Fenster und navigieren Sie zum Ordner `ui.frontend`. Führen Sie den Befehl `npm start` aus:
 
    ```shell
    $ cd ui.frontend
@@ -262,13 +262,13 @@ Ein [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann 
 
 1. Öffnen Sie eine neue Browser-Registerkarte (falls noch nicht geöffnet) und navigieren Sie zu [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html).
 
-   ![Webpack-Dev-Server – Proxy-JSON](./assets/integrate-spa/webpack-dev-server-1.png)
+   ![webpack-Dev-Server – Proxy-JSON](./assets/integrate-spa/webpack-dev-server-1.png)
 
    Sie sollten denselben Inhalt wie in AEM sehen, jedoch ohne dass eine der Authoring-Funktionen aktiviert ist.
 
    >[!NOTE]
    >
-   > Aufgrund der Sicherheitsanforderungen von AEM müssen Sie in der lokalen AEM-Instanz (http://localhost:4502) im selben Browser, aber in einer anderen Registerkarte angemeldet sein.
+   > Aufgrund der Sicherheitsanforderungen von AEM müssen Sie bei der lokalen AEM-Instanz (http://localhost:4502) im selben Browser, aber in einer anderen Registerkarte angemeldet sein.
 
 1. Kehren Sie zur IDE zurück und erstellen Sie eine Datei mit dem Namen `Header.css` im Ordner `src/components/Header`.
 1. Befüllen Sie `Header.css` mit dem Folgenden:
@@ -328,7 +328,7 @@ Ein [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann 
 
    Sie können weiterhin Inhaltsaktualisierungen in AEM vornehmen und sehen, dass diese in **webpack-dev-server** reflektiert werden, da wir für den Inhalt einen Proxy verwenden.
 
-1. Beenden Sie den Webpack Development Server mit `ctrl+c` im Terminal.
+1. Stoppen Sie den Webpack Development Server mit `ctrl+c` im Terminal.
 
 ## Bereitstellen von SPA-Updates für AEM
 
@@ -359,7 +359,7 @@ Herzlichen Glückwunsch, Sie haben die SPA aktualisiert und die Integration mit 
 
 Eine weitere Möglichkeit, die Entwicklung zu beschleunigen, besteht darin, eine statische JSON-Datei als JSON-Modell zu verwenden. Durch JSON-„Mocking“ entfernen wir die Abhängigkeit von einer lokalen AEM-Instanz. Außerdem können dadurch Frontend-Entwicklerinnen und -Entwickler das JSON-Modell aktualisieren, um die Funktionalität zu testen und Änderungen an der JSON-API vorzunehmen, die später von Backend-Entwicklerinnen und -Entwicklern implementiert werden.
 
-Die Ersteinrichtung des JSON-Pseudomodells **erfordert eine lokale AEM-Instanz**.
+Die Ersteinrichtung des JSON-Mockups **erfordert eine lokale AEM-Instanz**.
 
 1. Kehren Sie zur IDE zurück, navigieren Sie zu `ui.frontend/public` und fügen Sie einen neuen Ordner mit dem Namen `mock-content` hinzu.
 1. Erstellen Sie eine neue Datei mit dem Namen `mock.model.json` unter `ui.frontend/public/mock-content`.
@@ -405,7 +405,7 @@ Die Ersteinrichtung des JSON-Pseudomodells **erfordert eine lokale AEM-Instanz**
    $ npm start
    ```
 
-   Navigieren Sie zu [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html). Sie sollten jetzt die SPA mit dem gleichen Inhalt sehen, der in der **Proxy**-JSON verwendet wird.
+   Navigieren Sie zu [http://localhost:3000/content/wknd-spa-react/us/en/home.html](http://localhost:3000/content/wknd-spa-react/us/en/home.html) und Sie sollten die SPA mit demselben Inhalt sehen, der in der JSON **proxy** verwendet wird.
 
 1. Nehmen Sie eine kleine Änderung an der zuvor erstellten Datei `mock.model.json` vor. Sie sollten den aktualisierten Inhalt sofort im **webpack-dev-server** sehen.
 

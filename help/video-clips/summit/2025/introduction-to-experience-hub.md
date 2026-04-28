@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 8f2826fe-d330-42f5-be29-7bc3a2f26deb
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 100%
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Entdecken Sie den einheitlichen Ausgangspunkt für AEM-Benutzende mit Experience Hub, der zur Steigerung der Produktivität und Personalisierung konzipiert wurde.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462136/?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459224/?learn=on&enablevpops)

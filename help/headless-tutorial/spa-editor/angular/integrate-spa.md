@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 536
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '2045'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2299'
+ht-degree: 94%
 
 ---
 
@@ -424,7 +424,7 @@ Die Ersteinrichtung des JSON-Mockups **erfordert eine lokale AEM-Instanz**.
 
    ![Angular-JSON-Build-Dev-Aktualisierung](assets/integrate-spa/angular-json-build-dev-update.png)
 
-7. Öffnen Sie die Datei `ui.frontend/package.json` und fügen Sie einen neuen Befehl **start:mock** zum Verweisen auf die Datei **proxy.mock.conf.json** hinzu.
+7. Öffnen Sie die Datei `ui.frontend/package.json` und fügen Sie einen neuen Befehl **start:mock** zum Verweisen auf die Datei **proxy.mock.conf.** hinzu.
 
    ```diff
        "scripts": {
@@ -439,7 +439,7 @@ Die Ersteinrichtung des JSON-Mockups **erfordert eine lokale AEM-Instanz**.
 
    Durch Hinzufügen eines neuen Befehls ist es einfach, zwischen den Proxy-Konfigurationen umzuschalten.
 
-8. Halten Sie den **webpack-Dev-Server** an, falls er aktuell ausgeführt wird. Starten Sie den **webpack-Dev-Server** mit dem Skript **start:mock**:
+8. Halten Sie den **webpack-Dev-Server** an, falls er aktuell ausgeführt wird. Starten Sie den **webpack-Dev-Server** mithilfe des **start:mock**-Skripts:
 
    ```shell
    $ npm run start:mock
@@ -448,7 +448,7 @@ Die Ersteinrichtung des JSON-Mockups **erfordert eine lokale AEM-Instanz**.
    > ng serve --open --proxy-config ./proxy.mock.conf.json
    ```
 
-   Navigieren Sie zu [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html). Sie sollten daraufhin dieselbe SPA sehen, wobei der Inhalt nun aber aus der **JSON-Pseudodatei** bezogen wird.
+   Navigieren Sie zu [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html). Sie sollten daraufhin dieselbe SPA sehen, wobei der Inhalt nun jedoch aus der JSON-**(**) abgerufen wird.
 
 9. Nehmen Sie eine kleine Änderung an der zuvor erstellten Datei **en.model.json** vor. Der aktualisierte Inhalt sollte sofort auf dem **webpack-Dev-Server** widergespiegelt werden.
 

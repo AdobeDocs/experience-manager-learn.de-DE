@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
 duration: 323
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1105'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '1274'
+ht-degree: 94%
 
 ---
 
@@ -346,10 +346,10 @@ Navigieren Sie anschließend zu AEM, um die Aktualisierungen zu überprüfen und
    com.adobe.aem.guides.wkndspa.react.core.models.impl.OpenWeatherModelImpl exports 'wknd-spa-react/components/open-weather' with selector 'model' and extension '[Ljava.lang.String;@2fd80fc5' with exporter 'jackson'
    ```
 
-   Sie sollten die beiden obigen Zeilen sehen, die anzeigen, dass die `OpenWeatherModelImpl` mit der Komponente `wknd-spa-react/components/open-weather` verbunden ist und dass sie über den Sling-Modell-Exporter registriert ist.
+   Sie sollten die beiden obigen Zeilen sehen, die anzeigen, dass `OpenWeatherModelImpl` mit der Komponente `wknd-spa-react/components/open-weather` verbunden ist und dass sie über den Sling-Modell-Exporter registriert ist.
 
-1. Navigieren Sie zu der SPA-Seitenvorlage unter [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. Aktualisieren Sie die Richtlinie des Layout-Containers, um das neue `Open Weather` als zulässige Komponente hinzuzufügen:
+1. Navigieren Sie zur SPA-Seitenvorlage unter [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
+1. Aktualisieren Sie die Richtlinie des Layout-Containers, um die neue `Open Weather` als zulässige Komponente hinzuzufügen:
 
    ![Aktualisieren der Layout-Container-Richtlinie](assets/custom-component/custom-component-allowed.png)
 
@@ -362,7 +362,7 @@ Navigieren Sie anschließend zu AEM, um die Aktualisierungen zu überprüfen und
 Als Nächstes erstellen Sie mit dem AEM-SPA-Editor die Komponente `Open Weather`.
 
 1. Navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
-1. Fügen Sie im `Edit`-Modus `Open Weather` zum `Layout Container` hinzu:
+1. Fügen Sie die `Open Weather` im Modus `Edit` dem `Layout Container` hinzu:
 
    ![Neue Komponente einfügen](assets/custom-component/insert-custom-component.png)
 
@@ -376,7 +376,7 @@ Als Nächstes erstellen Sie mit dem AEM-SPA-Editor die Komponente `Open Weather`
 
    ![Wetterkomponente aktualisiert](assets/custom-component/weather-updated.png)
 
-1. Zeigen Sie das JSON-Modell durch Navigieren zu [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) an. Suchen Sie nach `wknd-spa-react/components/open-weather`:
+1. Anzeigen des JSON-Modells durch Navigieren zu [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Suchen Sie nach `wknd-spa-react/components/open-weather`:
 
    ```json
    "open_weather": {

@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1002'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '1148'
+ht-degree: 90%
 
 ---
 
@@ -139,9 +139,9 @@ Kompilieren und erstellen Sie anschließend mithilfe von Maven den Projekt-Code 
    [INFO] ------------------------------------------------------------------------
    ```
 
-   Das Maven-Profil ***autoInstallSinglePackage*** kompiliert die einzelnen Module des Projekts und stellt ein einzelnes Paket in der AEM-Instanz bereit. Standardmäßig wird dieses Paket in einer AEM-Instanz bereitgestellt, die am Port **4502** lokal mit den Anmeldeinformationen **admin:admin** ausgeführt wird.
+   Das Maven-Profil ***autoInstallSinglePackage*** kompiliert die einzelnen Module des Projekts und stellt ein einzelnes Paket in der AEM-Instanz bereit. Standardmäßig wird dieses Paket in einer AEM-Instanz bereitgestellt, die lokal am Port **4502** mit den Anmeldeinformationen von **admin:admin** ausgeführt wird.
 
-4. Navigieren Sie in Ihrer lokalen AEM-Instanz zu **[!UICONTROL Package Manager]**: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
+4. Navigieren Sie **[!UICONTROL Package Manager]** auf Ihrer lokalen AEM-Instanz: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp).
 
 5. Sie sollten drei Pakete sehen für `wknd-spa-angular.all`, `wknd-spa-angular.ui.apps` und `wknd-spa-angular.ui.content`.
 
@@ -203,7 +203,7 @@ Kompilieren und erstellen Sie anschließend mithilfe von Maven den Projekt-Code 
 
    ![XHR-Anfragen](./assets/create-project/xhr-requests.png)
 
-   Es sollte eine Anfrage geben an [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Diese enthält den gesamten Inhalt, formatiert in JSON, für die SPA.
+   Es sollte eine Anfrage an [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) vorhanden sein. Diese enthält den gesamten Inhalt, formatiert in JSON, für die SPA.
 
 5. Öffnen Sie in einer neuen Registerkarte [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 

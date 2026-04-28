@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1058'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '1115'
+ht-degree: 98%
 
 ---
 
@@ -479,7 +479,7 @@ Implementieren Sie als Nächstes das Sling-Modell für die `BannerModel`-Schnitt
 
 ![Bannertext angezeigt](assets/extend-component/banner-text-displayed.png)
 
-1. Betrachten Sie die JSON-Modellantwort unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) und suchen Sie nach `wknd-spa-react/components/card`:
+1. Zeigen Sie die JSON-Modellantwort unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) an und suchen Sie nach der `wknd-spa-react/components/card`:
 
    ```json
    "banner": {

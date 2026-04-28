@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
 duration: 509
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '2213'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2475'
+ht-degree: 96%
 
 ---
 
@@ -65,11 +65,11 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) ansehen oder den Code lokal auschecken, indem Sie zu der Verzweigung `Angular/map-components-solution` wechseln.
+Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) ansehen oder den Code lokal auschecken, indem Sie zur Verzweigung `Angular/map-components-solution` wechseln.
 
 ## Zuordnungsansatz
 
-Das grundlegende Konzept besteht darin, eine SPA-Komponente einer AEM-Komponente zuzuordnen. Server-seitig ausgeführte AEM-Komponenten exportieren Inhalte als Teil der JSON-Modell-API. Der JSON-Inhalt wird von der SPA verwendet, die Client-seitig im Browser ausgeführt wird. Es wird eine 1:1-Zuordnung zwischen SPA-Komponenten und einer AEM-Komponente erstellt.
+Das grundlegende Konzept besteht darin, eine SPA-Komponente einer AEM-Komponente zuzuordnen. Server-seitig ausgeführte AEM-Komponenten exportieren Inhalte als Teil der JSON-Modell-API. Der JSON-Inhalt wird von der SPA verwendet, die Client-seitig im Browser ausgeführt wird. Eine 1:1-Zuordnung zwischen SPA-Komponenten und einer AEM-Komponente wird erstellt.
 
 ![Allgemeine Übersicht über die Zuordnung einer AEM-Komponente zu einer Angular-Komponente](./assets/map-components/high-level-approach.png)
 
@@ -105,7 +105,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    Das Modul `ui.frontend` ist aktuell auf die Verwendung des [JSON-Pseudomodells](./integrate-spa.md#mock-json) eingerichtet.
 
-2. Es sollte ein neues Browser-Fenster zu sehen sein, in dem [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html) geöffnet ist.
+2. Es sollte ein neues Browser-Fenster zu sehen sein, in dem [http://localhost:4200/content/wknd-spa-angular/us/en/home.html geöffnet ist](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)
 
    ![webpack-Dev-Server mit Pseudoinhalten](assets/map-components/initial-start.png)
 
@@ -403,7 +403,7 @@ Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Stel
 
 6. Navigieren Sie zur **Homepage** [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
 
-   Sie sollten auch dazu in der Lage sein, die `Text`-Komponente zu bearbeiten und zusätzliche Absatzformate im **Vollbildmodus** hinzuzufügen.
+   Sie sollten auch in der Lage sein, die `Text`-Komponente zu bearbeiten und zusätzliche Absatzformate im **Vollbild**-Modus hinzuzufügen.
 
    ![Rich-Text-Bearbeitung im Vollbildmodus](assets/map-components/full-screen-rte.png)
 
@@ -411,9 +411,9 @@ Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Stel
 
    ![Ziehen eines Bilds per Drag-and-Drop](./assets/map-components/drag-drop-image.gif)
 
-8. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Code-Basis für die Standard-[WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit dem [Package Manager von AEM](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+8. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Code-Basis für die Standard-[WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit dem [AEM-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Package Manager-Installation wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Paket-Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 ## Überprüfen des Layout-Containers
 
@@ -437,15 +437,15 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    Die Komponente **Layout-Container** verfügt über einen `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA-Editor mithilfe der `:type`-Eigenschaft erkannt, genau wie die Komponenten `Text` und `Image`.
 
-   Die gleichen Funktionen für die Neuskalierung einer Komponente über den [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=de#defining-layouts-layout-mode) sind im SPA-Editor verfügbar.
+   Die gleichen Funktionen für die Änderung der Größe einer Komponente mit dem [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=de#defining-layouts-layout-mode) sind mit dem SPA-Editor verfügbar.
 
-3. Kehren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) zurück. Fügen Sie zusätzliche **Bildkomponenten** hinzu und versuchen Sie, sie mithilfe der Option **Layout** neu zu skalieren:
+3. Kehren Sie zurück zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). Fügen Sie zusätzliche **Bild**-Komponenten hinzu und versuchen Sie, mithilfe der **Layout**-Option ihre Größe zu verändern:
 
-   ![Neuskalierung der Bildgröße im Layout-Modus](./assets/map-components/responsive-grid-layout-change.gif)
+   ![Ändern der Bildgröße mit dem Layout-Modus](./assets/map-components/responsive-grid-layout-change.gif)
 
 4. Öffnen Sie das JSON-Modell [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) erneut und betrachten Sie die `columnClassNames` als Teil von JSON:
 
-   ![Spalten mit Klassennamen](./assets/map-components/responsive-grid-classnames.png)
+   ![Spalten-Klassennamen](./assets/map-components/responsive-grid-classnames.png)
 
    Der Klassenname `aem-GridColumn--default--4` gibt an, dass die Komponente basierend auf einem 12-Spalten-Raster 4 Spalten breit sein sollte. Weitere Informationen zum [Responsiven Raster finden Sie hier.](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)
 
@@ -479,7 +479,7 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
 
 2. Erweitern Sie das **ui.content**-Modul im Project Explorer und navigieren Sie zu `/conf/wknd-spa-angular/settings/wcm/templates`.
 
-3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM Server**:
+3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM-Server**:
 
    ![VSCode-Importvorlage](assets/map-components/import-aem-servervscode.png)
 
@@ -498,6 +498,6 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
     </workspaceFilter>
    ```
 
-   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. `mode="merge"` bei jedem Filter bedeutet, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass Inhalte bei einer Code-Bereitstellung **nicht** überschrieben werden. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
+   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. `mode="merge"` bei jedem Filter bedeutet, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und -autoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass eine Code-Bereitstellung den Inhalt **nicht** überschreibt. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
 
-   Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml`, um sich mit den verschiedenen, von den einzelnen Modulen verwalteten Knoten vertraut zu machen.
+   Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml`, um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.

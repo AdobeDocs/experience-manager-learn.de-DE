@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '583'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '734'
+ht-degree: 88%
 
 ---
 
@@ -35,8 +35,8 @@ In diesem mehrteiligen Tutorial lernen Entwicklerinnen und Entwickler, wie eine 
 
 Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** erstellt und ist abwärtskompatibel mit **AEM 6.5.4+** und **AEM 6.4.8+**. Die SPA wird mithilfe von Folgendem implementiert:
 
-* [Maven-AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)
-* [Der SPA-Editor von AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html?lang=de#content-editing-experience-with-spa)
+* [Maven AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)
+* [AEM-SPA-Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html?lang=de#content-editing-experience-with-spa)
 * [Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
 * [Angular](https://angular.io/)
 
@@ -59,7 +59,7 @@ Bevor Sie mit diesem Tutorial beginnen, benötigen Sie Folgendes:
 * [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
 * [Node.js](https://nodejs.org/de/) und [npm](https://www.npmjs.com/)
 
-*Es ist zwar nicht erforderlich, jedoch von Vorteil, über ein grundlegendes Verständnis der [Entwicklung herkömmlicher AEM-Sites-Komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de) zu verfügen.*
+*Es ist zwar nicht erforderlich, jedoch von Vorteil, über ein grundlegendes Verständnis von der [Entwicklung herkömmlicher AEM Sites-Komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de) zu verfügen.*
 
 ## Lokale Entwicklungsumgebung {#local-dev-environment}
 
@@ -67,13 +67,13 @@ Für die Durchführung dieses Tutorials ist eine lokale Entwicklungsumgebung erf
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Sehen Sie sich eine [detaillierte Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de) an.
+> **Neu bei AEM as a Cloud Service?** Lesen Sie die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 >
-> **Neu bei AEM 6.5?** Sehen Sie sich die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
+> **Neu bei AEM 6.5?** Sehen Sie sich die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 
-Möchten Sie loslegen? Beginnen Sie das Tutorial, indem Sie zum Kapitel [SPA-Editor-Projekt](create-project.md) navigieren und lernen, wie Sie ein SPA-Editor-fähiges Projekt mithilfe des AEM-Projektarchetyps erstellen.
+Worauf wartest du?! Starten Sie das Tutorial, indem Sie zum Kapitel [SPA-Editor-Projekt](create-project.md) navigieren und lernen, wie Sie ein SPA-Editor-aktiviertes Projekt mithilfe des AEM-Projektarchetyps erstellen.
 
 ## Abwärtskompatibilität {#compatibility}
 

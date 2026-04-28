@@ -13,10 +13,10 @@ exl-id: 38802296-8988-4300-a04a-fcbbe98ac810
 last-substantial-update: 2022-08-25T00:00:00Z
 duration: 71
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '417'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 86%
 
 ---
 
@@ -62,10 +62,10 @@ Für die Durchführung dieses Tutorials ist eine lokale Entwicklungsumgebung erf
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Sehen Sie sich eine [detaillierte Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de) an.
+> **Neu bei AEM as a Cloud Service?** Lesen Sie die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 >
-> **Neu bei AEM 6.5?** Sehen Sie sich die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
+> **Neu bei AEM 6.5?** Sehen Sie sich die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 
-Keine Zeit verlieren! Starten Sie das Tutorial, indem Sie zum Kapitel [Projekt erstellen](create-project.md) gehen, und erfahren Sie, wie Sie ein Projekt mit aktiviertem SPA-Editor mithilfe des AEM-Projekt-Archetyps erstellen.
+Worauf wartest du?! Starten Sie das Tutorial, indem Sie zum Kapitel [Projekt erstellen](create-project.md) navigieren und lernen, wie Sie ein SPA-Editor-aktiviertes Projekt mithilfe des AEM-Projektarchetyps erstellen.

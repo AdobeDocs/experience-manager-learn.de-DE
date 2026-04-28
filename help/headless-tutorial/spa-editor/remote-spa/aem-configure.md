@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
 duration: 297
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1229'
-ht-degree: 100%
+source-wordcount: '1278'
+ht-degree: 97%
 
 ---
 
@@ -210,7 +210,7 @@ Die Datei `filter.xml` sollte wie folgt aussehen:
 
 Wenn das AEM-Projekt jetzt bereitgestellt wird, werden diese Konfigurationen automatisch einbezogen.
 
-Die Sling-Zuordnungseffekte wirken sich auf AEM aus, das auf `http` und `localhost` läuft und so wird nur die lokale Entwicklung unterstützt. Bei der Bereitstellung in AEM as a Cloud Service müssen ähnliche Sling-Zuordnungen hinzugefügt werden, die auf `https` und die entsprechende(n) AEM as a Cloud Service-Domain(s) abzielen. Weitere Informationen finden Sie in der [Sling-Zuordnungsdokumentation](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
+Die Sling-Zuordnungseffekte wirken sich auf AEM aus, das auf `http` und `localhost` läuft und so wird nur die lokale Entwicklung unterstützt. Bei der Bereitstellung in AEM as a Cloud Service müssen ähnliche Sling-Zuordnungen hinzugefügt werden, die `https` und die entsprechende(n) AEM as a Cloud Service-Domain(s) betreffen. Weitere Informationen finden Sie in der [Sling-Zuordnungsdokumentation](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html).
 
 ## Sicherheitsrichtlinien für Cross-Origin Resource Sharing
 

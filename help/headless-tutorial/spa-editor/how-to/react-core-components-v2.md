@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '525'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ AEM stellt das Node.js-basierte SDK [AEM React Editable Components v2](https://w
 
 * [NPM-Modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [GitHub-Projekt](https://github.com/adobe/aem-react-editable-components)
-* [Adobe-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=de)
+* [Dokumentation zu Adobe](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=de)
 
 
 Weitere Informationen und Code-Beispiele für AEM React Editable Components v2 finden Sie in der technischen Dokumentation:

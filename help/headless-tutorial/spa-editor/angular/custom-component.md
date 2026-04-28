@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
 duration: 308
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1321'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '1544'
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ Erfahren Sie, wie Sie eine benutzerdefinierte Komponente erstellen, die mit dem 
 
 1. Machen Sie sich mit der Rolle von Sling-Modellen bei der Bearbeitung der von AEM bereitgestellten JSON-Modell-API vertraut.
 2. Erfahren Sie, wie Sie AEM-Komponentendialogfelder erstellen.
-3. Erfahren Sie, wie Sie eine **benutzerdefinierte** AEM-Komponente erstellen, die mit dem SPA-Editor-Framework kompatibel ist.
+3. Lernen Sie, eine **benutzerdefinierte** AEM-Komponente zu erstellen, die mit dem Framework des SPA-Editors kompatibel ist.
 
 ## Was Sie erstellen werden
 
@@ -59,15 +59,15 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
+   Fügen Sie bei Verwendung von [AEM 6.x](overview.md#compatibility) das Profil `classic` hinzu:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die Bilder von der [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) werden auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die Bilder von der [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) werden auf der WKND-SPA wiederverwendet. Das Paket kann mit dem [AEM-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Package Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Paket-Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution) einsehen oder den Code lokal auschecken, indem Sie zur Verzweigung `Angular/custom-component-solution` wechseln.
 
@@ -157,13 +157,13 @@ Eine AEM-Komponente ist definiert als ein Knoten und Eigenschaften. Im Projekt w
 
    >[!NOTE]
    >
-   > Sie können viele weitere [Beispiele für Dialoge in den Definitionen der Kernkomponenten sehen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Sie können auch zusätzliche Formularfelder anzeigen, zum Beispiel `select`, `textarea`, `pathfield`, verfügbar unter `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
+   > Sie können viele weitere [Beispiele für Dialoge in den Kernkomponenten-Definitionen sehen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Sie können auch zusätzliche Formularfelder anzeigen, zum Beispiel `select`, `textarea`, `pathfield`, verfügbar unter `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
    Bei einer herkömmlichen AEM-Komponente ist normalerweise ein [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=de)-Skript erforderlich. Da die SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
 
 ## Erstellen des Sling-Modells
 
-Sling-Modelle sind von Anmerkungen gesteuerte Java™-„POJOs“ (Plain Old Java™ Objects), die die Zuordnung von Daten aus JCR zu Java™-Variablen erleichtern. [Sling-Modelle](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=de#sling-models) dienen normalerweise zum Einkapseln komplexer Server-seitiger Business-Logik für AEM-Komponenten.
+Sling-Modelle sind von Anmerkungen gesteuerte Java™-„POJOs“ (Plain Old Java™ Objects), die die Zuordnung von Daten aus JCR zu Java™-Variablen erleichtern. [Sling-Modelle](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=de#sling-models) dienen normalerweise dazu, komplexe Server-seitige Geschäftslogik für AEM-Komponenten einzukapseln.
 
 Im Zusammenhang mit dem SPA-Editor stellen Sling-Modelle den Inhalt einer Komponente durch das JSON-Modell über eine Funktion mit dem [Sling-Modell-Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=de) dar.
 
@@ -319,7 +319,7 @@ Als Nächstes erstellen Sie die `Custom Component` mit dem AEM-SPA-Editor.
 
    ![Nachricht in Großbuchstaben angezeigt](assets/custom-component/message-displayed.png)
 
-5. Zeigen Sie das JSON-Modell durch Navigieren zu [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) an. Suchen Sie nach `wknd-spa-angular/components/custom-component`:
+5. Anzeigen des JSON-Modells durch Navigieren zu [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Suchen Sie nach `wknd-spa-angular/components/custom-component`:
 
    ```json
    "custom_component_208183317": {

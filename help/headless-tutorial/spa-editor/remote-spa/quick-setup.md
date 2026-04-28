@@ -13,10 +13,10 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 93%
+source-wordcount: '838'
+ht-degree: 90%
 
 ---
 
@@ -59,7 +59,7 @@ Dieses Tutorial setzt Folgendes voraus:
 
 Herunterladen und Installieren des AEM SDK-Schnellstarts auf Port 4502 mit den standardmäßigen `admin/admin`-Anmeldeinformationen.
 
-1. [Laden Sie das aktuelle AEM SDK herunter.](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
+1. [Neueste AEM SDK herunterladen](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
 1. Entpacken Sie das AEM SDK in `~/aem-sdk`.
 1. Führen Sie das AEM SDK-Schnellstart-JAR aus.
 
@@ -78,7 +78,7 @@ AEM SDK wird gestartet und automatisch auf [http://localhost:4502](http://localh
 
 Dieses Tutorial weist eine Abhängigkeit vom Projekt __WKND 2.1.0+__ auf (für den Inhalt).
 
-1. [Laden Sie die neueste Version von `aem-guides-wknd.all.x.x.x.zip` herunter.](https://github.com/adobe/aem-guides-wknd/releases)
+1. [Herunterladen der neuesten Version von `aem-guides-wknd.all.x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases)
 1. Melden Sie sich beim Package Manager von AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin` Anmeldeinformationen an.
 1. __Laden__ Sie die in Schritt 1 heruntergeladene Datei `aem-guides-wknd.all.x.x.x.zip` hoch.
 1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `aem-guides-wknd.all-x.x.x.zip`.
@@ -87,11 +87,11 @@ Dieses Tutorial weist eine Abhängigkeit vom Projekt __WKND 2.1.0+__ auf (für d
 
 Um eine Schnelleinrichtung zu ermöglichen, werden hier AEM-Pakete mit der endgültigen AEM-Konfiguration und den fertiggestellten AEM-Inhalten für das Tutorial bereitgestellt.
 
-1. [Herunterladen &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Herunterladen &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [`wknd-app.all.x.x.x.zip` herunterladen](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [`wknd-app.ui.content.sample.x.x.x.zip` herunterladen](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. Melden Sie sich beim Package Manager von AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin` Anmeldeinformationen an.
 1. __Laden__ Sie die in Schritt 1 heruntergeladene Datei `wknd-app.all.x.x.x.zip` hoch.
-1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `wknd-app.all.x.x.x.zip`
+1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `wknd-app.all.x.x.x.zip`.
 1. __Laden__ Sie die in Schritt 2 heruntergeladene Datei `wknd-app.ui.content.sample.x.x.x.zip` hoch
 1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `wknd-app.ui.content.sample.x.x.x.zip`
 

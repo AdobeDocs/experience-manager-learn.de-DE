@@ -12,14 +12,14 @@ doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 100%
+source-wordcount: '667'
+ht-degree: 92%
 
 ---
 
-# Übersicht
+# Überblick
 
 {{edge-delivery-services}}
 
@@ -27,7 +27,7 @@ Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React
 
 Dieses Tutorial baut auf der [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de) auf, einer React-App, die AEM Inhaltsfragmentinhalte über GraphQL-APIs von AEM nutzt, jedoch keine kontextbezogene Bearbeitung von SPA-Inhalten bereitstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444856?captions=ger&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Über das Tutorial
 
@@ -66,15 +66,15 @@ Dieses Tutorial setzt Folgendes voraus:
 
 >[!NOTE]
 >
-> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Lesen Sie die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
+> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Lesen Sie die [ Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit der AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 
-## &#x200B;1. Konfigurieren von AEM für SPA-Editor
+## &#x200B;1. Konfigurieren von AEM für den SPA-Editor
 
 AEM-Konfigurationen sind erforderlich, um die SPA mit dem AEM-SPA-Editor zu integrieren. Diese Konfigurationen werden über ein AEM-Projekt verwaltet und bereitgestellt. In diesem Kapitel erfahren Sie, welche Konfigurationen erforderlich sind und wie sie definiert werden.
 
 + [Erfahren Sie, wie Sie AEM für den SPA-Editor konfigurieren](./aem-configure.md)
 
-## &#x200B;2. Bootstrapping des SPA
+## &#x200B;2. Bootstrap - die SPA
 
 Damit der AEM-SPA-Editor eine SPA in den Authoring-Kontext integrieren kann, müssen einige Ergänzungen an der SPA vorgenommen werden.
 

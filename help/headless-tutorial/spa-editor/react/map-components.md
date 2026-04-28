@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
 duration: 477
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '2123'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2357'
+ht-degree: 96%
 
 ---
 
@@ -37,7 +37,7 @@ In diesem Kapitel werden die AEM JSON-Modell-API und die Möglichkeiten erläute
 
 In diesem Kapitel wird untersucht, wie die bereitgestellte SPA-`Text`-Komponente auf die AEM-`Text`-Komponente abgebildet wird. React-Kernkomponenten wie die SPA-`Image`-Komponente werden in der SPA verwendet und in AEM verfasst. Vorkonfigurierte Funktionen der **Layout-Container**- und **Vorlageneditor**-Richtlinien werden auch verwendet, um eine Ansicht zu erstellen, die etwas abwechslungsreicher erscheint.
 
-![Kapitelbeispiel für die endgültige Bearbeitung](./assets/map-components/final-page.png)
+![Kapitel Beispiel endgültige Erstellung](./assets/map-components/final-page.png)
 
 ## Voraussetzungen
 
@@ -45,7 +45,7 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
 
 ## Zuordnungsansatz
 
-Das grundlegende Konzept besteht darin, eine SPA-Komponente einer AEM-Komponente zuzuordnen. Server-seitig ausgeführte AEM-Komponenten exportieren Inhalte als Teil der JSON-Modell-API. Der JSON-Inhalt wird von der SPA verwendet, die Client-seitig im Browser ausgeführt wird. Es wird eine 1:1-Zuordnung zwischen SPA-Komponenten und einer AEM-Komponente erstellt.
+Das grundlegende Konzept besteht darin, eine SPA-Komponente einer AEM-Komponente zuzuordnen. Server-seitig ausgeführte AEM-Komponenten exportieren Inhalte als Teil der JSON-Modell-API. Der JSON-Inhalt wird von der SPA verwendet, die Client-seitig im Browser ausgeführt wird. Eine 1:1-Zuordnung zwischen SPA-Komponenten und einer AEM-Komponente wird erstellt.
 
 ![Allgemeine Übersicht über die Zuordnung einer AEM-Komponente zu einer React-Komponente](./assets/map-components/high-level-approach.png)
 
@@ -68,9 +68,9 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    `:type` ist eine reservierte Eigenschaft, die den `sling:resourceType` (oder Pfad) der AEM-Komponente auflistet. Der Wert von `:type` wird verwendet, um die AEM-Komponente der SPA zuzuordnen.
 
-   `text` und `richText` sind zusätzliche Eigenschaften, die für die SPA-Komponente verfügbar gemacht werden.
+   `text` und `richText` sind zusätzliche Eigenschaften, die für die SPA-Komponente bereitgestellt werden.
 
-1. Sehen Sie sich die JSON-Ausgabe unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) an. Sie sollten einen Eintrag finden können, der in etwa wie folgt aussieht:
+1. Anzeigen der JSON-Ausgabe unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Sie sollten einen Eintrag finden können, der in etwa wie folgt aussieht:
 
    ```json
    "text": {
@@ -125,7 +125,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
    };
    ```
 
-   Der obige Code bestimmt, wann der Platzhalter in der AEM Author-Umgebung gerendert werden soll. Wenn die Methode `isEmpty` **true** zurückgibt, wird der Platzhalter gerendert.
+   Der obige Code bestimmt, wann der Platzhalter in der AEM Author-Umgebung gerendert werden soll. Wenn die Methode `isEmpty` den Wert **true** zurückgibt, wird der Platzhalter gerendert.
 
 1. Sehen Sie sich abschließend den Aufruf `MapTo` bei ~Zeile 94 an:
 
@@ -133,7 +133,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
    export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
-   `MapTo` wird durch das AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`) bereitgestellt. Der Pfad `wknd-spa-react/components/text` stellt die `sling:resourceType` der AEM-Komponente dar. Dieser Pfad wird mit dem `:type` abgeglichen, der von dem zuvor festgestellten JSON-Modell bereitgestellt wird. `MapTo` analysiert die JSON-Modellantwort und übergibt die richtigen Werte als `props` zur SPA-Komponente.
+   `MapTo` wird durch das AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`) bereitgestellt. Der Pfad `wknd-spa-react/components/text` steht für das `sling:resourceType`-Element der AEM-Komponente. Dieser Pfad wird mit `:type` abgeglichen, das von dem zuvor festgestellten JSON-Modell bereitgestellt wird. `MapTo` analysiert die JSON-Modellantwort und übergibt die richtigen Werte als `props` zur SPA-Komponente.
 
    Sie finden die AEM-`Text`Komponentendefinition unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`.
 
@@ -172,7 +172,7 @@ Richtlinien sind eine Funktion von AEM-Vorlagen, die Entwickelnden und Hauptbenu
 
    Unter **Standardkomponenten** > **Zuordnung hinzufügen** wählen Sie die Komponente **Bild – WKND SPA React – Inhalt**:
 
-   ![Standardkomponenten festlegen](./assets/map-components/default-components.png)
+   ![Festlegen der Standardkomponenten](./assets/map-components/default-components.png)
 
    Geben Sie einen **MIME-Typ** von `image/*` ein.
 
@@ -180,7 +180,7 @@ Richtlinien sind eine Funktion von AEM-Vorlagen, die Entwickelnden und Hauptbenu
 
 1. Klicken Sie im **Layout-Container** auf das Symbol **Richtlinie** für die Komponente **Text**.
 
-   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA-Text**. Unter **Plugins** > **Formatierung** > markieren Sie alle Kästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
+   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA Text**. Unter **Plugins** > **Formatierung** > markieren Sie alle Kästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
 
    ![Aktivieren der RTE-Formatierung](assets/map-components/enable-formatting-rte.png)
 
@@ -192,7 +192,7 @@ Richtlinien sind eine Funktion von AEM-Vorlagen, die Entwickelnden und Hauptbenu
 
 ### Authoring von Inhalten
 
-1. Navigieren Sie zur **Startseite** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
+1. Navigieren Sie zur **Homepage** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
 
 1. Sie sollten jetzt in der Lage sein, die zusätzlichen Komponenten **Bild**, **Teaser** und **Titel** auf der Seite zu verwenden.
 
@@ -204,13 +204,13 @@ Richtlinien sind eine Funktion von AEM-Vorlagen, die Entwickelnden und Hauptbenu
 
 1. Sie sollten auch dazu in der Lage sein, ein Bild per Drag-and-Drop aus dem **Asset-Finder** zu ziehen:
 
-   ![Bild per Drag-and-Drop ziehen](assets/map-components/drag-drop-image.png)
+   ![Ziehen eines Bilds per Drag-and-Drop](assets/map-components/drag-drop-image.png)
 
 1. Experimentieren Sie mit der **Titel**- und der **Teaser**-Komponente.
 
-1. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Codebasis für die standardmäßige [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit dem [Package Manager von AEM](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+1. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Code-Basis für die Standard-[WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit dem [AEM-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Package Manager-Installation wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Paket-Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 ## Überprüfen des Layout-Containers
 
@@ -250,7 +250,7 @@ Herzlichen Glückwunsch! Sie haben gelernt, wie Sie SPA-Komponenten AEM-Komponen
 
 ### Nächste Schritte {#next-steps}
 
-[Navigation und Routing](navigation-routing.md) – Erfahren Sie, wie mehrere Ansichten in der SPA durch Zuordnung zu AEM-Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wird mit React Router und React-Kernkomponenten implementiert.
+[Navigation und Routing](navigation-routing.md) – Erfahren Sie, wie mehrere Ansichten in der SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM-Seiten zuordnen. Die dynamische Navigation wird mit React Router und React-Kernkomponenten implementiert.
 
 ## (Bonus) Beibehalten von Konfigurationen zur Verwaltung der Quelle {#bonus-configs}
 
@@ -264,7 +264,7 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
 
 2. Erweitern Sie das **ui.content**-Modul im Project Explorer und navigieren Sie zu `/conf/wknd-spa-react/settings/wcm/templates`.
 
-3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM Server**:
+3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM-Server**:
 
    ![VSCode-Importvorlage](./assets/map-components/import-aem-servervscode.png)
 
@@ -283,7 +283,7 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
     </workspaceFilter>
    ```
 
-   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. `mode="merge"` bei jedem Filter bedeutet, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass Inhalte bei einer Code-Bereitstellung **nicht** überschrieben werden. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
+   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. `mode="merge"` bei jedem Filter bedeutet, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und -autoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass eine Code-Bereitstellung den Inhalt **nicht** überschreibt. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
 
    Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml`, um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.
 

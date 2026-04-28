@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '2531'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2845'
+ht-degree: 92%
 
 ---
 
@@ -57,15 +57,15 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
+   Fügen Sie bei Verwendung von [AEM 6.x](overview.md#compatibility) das Profil `classic` hinzu:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/latest). Die Bilder von der [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/latest) werden auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die Bilder von der [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/latest) werden auf der WKND-SPA wiederverwendet. Das Paket kann mit dem [AEM-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Paket-Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) ansehen oder den Code lokal auschecken, indem Sie zur Verzweigung `Angular/navigation-routing-solution` wechseln.
 
@@ -188,7 +188,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 4. Kehren Sie zur AEM Sites-Konsole zurück und wiederholen Sie die obigen Schritte, indem Sie eine zweite Seite mit dem Namen **„Seite 2“** als gleichgeordnet zu **Seite 1** erstellen. Fügen Sie Inhalt auf **Seite 2** ein, sodass sie leicht zu erkennen ist.
 5. Erstellen Sie abschließend eine dritte Seite, **„Seite 3“**, diese jedoch als **untergeordnet** zu **Seite 2**. Danach sollte die Website-Hierarchie wie folgt aussehen:
 
-   ![Beispielhafte Website-Hierarchie](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
+   ![Beispiel für Website-Hierarchie](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
 6. Öffnen Sie in einer neuen Registerkarte die von AEM bereitgestellte JSON-Modell-API: [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json). Dieser JSON-Inhalt wird angefordert, wenn die SPA zum ersten Mal geladen wird. Die äußere Struktur sieht wie folgt aus:
 
@@ -219,7 +219,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
 7. Navigieren Sie zur **SPA-Stamm**-Vorlage unter: [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-app-template/structure.html).
 
-   Klicken Sie auf das Menü **[!UICONTROL Seiteneigenschaften]** > **[!UICONTROL Seitenrichtlinie]**:
+   Klicken Sie auf **[!UICONTROL Seiteneigenschaften]** > **[!UICONTROL Seitenrichtlinie]**:
 
    ![Öffnen der Seitenrichtlinie für den SPA-Stamm](assets/navigation-routing/open-page-policy.png)
 
@@ -261,7 +261,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
 Implementieren Sie anschließend das Navigationsmenü mit einer neuen `NavigationComponent`. Wir könnten den Code direkt in `header.component.html` hinzufügen, doch es empfiehlt sich, große Komponenten zu vermeiden. Implementieren Sie stattdessen eine `NavigationComponent`, die später möglicherweise wiederverwendet werden kann.
 
-1. Überprüfen Sie die JSON, die von der AEM-`Header`-Komponente unter [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) bereitgestellt wird:
+1. Überprüfen Sie die JSON, die von der AEM-`Header` unter [http://localhost:4502/content/wknd-spa-angular/us/en.model.json bereitgestellt ](http://localhost:4502/content/wknd-spa-angular/us/en.model.json):
 
    ```json
    ...
@@ -519,7 +519,7 @@ Nun, da `NavigationComponent` implementiert worden ist, muss `HeaderComponent` a
    $ npm start
    ```
 
-2. Öffnen Sie im Browser eine Registerkarte und navigieren Sie zu [http://localhost:4200/](http://localhost:4200/).
+2. Öffnen Sie eine Browser-Registerkarte und navigieren Sie zu [http://localhost:4200/](http://localhost:4200/).
 
    Der **Webpack-Dev-Server** sollte so konfiguriert sein, dass eine lokale Instanz von AEM (`ui.frontend/proxy.conf.json`) als Proxy für das JSON-Modell fungiert. Auf diese Weise können wir Code direkt anhand der Inhalte erstellen, die zuvor im Tutorial in AEM erstellt wurden.
 
@@ -580,7 +580,7 @@ Nun, da `NavigationComponent` implementiert worden ist, muss `HeaderComponent` a
 
    Da die `NavigationComponent` jetzt als Teil der `HeaderComponent` verwendet wird, muss sie als Teil der Testumgebung deklariert werden.
 
-7. Speichern Sie Änderungen an allen geöffneten Dateien und kehren Sie zurück zum **Webpack-Dev-Server**: [http://localhost:4200/](http://localhost:4200/)
+7. Speichern Sie Änderungen an allen geöffneten Dateien und kehren Sie zurück zum **webpack-Dev-Server**: [http://localhost:4200/](http://localhost:4200/)
 
    ![Header-Navigation abgeschlossen](assets/navigation-routing/completed-header.png)
 
@@ -702,9 +702,9 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    >[!CAUTION]
    >
-   > Für das Angular-Projekt sind einige sehr strenge Verknüpfungsregeln aktiviert. Wenn der Maven-Build fehlschlägt, überprüfen Sie den Fehler und suchen Sie nach gefundenen **Lint-Fehlern in den aufgelisteten Dateien.**. Korrigieren Sie alle vom Linter gefundenen Probleme und führen Sie den Maven-Befehl erneut aus.
+   > Für das Angular-Projekt sind einige sehr strenge Verknüpfungsregeln aktiviert. Wenn der Maven-Build fehlschlägt, überprüfen Sie den Fehler und suchen Sie nach **Lint-Fehlern, die in den aufgelisteten Dateien gefunden wurden.**. Beheben Sie alle vom Linter gefundenen Probleme und führen Sie den Maven-Befehl erneut aus.
 
-2. Navigieren Sie zur SPA-Homepage in AEM, [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html), und öffnen Sie die Entwickler-Tools Ihres Browsers. Die folgenden Screenshots stammen vom Google Chrome-Browser.
+2. Navigieren Sie zur SPA-Homepage in AEM: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) und öffnen Sie die Entwickler-Tools Ihres Browsers. Die folgenden Screenshots stammen vom Google Chrome-Browser.
 
    Aktualisieren Sie die Seite. Sie sollten jetzt eine XHR-Anfrage an `/content/wknd-spa-angular/us/en.model.json` sehen, den SPA-Stamm. Beachten Sie, dass nur drei untergeordnete Seiten enthalten sind. Dies basiert auf der Hierarchietiefenkonfiguration der SPA-Stammvorlage, die zuvor im Tutorial vorgenommen wurde. Dies umfasst nicht **Seite 3**.
 

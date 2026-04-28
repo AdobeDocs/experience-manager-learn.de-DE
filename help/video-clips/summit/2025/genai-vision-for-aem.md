@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 193543f3-5200-479b-8735-3b529291ff7c
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über den Ansatz von Adobe, mit GenAI-Tools Markteintrittsbarrieren zu senken, Workflows zu vereinheitlichen und die Geschäftsauswirkungen zu maximieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462161/?captions=ger&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459231/?learn=on&enablevpops)

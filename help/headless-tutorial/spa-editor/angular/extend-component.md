@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: ht
-source-wordcount: '1713'
-ht-degree: 100%
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+workflow-type: tm+mt
+source-wordcount: '2040'
+ht-degree: 96%
 
 ---
 
@@ -61,17 +61,17 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
+   Fügen Sie bei Verwendung von [AEM 6.x](overview.md#compatibility) das Profil `classic` hinzu:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). Die von der [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/latest) bereitgestellten Bilder werden in der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+3. Installieren Sie das fertige Paket für die herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). Die von der [WKND-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases/latest) bereitgestellten Bilder werden in der WKND-SPA wiederverwendet. Das Paket kann mit dem [AEM-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Package Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
+   ![Paket-Manager-Installation von wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) ansehen oder den Code lokal auschecken, indem Sie zur Verzweigung `Angular/extend-component-solution` wechseln.
+Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) einsehen oder den Code lokal auschecken, indem Sie zur Verzweigung `Angular/extend-component-solution` wechseln.
 
 ## Prüfen der ersten Kartenimplementierung
 
@@ -364,7 +364,7 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core`.
 
    Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu.
 
-9. Öffnen Sie die JSON-Modellantwort unter [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) und suchen Sie nach `wknd-spa-angular/components/card`:
+9. Zeigen Sie die JSON-Modellantwort unter [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) an und suchen Sie nach der `wknd-spa-angular/components/card`:
 
    ```json
    "card": {
