@@ -10,19 +10,21 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20901
 thumbnail: KT-20901.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: bd9b74e8-81ab-4d42-bd0a-5443248b5770
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 2%
 
 ---
 
-
 # Komponentenentwicklung mit AEM Agent Skills
 
-Erfahren Sie, wie Sie mit AEM Agent Skills eine AEM-Komponente als Teil der [KI-unterstützten Entwicklung“ &#x200B;](../overview.md).
+Erfahren Sie, wie Sie mit AEM Agent Skills eine AEM-Komponente als Teil der [KI-unterstützten Entwicklung“ ](../overview.md).
 
 In dieser exemplarischen Vorgehensweise verwenden Sie natürliche Sprache in einer KI-gestützten IDE (z. B. Cursor), um eine **Promo-Banner**-Komponente im [WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) zu entwickeln. Der Codierungsagent wendet die `create-component` AEM Agent Skill an, um die Implementierung zu generieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3484952/?learn=on&enablevpops)
 
 ## Voraussetzungen
 
@@ -59,53 +61,53 @@ Die Design-Referenz ist ein Screenshot, der über Wireframe, Mockup oder statisc
    3. CTA Link - Pathfield, required
    ```
 
-1. The coding agent uses the `create-component` AEM Agent Skill to generate the component. Review the proposed HTL, Sling Model, dialog XML, and related files.
-   ![Review the generated code](../assets/component-development/review-generated-code.png)
+1. Der Codierungsagent verwendet die `create-component` AEM Agent Skill, um die Komponente zu generieren. Überprüfen Sie die vorgeschlagenen HTL-, Sling-Modell-, Dialog-XML- und zugehörigen Dateien.
+   ![Überprüfen des generierten Codes](../assets/component-development/review-generated-code.png)
 
 >[!TIP]
 >
->Instead of providing the design reference as a screenshot, you can also provide a Figma design via the [Figma MCP server](https://www.figma.com/mcp-catalog/) to generate the component. The `create-component` skill supports the [Figma design integration](https://github.com/adobe/skills/blob/main/plugins/aem/cloud-service/skills/create-component/references/figma-design-rules.md)
+>Anstatt die Designreferenz als Screenshot bereitzustellen, können Sie auch ein Figma-Design über den [Figma MCP Server](https://www.figma.com/mcp-catalog/) bereitstellen, um die Komponente zu erzeugen. Die `create-component`-Kompetenz unterstützt die [Figma Design Integration](https://github.com/adobe/skills/blob/main/plugins/aem/cloud-service/skills/create-component/references/figma-design-rules.md)
 
 
-1. Deploy the component to the local AEM instance/SDK.
+1. Stellen Sie die Komponente in der lokalen AEM-Instanz/SDK bereit.
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-1. In authoring, place the Promo Banner on the home page and validate behavior. Refine the implementation if it still diverges from the design reference.
-   ![Author the Promo Banner component](../assets/component-development/author-promo-banner-component.png)
+1. Platzieren Sie im Authoring das Promo-Banner auf der Startseite und validieren Sie das Verhalten. Verfeinern Sie die Implementierung, wenn sie immer noch von der Entwurfsreferenz abweicht.
+   ![Erstellen der Promo-Bannerkomponente](../assets/component-development/author-promo-banner-component.png)
 
-1. Review the newly created component by publishing the page or View as Published.
-   ![Review the newly created component](../assets/component-development/review-newly-created-component.png)
+1. Überprüfen Sie die neu erstellte Komponente, indem Sie die Seite veröffentlichen oder Als veröffentlicht anzeigen.
+   ![Überprüfen Sie die neu erstellte Komponente](../assets/component-development/review-newly-created-component.png)
 
-Herzlichen Glückwunsch! You have successfully created a new AEM component using AEM Agent Skills as part of AI-assisted development.
+Herzlichen Glückwunsch! Sie haben mit AEM Agent Skills im Rahmen der KI-unterstützten Entwicklung erfolgreich eine neue AEM-Komponente erstellt.
 
-## Beyond simple components
+## Über einfache Komponenten hinaus
 
-This walkthrough uses a simple component. The same `create-component` skill also supports richer cases, including:
+In dieser exemplarischen Vorgehensweise wird eine einfache Komponente verwendet. Die gleiche `create-component`-Qualifikation unterstützt auch umfangreichere Fälle, darunter:
 
-- Multifields and nested dialogs fields
-- AEM Core Components extensions (including Sling Resource Merger patterns)
-- Figma file or frame URLs for layout and styling, when the Figma MCP server (for example `plugin-figma-figma`) is enabled in your IDE
+- Felder mit mehreren Feldern und verschachtelten Dialogfeldern
+- Erweiterungen der AEM-Kernkomponenten (einschließlich Sling Resource Merger-Mustern)
+- Figma-Datei- oder Frame-URLs für Layout und Stil, wenn der Figma MCP-Server (z. B. `plugin-figma-figma`) in Ihrer IDE aktiviert ist
 
-For field types, dialog patterns, Figma rules, and examples, read `SKILL.md` in your installed skill folder, for example, `.agents/skills/create-component/SKILL.md`.
+Für Feldtypen, Dialogmuster, Figmaregeln und Beispiele lesen Sie `SKILL.md` in Ihrem installierten Ordner für Kenntnisse, z. B. `.agents/skills/create-component/SKILL.md`.
 
-For an overview, installation paths by IDE, and troubleshooting, see [AEM Component Development Agent](https://github.com/adobe/skills/blob/main/plugins/aem/cloud-service/skills/create-component/README.md) in the Adobe Skills repository.
+Einen Überblick, Installationspfade nach IDE und Fehlerbehebung finden Sie unter [AEM Component Development Agent](https://github.com/adobe/skills/blob/main/plugins/aem/cloud-service/skills/create-component/README.md) im Adobe Skills Repository.
 
 ## AGENTS.md
 
-Before we wrap up, let&#39;s understand how AGENTS.md was generated as part of creating the component.
+Bevor wir abschließen, sollten wir verstehen, wie AGENTS.md im Rahmen der Erstellung der Komponente generiert wurde.
 
-For AEM as a Cloud Service projects, the `ensure-agents-md` bootstrap skill (selected during [Setup AEM Agent Skills](../setup/agent-skills.md)) creates `AGENTS.md` at the repository root when it is **missing**. It uses what it learns from your project layout.
+Bei AEM as a Cloud Service-Projekten erstellt die `ensure-agents-md` Bootstrap-Kenntnisse (ausgewählt unter [Einrichten von AEM-](../setup/agent-skills.md)) `AGENTS.md` im Repository-Stamm, wenn sie **fehlt**. Es verwendet, was es aus Ihrem Projekt-Layout lernt.
 
-It does **not** overwrite an existing `AGENTS.md` file.
+Eine vorhandene `AGENTS.md`-Datei **nicht**.
 
 ![AGENTS.md-Erstellung](../assets/component-development/agents-md-creation.png)
 
 ## Zusätzliche Ressourcen
 
-- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe-Kenntnisse für KI-Codierungs-Agenten](https://github.com/adobe/skills)
 

@@ -1,6 +1,6 @@
 ---
-title: Set up AEM Agent Skills
-description: Learn how to set up AEM Agent Skills for AI-assisted development.
+title: Einrichten von AEM Agent-Kenntnissen
+description: Erfahren Sie, wie Sie AEM Agent Skills für KI-unterstützte Entwicklung einrichten.
 feature: Developer Tools
 version: Experience Manager as a Cloud Service
 role: Developer
@@ -10,54 +10,56 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20900
 thumbnail: KT-20900.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: c92d9124-4b92-4ee1-b04f-b6d1f82d53aa
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 4%
 
 ---
 
+# Einrichten von AEM Agent-Kenntnissen
 
-# Set up AEM Agent Skills
+Erfahren Sie, wie Sie AEM Agent Skills für KI-unterstützte Entwicklung einrichten.
 
-Learn how to set up AEM Agent Skills for AI-assisted development.
+Wenn Sie einen Codierungsagenten über eine KI-gestützte IDE auffordern, AEM-Entwicklungsaufgaben zu bearbeiten, kann er **AEM-Agentenkenntnisse** Verfahrensanleitungen von Adobe verwenden, anstatt sich nur auf allgemeine Modellschulungen oder was immer er auch nur aus Ihrem Repository ableiten kann, zu verlassen.
 
-When you ask a coding agent through an AI-powered IDE to work on AEM development tasks, it can use **AEM Agent Skills** procedural guidance from Adobe instead of relying only on generic model training or whatever it can infer from your repository alone.
+Adobe stellt die Kenntnisse des AEM-Agenten über das Repository [Adobe Skills](https://github.com/adobe/skills) zur Verfügung. Siehe auch [KI-unterstützte Entwicklung](../overview.md) , wie Adobe bei der KI-unterstützten Entwicklung hilft.
 
-Adobe provides the AEM Agent Skills via the [Adobe Skills](https://github.com/adobe/skills) repository. Also see the [AI-assisted development](../overview.md) for how Adobe helps with AI-assisted development.
+In diesem Tutorial installieren Sie die Kenntnisse in einem lokalen Klon des [WKND Sites-Projekts](https://github.com/adobe/aem-guides-wknd). Sie können dieselben Schritte für Ihr eigenes AEM as a Cloud Service-Projekt verwenden.
 
-In this tutorial, you install the skills on a local clone of the [WKND Sites Project](https://github.com/adobe/aem-guides-wknd). You can use the same steps for your own AEM as a Cloud Service project.
+>[!VIDEO](https://video.tv.adobe.com/v/3484940/?learn=on&enablevpops)
 
 ## Voraussetzungen
 
-To follow this tutorial, you need the following:
+Für dieses Tutorial benötigen Sie Folgendes:
 
-- A local clone of the [WKND Sites Project](https://github.com/adobe/aem-guides-wknd) or your own AEM as a Cloud Service project.
-- An AI-powered IDE such as Cursor, or Visual Studio Code with GitHub Copilot.
+- Ein lokaler Klon des [WKND Sites-Projekts](https://github.com/adobe/aem-guides-wknd) oder Ihres eigenen AEM as a Cloud Service-Projekts.
+- Eine KI-gestützte IDE wie Cursor oder Visual Studio Code mit GitHub Copilot.
 
-## Install AEM Agent Skills
+## AEM Agent-Kenntnisse installieren
 
-Install AEM Agent Skills with the `npx` command (requires [Node.js](https://nodejs.org/) so `npx` is available). For other install options, for example, Claude Code plugins or the GitHub CLI extension, see the [Installation](https://github.com/adobe/skills/tree/main#installation) section in the Adobe Skills repository.
+Installieren Sie AEM Agent-Kenntnisse mit dem `npx`-Befehl (erfordert [Node.js](https://nodejs.org/), damit `npx` verfügbar ist). Weitere Installationsoptionen, z. B. Claude-Code-Plug-ins oder die GitHub-CLI-Erweiterung, finden Sie im Abschnitt [Installation](https://github.com/adobe/skills/tree/main#installation) im Repository für Adobe-Kenntnisse.
 
-1. Clone the [WKND Sites Project](https://github.com/adobe/aem-guides-wknd) locally:
+1. Klonen Sie das [WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) lokal:
 
    ```shell
    $ git clone https://github.com/adobe/aem-guides-wknd.git
    ```
 
-1. Open the cloned project in your AI-powered IDE (for example, Cursor) and open the integrated terminal.
-   ![Open the terminal](../assets/agent-skills/wknd-in-cursor-ide-open-terminal.png)
+1. Öffnen Sie das geklonte Projekt in Ihrer KI-gestützten IDE (z. B. Cursor) und öffnen Sie das integrierte Terminal.
+   ![Öffnen Sie das Terminal](../assets/agent-skills/wknd-in-cursor-ide-open-terminal.png)
 
-1. Run the following command to add AEM Agent Skills for Cursor:
+1. Führen Sie den folgenden Befehl aus, um AEM Agent-Kenntnisse für Cursor hinzuzufügen:
 
    ```shell
    $ npx skills add https://github.com/adobe/skills/tree/main/plugins/aem/cloud-service --agent cursor
    ```
 
-   For other agent types, see the [Installation](https://github.com/adobe/skills/tree/main#installation) section in the Adobe Skills repository.
+   Informationen zu anderen Agententypen finden Sie im [Installation](https://github.com/adobe/skills/tree/main#installation) im Adobe Skills Repository.
 
-1. When prompted, choose which AEM Agent Skills to install.
-   ![Select which AEM Agent Skills to install](../assets/agent-skills/select-aem-agent-skills-to-install.png)
+1. Wählen Sie nach Aufforderung aus, welche AEM Agent-Kenntnisse installiert werden sollen.
+   ![Wählen Sie die zu installierenden AEM Agent Skills aus](../assets/agent-skills/select-aem-agent-skills-to-install.png)
 
    Wählen Sie die Qualifikation **Ensure-agents-md** aus, damit das Installationsprogramm **AGENTS.md**- und **CLAUDE.md**-Dateien im Repository-Stamm erstellen kann. Diese Bootstrap-Kenntnisse untersuchen Ihr Projekt, z. B. die `pom.xml` und Module, und generieren eine maßgeschneiderte Agentenführung.
 
@@ -119,7 +121,7 @@ CARDS
 
 ## Zusätzliche Ressourcen
 
-- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Lokale Entwicklung mit KI-Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe-Kenntnisse für KI-Codierungs-Agenten](https://github.com/adobe/skills)
 
